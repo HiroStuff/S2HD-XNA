@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//BODY</texture>
+    <texture>//SKIN</texture>
+  </textures>
+  <animations>
+    <animation delay="4" offset_y="-4">
+      <frame x="0" y="0" w="288" h="352" />
+      <frame x="288" y="0" w="288" h="352" />
+      <frame x="576" y="0" w="288" h="352" />
+      <frame x="864" y="0" w="288" h="352" />
+      <frame x="1152" y="0" w="288" h="352" />
+      <frame x="1440" y="0" w="288" h="352" />
+      <frame x="1728" y="0" w="288" h="352" />
+      <frame x="0" y="352" w="288" h="352" />
+      <frame x="288" y="352" w="288" h="352" />
+      <frame x="576" y="352" w="288" h="352" />
+    </animation>
+    <animation delay="3" offset_y="-4">
+      <frame x="864" y="352" w="288" h="352" />
+      <frame x="1152" y="352" w="288" h="352" />
+      <frame x="1440" y="352" w="288" h="352" />
+      <frame x="1728" y="352" w="288" h="352" />
+      <frame x="0" y="704" w="288" h="352" />
+      <frame x="288" y="704" w="288" h="352" />
+      <frame x="576" y="704" w="288" h="352" />
+      <frame x="864" y="704" w="288" h="352" />
+    </animation>
+    <animation delay="3" offset_y="-4">
+      <frame x="864" y="352" w="288" h="352" offset_y="32" />
+      <frame x="1152" y="352" w="288" h="352" offset_y="32" />
+      <frame x="1440" y="352" w="288" h="352" offset_y="32" />
+      <frame x="1728" y="352" w="288" h="352" offset_y="32" />
+      <frame x="0" y="704" w="288" h="352" offset_y="32" />
+      <frame x="288" y="704" w="288" h="352" offset_y="32" />
+      <frame x="576" y="704" w="288" h="352" offset_y="32" />
+      <frame x="864" y="704" w="288" h="352" offset_y="32" />
+    </animation>
+  </animations>
+</anigroup>

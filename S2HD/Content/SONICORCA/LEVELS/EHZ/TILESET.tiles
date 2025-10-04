@@ -1,0 +1,2522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tileset>
+  <textures>
+    <texture>/TEXTURE0</texture>
+    <texture>/TEXTURE1</texture>
+  </textures>
+  <tiles>
+    <tile id="1024" texture="0" x="0" y="0" opaque="true" />
+    <tile id="1025" texture="0" x="64" y="0" opaque="true" />
+    <tile id="1026" texture="0" x="128" y="0" opaque="true" />
+    <tile id="1027" texture="0" x="192" y="0" opaque="true" />
+    <tile id="1028" texture="0" x="256" y="0" opaque="true" />
+    <tile id="1029" texture="0" x="320" y="0" opaque="true" />
+    <tile id="1030" texture="0" x="384" y="0" opaque="true" />
+    <tile id="1031" texture="0" x="448" y="0" opaque="true" />
+    <tile id="1032" texture="0" x="512" y="0" opaque="true" />
+    <tile id="1033" texture="0" x="576" y="0" opaque="true" />
+    <tile id="1034" texture="0" x="640" y="0" opaque="true" />
+    <tile id="1035" texture="0" x="704" y="0" opaque="true" />
+    <tile id="1036" texture="0" x="768" y="0" opaque="true" />
+    <tile id="1037" texture="0" x="832" y="0" opaque="true" />
+    <tile id="1038" texture="0" x="896" y="0" opaque="true" />
+    <tile id="1039" texture="0" x="960" y="0" opaque="true" />
+    <tile id="1040" texture="0" x="1024" y="0" opaque="true" />
+    <tile id="1041" texture="0" x="1088" y="0" opaque="true" />
+    <tile id="1042" texture="0" x="1152" y="0" opaque="true" />
+    <tile id="1043" texture="0" x="1216" y="0" opaque="true" />
+    <tile id="1044" texture="0" x="1280" y="0" opaque="true" />
+    <tile id="1045" texture="0" x="1344" y="0" opaque="true" />
+    <tile id="1046" texture="0" x="1408" y="0" opaque="true" />
+    <tile id="1047" texture="0" x="1472" y="0" opaque="true" />
+    <tile id="1048" texture="0" x="1536" y="0" opaque="true" />
+    <tile id="1049" texture="0" x="1600" y="0" opaque="true" />
+    <tile id="1050" texture="0" x="1664" y="0" opaque="true" />
+    <tile id="1051" texture="0" x="1728" y="0" opaque="true" />
+    <tile id="1052" texture="0" x="1792" y="0" opaque="true" />
+    <tile id="1053" texture="0" x="1856" y="0" opaque="true" />
+    <tile id="1054" texture="0" x="1920" y="0" opaque="true" />
+    <tile id="1055" texture="0" x="1984" y="0" opaque="true" />
+    <tile id="1056" texture="0" x="0" y="64" opaque="true" />
+    <tile id="1057" texture="0" x="64" y="64" opaque="true" />
+    <tile id="1058" texture="0" x="128" y="64" opaque="true" />
+    <tile id="1059" texture="0" x="192" y="64" opaque="true" />
+    <tile id="1060" texture="0" x="256" y="64" opaque="true" />
+    <tile id="1061" texture="0" x="320" y="64" opaque="true" />
+    <tile id="1062" texture="0" x="384" y="64" opaque="true" />
+    <tile id="1063" texture="0" x="448" y="64" opaque="true" />
+    <tile id="1064" texture="0" x="512" y="64" opaque="true" />
+    <tile id="1065" texture="0" x="576" y="64" opaque="true" />
+    <tile id="1066" texture="0" x="640" y="64" opaque="true" />
+    <tile id="1067" texture="0" x="704" y="64" opaque="true" />
+    <tile id="1068" texture="0" x="768" y="64" opaque="true" />
+    <tile id="1069" texture="0" x="832" y="64" opaque="true" />
+    <tile id="1070" texture="0" x="896" y="64" opaque="true" />
+    <tile id="1071" texture="0" x="960" y="64" opaque="true" />
+    <tile id="1072" texture="0" x="1024" y="64" opaque="true" />
+    <tile id="1073" texture="0" x="1088" y="64" opaque="true" />
+    <tile id="1074" texture="0" x="1152" y="64" opaque="true" />
+    <tile id="1075" texture="0" x="1216" y="64" opaque="true" />
+    <tile id="1076" texture="0" x="1280" y="64" opaque="true" />
+    <tile id="1077" texture="0" x="1344" y="64" opaque="true" />
+    <tile id="1078" texture="0" x="1408" y="64" opaque="true" />
+    <tile id="1079" texture="0" x="1472" y="64" opaque="true" />
+    <tile id="1080" texture="0" x="1536" y="64" opaque="true" />
+    <tile id="1081" texture="0" x="1600" y="64" opaque="true" />
+    <tile id="1082" texture="0" x="1664" y="64" opaque="true" />
+    <tile id="1083" texture="0" x="1728" y="64" opaque="true" />
+    <tile id="1084" texture="0" x="1792" y="64" opaque="true" />
+    <tile id="1085" texture="0" x="1856" y="64" opaque="true" />
+    <tile id="1086" texture="0" x="1920" y="64" opaque="true" />
+    <tile id="1087" texture="0" x="1984" y="64" opaque="true" />
+    <tile id="1088" texture="0" x="0" y="128" opaque="true" />
+    <tile id="1089" texture="0" x="64" y="128" opaque="true" />
+    <tile id="1090" texture="0" x="128" y="128" opaque="true" />
+    <tile id="1091" texture="0" x="192" y="128" opaque="true" />
+    <tile id="1092" texture="0" x="256" y="128" opaque="true" />
+    <tile id="1093" texture="0" x="320" y="128" opaque="true" />
+    <tile id="1094" texture="0" x="384" y="128" opaque="true" />
+    <tile id="1095" texture="0" x="448" y="128" opaque="true" />
+    <tile id="1096" texture="0" x="512" y="128" opaque="true" />
+    <tile id="1097" texture="0" x="576" y="128" opaque="true" />
+    <tile id="1098" texture="0" x="640" y="128" opaque="true" />
+    <tile id="1099" texture="0" x="704" y="128" opaque="true" />
+    <tile id="1100" texture="0" x="768" y="128" opaque="true" />
+    <tile id="1101" texture="0" x="832" y="128" opaque="true" />
+    <tile id="1102" texture="0" x="896" y="128" opaque="true" />
+    <tile id="1103" texture="0" x="960" y="128" opaque="true" />
+    <tile id="1104" texture="0" x="1024" y="128" opaque="true" />
+    <tile id="1105" texture="0" x="1088" y="128" opaque="true" />
+    <tile id="1106" texture="0" x="1152" y="128" opaque="true" />
+    <tile id="1107" texture="0" x="1216" y="128" opaque="true" />
+    <tile id="1108" texture="0" x="1280" y="128" opaque="true" />
+    <tile id="1109" texture="0" x="1344" y="128" opaque="true" />
+    <tile id="1110" texture="0" x="1408" y="128" opaque="true" />
+    <tile id="1111" texture="0" x="1472" y="128" opaque="true" />
+    <tile id="1112" texture="0" x="1536" y="128" opaque="true" />
+    <tile id="1113" texture="0" x="1600" y="128" opaque="true" />
+    <tile id="1114" texture="0" x="1664" y="128" opaque="true" />
+    <tile id="1115" texture="0" x="1728" y="128" opaque="true" />
+    <tile id="1116" texture="0" x="1792" y="128" opaque="true" />
+    <tile id="1117" texture="0" x="1856" y="128" opaque="true" />
+    <tile id="1118" texture="0" x="1920" y="128" opaque="true" />
+    <tile id="1119" texture="0" x="1984" y="128" opaque="true" />
+    <tile id="1120" texture="0" x="0" y="192" opaque="true" />
+    <tile id="1121" texture="0" x="64" y="192" opaque="true" />
+    <tile id="1122" texture="0" x="128" y="192" opaque="true" />
+    <tile id="1123" texture="0" x="192" y="192" opaque="true" />
+    <tile id="1124" texture="0" x="256" y="192" opaque="true" />
+    <tile id="1125" texture="0" x="320" y="192" opaque="true" />
+    <tile id="1126" texture="0" x="384" y="192" opaque="true" />
+    <tile id="1127" texture="0" x="448" y="192" opaque="true" />
+    <tile id="1128" texture="0" x="512" y="192" opaque="true" />
+    <tile id="1129" texture="0" x="576" y="192" opaque="true" />
+    <tile id="1130" texture="0" x="640" y="192" opaque="true" />
+    <tile id="1131" texture="0" x="704" y="192" opaque="true" />
+    <tile id="1132" texture="0" x="768" y="192" opaque="true" />
+    <tile id="1133" texture="0" x="832" y="192" opaque="true" />
+    <tile id="1134" texture="0" x="896" y="192" opaque="true" />
+    <tile id="1135" texture="0" x="960" y="192" opaque="true" />
+    <tile id="1136" texture="0" x="1024" y="192" opaque="true" />
+    <tile id="1137" texture="0" x="1088" y="192" opaque="true" />
+    <tile id="1138" texture="0" x="1152" y="192" opaque="true" />
+    <tile id="1139" texture="0" x="1216" y="192" opaque="true" />
+    <tile id="1140" texture="0" x="1280" y="192" opaque="true" />
+    <tile id="1141" texture="0" x="1344" y="192" opaque="true" />
+    <tile id="1142" texture="0" x="1408" y="192" opaque="true" />
+    <tile id="1143" texture="0" x="1472" y="192" opaque="true" />
+    <tile id="1144" texture="0" x="1536" y="192" opaque="true" />
+    <tile id="1145" texture="0" x="1600" y="192" opaque="true" />
+    <tile id="1146" texture="0" x="1664" y="192" opaque="true" />
+    <tile id="1147" texture="0" x="1728" y="192" opaque="true" />
+    <tile id="1148" texture="0" x="1792" y="192" opaque="true" />
+    <tile id="1149" texture="0" x="1856" y="192" opaque="true" />
+    <tile id="1150" texture="0" x="1920" y="192" opaque="true" />
+    <tile id="1151" texture="0" x="1984" y="192" opaque="true" />
+    <tile id="1152" texture="0" x="0" y="256" opaque="true" />
+    <tile id="1153" texture="0" x="64" y="256" opaque="true" />
+    <tile id="1154" texture="0" x="128" y="256" opaque="true" />
+    <tile id="1155" texture="0" x="192" y="256" opaque="true" />
+    <tile id="1156" texture="0" x="256" y="256" opaque="true" />
+    <tile id="1157" texture="0" x="320" y="256" opaque="true" />
+    <tile id="1158" texture="0" x="384" y="256" opaque="true" />
+    <tile id="1159" texture="0" x="448" y="256" opaque="true" />
+    <tile id="1160" texture="0" x="512" y="256" opaque="true" />
+    <tile id="1161" texture="0" x="576" y="256" opaque="true" />
+    <tile id="1162" texture="0" x="640" y="256" opaque="true" />
+    <tile id="1163" texture="0" x="704" y="256" opaque="true" />
+    <tile id="1164" texture="0" x="768" y="256" opaque="true" />
+    <tile id="1165" texture="0" x="832" y="256" opaque="true" />
+    <tile id="1166" texture="0" x="896" y="256" opaque="true" />
+    <tile id="1167" texture="0" x="960" y="256" opaque="true" />
+    <tile id="1168" texture="0" x="1024" y="256" opaque="true" />
+    <tile id="1169" texture="0" x="1088" y="256" opaque="true" />
+    <tile id="1170" texture="0" x="1152" y="256" opaque="true" />
+    <tile id="1171" texture="0" x="1216" y="256" opaque="true" />
+    <tile id="1172" texture="0" x="1280" y="256" opaque="true" />
+    <tile id="1173" texture="0" x="1344" y="256" opaque="true" />
+    <tile id="1174" texture="0" x="1408" y="256" opaque="true" />
+    <tile id="1175" texture="0" x="1472" y="256" opaque="true" />
+    <tile id="1176" texture="0" x="1536" y="256" opaque="true" />
+    <tile id="1177" texture="0" x="1600" y="256" opaque="true" />
+    <tile id="1178" texture="0" x="1664" y="256" opaque="true" />
+    <tile id="1179" texture="0" x="1728" y="256" opaque="true" />
+    <tile id="1180" texture="0" x="1792" y="256" opaque="true" />
+    <tile id="1181" texture="0" x="1856" y="256" opaque="true" />
+    <tile id="1182" texture="0" x="1920" y="256" opaque="true" />
+    <tile id="1183" texture="0" x="1984" y="256" opaque="true" />
+    <tile id="1184" texture="0" x="0" y="320" opaque="true" />
+    <tile id="1185" texture="0" x="64" y="320" opaque="true" />
+    <tile id="1186" texture="0" x="128" y="320" opaque="true" />
+    <tile id="1187" texture="0" x="192" y="320" opaque="true" />
+    <tile id="1188" texture="0" x="256" y="320" opaque="true" />
+    <tile id="1189" texture="0" x="320" y="320" opaque="true" />
+    <tile id="1190" texture="0" x="384" y="320" opaque="true" />
+    <tile id="1191" texture="0" x="448" y="320" opaque="true" />
+    <tile id="1192" texture="0" x="512" y="320" opaque="true" />
+    <tile id="1193" texture="0" x="576" y="320" opaque="true" />
+    <tile id="1194" texture="0" x="640" y="320" opaque="true" />
+    <tile id="1195" texture="0" x="704" y="320" opaque="true" />
+    <tile id="1196" texture="0" x="768" y="320" opaque="true" />
+    <tile id="1197" texture="0" x="832" y="320" opaque="true" />
+    <tile id="1198" texture="0" x="896" y="320" opaque="true" />
+    <tile id="1199" texture="0" x="960" y="320" opaque="true" />
+    <tile id="1200" texture="0" x="1024" y="320" opaque="true" />
+    <tile id="1201" texture="0" x="1088" y="320" opaque="true" />
+    <tile id="1202" texture="0" x="1152" y="320" opaque="true" />
+    <tile id="1203" texture="0" x="1216" y="320" opaque="true" />
+    <tile id="1204" texture="0" x="1280" y="320" opaque="true" />
+    <tile id="1205" texture="0" x="1344" y="320" opaque="true" />
+    <tile id="1206" texture="0" x="1408" y="320" opaque="true" />
+    <tile id="1207" texture="0" x="1472" y="320" opaque="true" />
+    <tile id="1208" texture="0" x="1536" y="320" opaque="true" />
+    <tile id="1209" texture="0" x="1600" y="320" opaque="true" />
+    <tile id="1210" texture="0" x="1664" y="320" opaque="true" />
+    <tile id="1211" texture="0" x="1728" y="320" opaque="true" />
+    <tile id="1212" texture="0" x="1792" y="320" opaque="true" />
+    <tile id="1213" texture="0" x="1856" y="320" opaque="true" />
+    <tile id="1214" texture="0" x="1920" y="320" opaque="true" />
+    <tile id="1215" texture="0" x="1984" y="320" opaque="true" />
+    <tile id="1216" texture="0" x="0" y="384" opaque="true" />
+    <tile id="1217" texture="0" x="64" y="384" opaque="true" />
+    <tile id="1218" texture="0" x="128" y="384" opaque="true" />
+    <tile id="1219" texture="0" x="192" y="384" opaque="true" />
+    <tile id="1220" texture="0" x="256" y="384" opaque="true" />
+    <tile id="1221" texture="0" x="320" y="384" opaque="true" />
+    <tile id="1222" texture="0" x="384" y="384" opaque="true" />
+    <tile id="1223" texture="0" x="448" y="384" opaque="true" />
+    <tile id="1224" texture="0" x="512" y="384" opaque="true" />
+    <tile id="1225" texture="0" x="576" y="384" opaque="true" />
+    <tile id="1226" texture="0" x="640" y="384" opaque="true" />
+    <tile id="1227" texture="0" x="704" y="384" opaque="true" />
+    <tile id="1228" texture="0" x="768" y="384" opaque="true" />
+    <tile id="1229" texture="0" x="832" y="384" opaque="true" />
+    <tile id="1230" texture="0" x="896" y="384" opaque="true" />
+    <tile id="1231" texture="0" x="960" y="384" opaque="true" />
+    <tile id="1232" texture="0" x="1024" y="384" opaque="true" />
+    <tile id="1233" texture="0" x="1088" y="384" opaque="true" />
+    <tile id="1234" texture="0" x="1152" y="384" opaque="true" />
+    <tile id="1235" texture="0" x="1216" y="384" opaque="true" />
+    <tile id="1236" texture="0" x="1280" y="384" />
+    <tile id="1237" texture="0" x="1344" y="384" />
+    <tile id="1238" texture="0" x="1408" y="384" />
+    <tile id="1239" texture="0" x="1472" y="384" />
+    <tile id="1240" texture="0" x="1536" y="384" />
+    <tile id="1241" texture="0" x="1600" y="384" />
+    <tile id="1242" texture="0" x="1664" y="384" />
+    <tile id="1243" texture="0" x="1728" y="384" />
+    <tile id="1244" texture="0" x="1792" y="384" />
+    <tile id="1245" texture="0" x="1856" y="384" />
+    <tile id="1246" texture="0" x="1920" y="384" />
+    <tile id="1247" texture="0" x="1984" y="384" />
+    <tile id="1248" texture="0" x="0" y="448" />
+    <tile id="1249" texture="0" x="64" y="448" />
+    <tile id="1250" texture="0" x="128" y="448" />
+    <tile id="1251" texture="0" x="192" y="448" />
+    <tile id="1252" texture="0" x="256" y="448" />
+    <tile id="1253" texture="0" x="320" y="448" />
+    <tile id="1254" texture="0" x="384" y="448" />
+    <tile id="1255" texture="0" x="448" y="448" />
+    <tile id="1256" texture="0" x="512" y="448" />
+    <tile id="1257" texture="0" x="576" y="448" />
+    <tile id="1258" texture="0" x="640" y="448" />
+    <tile id="1259" texture="0" x="704" y="448" />
+    <tile id="1260" texture="0" x="768" y="448" />
+    <tile id="1261" texture="0" x="832" y="448" />
+    <tile id="1262" texture="0" x="896" y="448" />
+    <tile id="1263" texture="0" x="960" y="448" />
+    <tile id="1264" texture="0" x="1024" y="448" />
+    <tile id="1265" texture="0" x="1088" y="448" />
+    <tile id="1266" texture="0" x="1152" y="448" />
+    <tile id="1267" texture="0" x="1216" y="448" />
+    <tile id="1268" texture="0" x="1280" y="448" opaque="true" />
+    <tile id="1269" texture="0" x="1344" y="448" opaque="true" />
+    <tile id="1270" texture="0" x="1408" y="448" opaque="true" />
+    <tile id="1271" texture="0" x="1472" y="448" opaque="true" />
+    <tile id="1272" texture="0" x="1536" y="448" opaque="true" />
+    <tile id="1273" texture="0" x="1600" y="448" opaque="true" />
+    <tile id="1274" texture="0" x="1664" y="448" opaque="true" />
+    <tile id="1275" texture="0" x="1728" y="448" opaque="true" />
+    <tile id="1276" texture="0" x="1792" y="448" opaque="true" />
+    <tile id="1277" texture="0" x="1856" y="448" opaque="true" />
+    <tile id="1278" texture="0" x="1920" y="448" opaque="true" />
+    <tile id="1279" texture="0" x="1984" y="448" opaque="true" />
+    <tile id="1280" texture="0" x="0" y="512" opaque="true" />
+    <tile id="1281" texture="0" x="64" y="512" opaque="true" />
+    <tile id="1282" texture="0" x="128" y="512" opaque="true" />
+    <tile id="1283" texture="0" x="192" y="512" opaque="true" />
+    <tile id="1284" texture="0" x="256" y="512" opaque="true" />
+    <tile id="1285" texture="0" x="320" y="512" opaque="true" />
+    <tile id="1286" texture="0" x="384" y="512" opaque="true" />
+    <tile id="1287" texture="0" x="448" y="512" opaque="true" />
+    <tile id="1288" texture="0" x="512" y="512" opaque="true" />
+    <tile id="1289" texture="0" x="576" y="512" opaque="true" />
+    <tile id="1290" texture="0" x="640" y="512" opaque="true" />
+    <tile id="1291" texture="0" x="704" y="512" opaque="true" />
+    <tile id="1292" texture="0" x="768" y="512" opaque="true" />
+    <tile id="1293" texture="0" x="832" y="512" opaque="true" />
+    <tile id="1294" texture="0" x="896" y="512" opaque="true" />
+    <tile id="1295" texture="0" x="960" y="512" opaque="true" />
+    <tile id="1296" texture="0" x="1024" y="512" opaque="true" />
+    <tile id="1297" texture="0" x="1088" y="512" opaque="true" />
+    <tile id="1298" texture="0" x="1152" y="512" opaque="true" />
+    <tile id="1299" texture="0" x="1216" y="512" opaque="true" />
+    <tile id="1300" texture="0" x="1280" y="512" opaque="true" />
+    <tile id="1301" texture="0" x="1344" y="512" opaque="true" />
+    <tile id="1302" texture="0" x="1408" y="512" opaque="true" />
+    <tile id="1303" texture="0" x="1472" y="512" opaque="true" />
+    <tile id="1304" texture="0" x="1536" y="512" opaque="true" />
+    <tile id="1305" texture="0" x="1600" y="512" opaque="true" />
+    <tile id="1306" texture="0" x="1664" y="512" opaque="true" />
+    <tile id="1307" texture="0" x="1728" y="512" opaque="true" />
+    <tile id="1308" texture="0" x="1792" y="512" opaque="true" />
+    <tile id="1309" texture="0" x="1856" y="512" opaque="true" />
+    <tile id="1310" texture="0" x="1920" y="512" opaque="true" />
+    <tile id="1311" texture="0" x="1984" y="512" opaque="true" />
+    <tile id="1312" texture="0" x="0" y="576" opaque="true" />
+    <tile id="1313" texture="0" x="64" y="576" opaque="true" />
+    <tile id="1314" texture="0" x="128" y="576" opaque="true" />
+    <tile id="1315" texture="0" x="192" y="576" opaque="true" />
+    <tile id="1316" texture="0" x="256" y="576" opaque="true" />
+    <tile id="1317" texture="0" x="320" y="576" opaque="true" />
+    <tile id="1318" texture="0" x="384" y="576" opaque="true" />
+    <tile id="1319" texture="0" x="448" y="576" opaque="true" />
+    <tile id="1320" texture="0" x="512" y="576" opaque="true" />
+    <tile id="1321" delay="8">
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+    </tile>
+    <tile id="1322" delay="8">
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+    </tile>
+    <tile id="1323" delay="8">
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+    </tile>
+    <tile id="1324" delay="8">
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+    </tile>
+    <tile id="1325" delay="8">
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+    </tile>
+    <tile id="1326" delay="8">
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+    </tile>
+    <tile id="1327" delay="8">
+      <frame texture="0" x="960" y="576" />
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+    </tile>
+    <tile id="1328" delay="8">
+      <frame texture="0" x="1024" y="576" />
+      <frame texture="0" x="576" y="576" />
+      <frame texture="0" x="640" y="576" />
+      <frame texture="0" x="704" y="576" />
+      <frame texture="0" x="768" y="576" />
+      <frame texture="0" x="832" y="576" />
+      <frame texture="0" x="896" y="576" />
+      <frame texture="0" x="960" y="576" />
+    </tile>
+    <tile id="1329" delay="2">
+      <frame texture="0" x="1088" y="576" />
+      <frame texture="0" x="1152" y="576" />
+      <frame texture="0" x="1216" y="576" />
+      <frame texture="0" x="1280" y="576" />
+      <frame texture="0" x="1344" y="576" />
+      <frame texture="0" x="1408" y="576" />
+      <frame texture="0" x="1472" y="576" />
+      <frame texture="0" x="1536" y="576" />
+      <frame texture="0" x="1600" y="576" />
+      <frame texture="0" x="1664" y="576" />
+      <frame texture="0" x="1728" y="576" />
+      <frame texture="0" x="1792" y="576" />
+      <frame texture="0" x="1856" y="576" />
+      <frame texture="0" x="1920" y="576" />
+      <frame texture="0" x="1984" y="576" />
+      <frame texture="0" x="0" y="640" />
+      <frame texture="0" x="64" y="640" />
+      <frame texture="0" x="128" y="640" />
+    </tile>
+    <tile id="1330" delay="2">
+      <frame texture="0" x="192" y="640" />
+      <frame texture="0" x="256" y="640" />
+      <frame texture="0" x="320" y="640" />
+      <frame texture="0" x="384" y="640" />
+      <frame texture="0" x="448" y="640" />
+      <frame texture="0" x="512" y="640" />
+      <frame texture="0" x="576" y="640" />
+      <frame texture="0" x="640" y="640" />
+      <frame texture="0" x="704" y="640" />
+      <frame texture="0" x="768" y="640" />
+      <frame texture="0" x="832" y="640" />
+      <frame texture="0" x="896" y="640" />
+      <frame texture="0" x="960" y="640" />
+      <frame texture="0" x="1024" y="640" />
+      <frame texture="0" x="1088" y="640" />
+      <frame texture="0" x="1152" y="640" />
+      <frame texture="0" x="1216" y="640" />
+      <frame texture="0" x="1280" y="640" />
+    </tile>
+    <tile id="1331" delay="2">
+      <frame texture="0" x="1344" y="640" />
+      <frame texture="0" x="1408" y="640" />
+      <frame texture="0" x="1472" y="640" />
+      <frame texture="0" x="1536" y="640" />
+      <frame texture="0" x="1600" y="640" />
+      <frame texture="0" x="1664" y="640" />
+      <frame texture="0" x="1728" y="640" />
+      <frame texture="0" x="1792" y="640" />
+      <frame texture="0" x="1856" y="640" />
+      <frame texture="0" x="1920" y="640" />
+      <frame texture="0" x="1984" y="640" />
+      <frame texture="0" x="0" y="704" />
+      <frame texture="0" x="64" y="704" />
+      <frame texture="0" x="128" y="704" />
+      <frame texture="0" x="192" y="704" />
+      <frame texture="0" x="256" y="704" />
+      <frame texture="0" x="320" y="704" />
+      <frame texture="0" x="384" y="704" />
+    </tile>
+    <tile id="1332" delay="2">
+      <frame texture="0" x="448" y="704" />
+      <frame texture="0" x="512" y="704" />
+      <frame texture="0" x="576" y="704" />
+      <frame texture="0" x="640" y="704" />
+      <frame texture="0" x="704" y="704" />
+      <frame texture="0" x="768" y="704" />
+      <frame texture="0" x="832" y="704" />
+      <frame texture="0" x="896" y="704" />
+      <frame texture="0" x="960" y="704" />
+      <frame texture="0" x="1024" y="704" />
+      <frame texture="0" x="1088" y="704" />
+      <frame texture="0" x="1152" y="704" />
+      <frame texture="0" x="1216" y="704" />
+      <frame texture="0" x="1280" y="704" />
+      <frame texture="0" x="1344" y="704" />
+      <frame texture="0" x="1408" y="704" />
+      <frame texture="0" x="1472" y="704" />
+      <frame texture="0" x="1536" y="704" />
+    </tile>
+    <tile id="1346" delay="2">
+      <frame texture="0" x="1600" y="704" />
+      <frame texture="0" x="1664" y="704" />
+      <frame texture="0" x="1728" y="704" />
+      <frame texture="0" x="1792" y="704" />
+      <frame texture="0" x="1856" y="704" />
+      <frame texture="0" x="1920" y="704" />
+      <frame texture="0" x="1984" y="704" />
+      <frame texture="0" x="0" y="768" />
+      <frame texture="0" x="64" y="768" />
+      <frame texture="0" x="128" y="768" />
+      <frame texture="0" x="192" y="768" />
+      <frame texture="0" x="256" y="768" />
+      <frame texture="0" x="320" y="768" />
+      <frame texture="0" x="384" y="768" />
+      <frame texture="0" x="448" y="768" />
+      <frame texture="0" x="512" y="768" />
+      <frame texture="0" x="576" y="768" />
+      <frame texture="0" x="640" y="768" />
+    </tile>
+    <tile id="1347" delay="2">
+      <frame texture="0" x="704" y="768" />
+      <frame texture="0" x="768" y="768" />
+      <frame texture="0" x="832" y="768" />
+      <frame texture="0" x="896" y="768" />
+      <frame texture="0" x="960" y="768" />
+      <frame texture="0" x="1024" y="768" />
+      <frame texture="0" x="1088" y="768" />
+      <frame texture="0" x="1152" y="768" />
+      <frame texture="0" x="1216" y="768" />
+      <frame texture="0" x="1280" y="768" />
+      <frame texture="0" x="1344" y="768" />
+      <frame texture="0" x="1408" y="768" />
+      <frame texture="0" x="1472" y="768" />
+      <frame texture="0" x="1536" y="768" />
+      <frame texture="0" x="1600" y="768" />
+      <frame texture="0" x="1664" y="768" />
+      <frame texture="0" x="1728" y="768" />
+      <frame texture="0" x="1792" y="768" />
+    </tile>
+    <tile id="1360" delay="2">
+      <frame texture="0" x="1856" y="768" />
+      <frame texture="0" x="1920" y="768" />
+      <frame texture="0" x="1984" y="768" />
+      <frame texture="0" x="0" y="832" />
+      <frame texture="0" x="64" y="832" />
+      <frame texture="0" x="128" y="832" />
+      <frame texture="0" x="192" y="832" />
+      <frame texture="0" x="256" y="832" />
+      <frame texture="0" x="320" y="832" />
+      <frame texture="0" x="384" y="832" />
+      <frame texture="0" x="448" y="832" />
+      <frame texture="0" x="512" y="832" />
+      <frame texture="0" x="576" y="832" />
+      <frame texture="0" x="640" y="832" />
+      <frame texture="0" x="704" y="832" />
+      <frame texture="0" x="768" y="832" />
+      <frame texture="0" x="832" y="832" />
+      <frame texture="0" x="896" y="832" />
+    </tile>
+    <tile id="1373" delay="2">
+      <frame texture="0" x="960" y="832" />
+      <frame texture="0" x="1024" y="832" />
+      <frame texture="0" x="1088" y="832" />
+      <frame texture="0" x="1152" y="832" />
+      <frame texture="0" x="1216" y="832" />
+      <frame texture="0" x="1280" y="832" />
+      <frame texture="0" x="1344" y="832" />
+      <frame texture="0" x="1408" y="832" />
+      <frame texture="0" x="1472" y="832" />
+      <frame texture="0" x="1536" y="832" />
+      <frame texture="0" x="1600" y="832" />
+      <frame texture="0" x="1664" y="832" />
+      <frame texture="0" x="1728" y="832" />
+      <frame texture="0" x="1792" y="832" />
+      <frame texture="0" x="1856" y="832" />
+      <frame texture="0" x="1920" y="832" />
+      <frame texture="0" x="1984" y="832" />
+      <frame texture="0" x="0" y="896" />
+    </tile>
+    <tile id="1329" delay="2">
+      <frame texture="0" x="64" y="896" />
+      <frame texture="0" x="128" y="896" />
+      <frame texture="0" x="192" y="896" />
+      <frame texture="0" x="256" y="896" />
+      <frame texture="0" x="320" y="896" />
+      <frame texture="0" x="384" y="896" />
+      <frame texture="0" x="448" y="896" />
+      <frame texture="0" x="512" y="896" />
+      <frame texture="0" x="576" y="896" />
+      <frame texture="0" x="640" y="896" />
+      <frame texture="0" x="704" y="896" />
+      <frame texture="0" x="768" y="896" />
+      <frame texture="0" x="832" y="896" />
+      <frame texture="0" x="896" y="896" />
+      <frame texture="0" x="960" y="896" />
+      <frame texture="0" x="1024" y="896" />
+      <frame texture="0" x="1088" y="896" />
+      <frame texture="0" x="1152" y="896" />
+    </tile>
+    <tile id="1359" delay="2">
+      <frame texture="0" x="1216" y="896" />
+      <frame texture="0" x="1280" y="896" />
+      <frame texture="0" x="1344" y="896" />
+      <frame texture="0" x="1408" y="896" />
+      <frame texture="0" x="1472" y="896" />
+      <frame texture="0" x="1536" y="896" />
+      <frame texture="0" x="1600" y="896" />
+      <frame texture="0" x="1664" y="896" />
+      <frame texture="0" x="1728" y="896" />
+      <frame texture="0" x="1792" y="896" />
+      <frame texture="0" x="1856" y="896" />
+      <frame texture="0" x="1920" y="896" />
+      <frame texture="0" x="1984" y="896" />
+      <frame texture="0" x="0" y="960" />
+      <frame texture="0" x="64" y="960" />
+      <frame texture="0" x="128" y="960" />
+      <frame texture="0" x="192" y="960" />
+      <frame texture="0" x="256" y="960" />
+    </tile>
+    <tile id="1372" delay="2">
+      <frame texture="0" x="320" y="960" />
+      <frame texture="0" x="384" y="960" />
+      <frame texture="0" x="448" y="960" />
+      <frame texture="0" x="512" y="960" />
+      <frame texture="0" x="576" y="960" />
+      <frame texture="0" x="640" y="960" />
+      <frame texture="0" x="704" y="960" />
+      <frame texture="0" x="768" y="960" />
+      <frame texture="0" x="832" y="960" />
+      <frame texture="0" x="896" y="960" />
+      <frame texture="0" x="960" y="960" />
+      <frame texture="0" x="1024" y="960" />
+      <frame texture="0" x="1088" y="960" />
+      <frame texture="0" x="1152" y="960" />
+      <frame texture="0" x="1216" y="960" />
+      <frame texture="0" x="1280" y="960" />
+      <frame texture="0" x="1344" y="960" />
+      <frame texture="0" x="1408" y="960" />
+    </tile>
+    <tile id="1382" delay="2">
+      <frame texture="0" x="1472" y="960" />
+      <frame texture="0" x="1536" y="960" />
+      <frame texture="0" x="1600" y="960" />
+      <frame texture="0" x="1664" y="960" />
+      <frame texture="0" x="1728" y="960" />
+      <frame texture="0" x="1792" y="960" />
+      <frame texture="0" x="1856" y="960" />
+      <frame texture="0" x="1920" y="960" />
+      <frame texture="0" x="1984" y="960" />
+      <frame texture="0" x="0" y="1024" />
+      <frame texture="0" x="64" y="1024" />
+      <frame texture="0" x="128" y="1024" />
+      <frame texture="0" x="192" y="1024" />
+      <frame texture="0" x="256" y="1024" />
+      <frame texture="0" x="320" y="1024" />
+      <frame texture="0" x="384" y="1024" />
+      <frame texture="0" x="448" y="1024" />
+      <frame texture="0" x="512" y="1024" />
+    </tile>
+    <tile id="1383" delay="2">
+      <frame texture="0" x="576" y="1024" />
+      <frame texture="0" x="640" y="1024" />
+      <frame texture="0" x="704" y="1024" />
+      <frame texture="0" x="768" y="1024" />
+      <frame texture="0" x="832" y="1024" />
+      <frame texture="0" x="896" y="1024" />
+      <frame texture="0" x="960" y="1024" />
+      <frame texture="0" x="1024" y="1024" />
+      <frame texture="0" x="1088" y="1024" />
+      <frame texture="0" x="1152" y="1024" />
+      <frame texture="0" x="1216" y="1024" />
+      <frame texture="0" x="1280" y="1024" />
+      <frame texture="0" x="1344" y="1024" />
+      <frame texture="0" x="1408" y="1024" />
+      <frame texture="0" x="1472" y="1024" />
+      <frame texture="0" x="1536" y="1024" />
+      <frame texture="0" x="1600" y="1024" />
+      <frame texture="0" x="1664" y="1024" />
+    </tile>
+    <tile id="1349" delay="2">
+      <frame texture="0" x="1728" y="1024" />
+      <frame texture="0" x="1792" y="1024" />
+      <frame texture="0" x="1856" y="1024" />
+      <frame texture="0" x="1920" y="1024" />
+      <frame texture="0" x="1984" y="1024" />
+      <frame texture="0" x="0" y="1088" />
+      <frame texture="0" x="64" y="1088" />
+      <frame texture="0" x="128" y="1088" />
+      <frame texture="0" x="192" y="1088" />
+      <frame texture="0" x="256" y="1088" />
+      <frame texture="0" x="320" y="1088" />
+      <frame texture="0" x="384" y="1088" />
+      <frame texture="0" x="448" y="1088" />
+      <frame texture="0" x="512" y="1088" />
+      <frame texture="0" x="576" y="1088" />
+      <frame texture="0" x="640" y="1088" />
+      <frame texture="0" x="704" y="1088" />
+      <frame texture="0" x="768" y="1088" />
+    </tile>
+    <tile id="1362" delay="2">
+      <frame texture="0" x="832" y="1088" />
+      <frame texture="0" x="896" y="1088" />
+      <frame texture="0" x="960" y="1088" />
+      <frame texture="0" x="1024" y="1088" />
+      <frame texture="0" x="1088" y="1088" />
+      <frame texture="0" x="1152" y="1088" />
+      <frame texture="0" x="1216" y="1088" />
+      <frame texture="0" x="1280" y="1088" />
+      <frame texture="0" x="1344" y="1088" />
+      <frame texture="0" x="1408" y="1088" />
+      <frame texture="0" x="1472" y="1088" />
+      <frame texture="0" x="1536" y="1088" />
+      <frame texture="0" x="1600" y="1088" />
+      <frame texture="0" x="1664" y="1088" />
+      <frame texture="0" x="1728" y="1088" />
+      <frame texture="0" x="1792" y="1088" />
+      <frame texture="0" x="1856" y="1088" />
+      <frame texture="0" x="1920" y="1088" />
+    </tile>
+    <tile id="1375" delay="2">
+      <frame texture="0" x="1984" y="1088" />
+      <frame texture="0" x="0" y="1152" />
+      <frame texture="0" x="64" y="1152" />
+      <frame texture="0" x="128" y="1152" />
+      <frame texture="0" x="192" y="1152" />
+      <frame texture="0" x="256" y="1152" />
+      <frame texture="0" x="320" y="1152" />
+      <frame texture="0" x="384" y="1152" />
+      <frame texture="0" x="448" y="1152" />
+      <frame texture="0" x="512" y="1152" />
+      <frame texture="0" x="576" y="1152" />
+      <frame texture="0" x="640" y="1152" />
+      <frame texture="0" x="704" y="1152" />
+      <frame texture="0" x="768" y="1152" />
+      <frame texture="0" x="832" y="1152" />
+      <frame texture="0" x="896" y="1152" />
+      <frame texture="0" x="960" y="1152" />
+      <frame texture="0" x="1024" y="1152" />
+    </tile>
+    <tile id="1348" delay="2">
+      <frame texture="0" x="1088" y="1152" />
+      <frame texture="0" x="1152" y="1152" />
+      <frame texture="0" x="1216" y="1152" />
+      <frame texture="0" x="1280" y="1152" />
+      <frame texture="0" x="1344" y="1152" />
+      <frame texture="0" x="1408" y="1152" />
+      <frame texture="0" x="1472" y="1152" />
+      <frame texture="0" x="1536" y="1152" />
+      <frame texture="0" x="1600" y="1152" />
+      <frame texture="0" x="1664" y="1152" />
+      <frame texture="0" x="1728" y="1152" />
+      <frame texture="0" x="1792" y="1152" />
+      <frame texture="0" x="1856" y="1152" />
+      <frame texture="0" x="1920" y="1152" />
+      <frame texture="0" x="1984" y="1152" />
+      <frame texture="0" x="0" y="1216" />
+      <frame texture="0" x="64" y="1216" />
+      <frame texture="0" x="128" y="1216" />
+    </tile>
+    <tile id="1361" delay="2">
+      <frame texture="0" x="192" y="1216" />
+      <frame texture="0" x="256" y="1216" />
+      <frame texture="0" x="320" y="1216" />
+      <frame texture="0" x="384" y="1216" />
+      <frame texture="0" x="448" y="1216" />
+      <frame texture="0" x="512" y="1216" />
+      <frame texture="0" x="576" y="1216" />
+      <frame texture="0" x="640" y="1216" />
+      <frame texture="0" x="704" y="1216" />
+      <frame texture="0" x="768" y="1216" />
+      <frame texture="0" x="832" y="1216" />
+      <frame texture="0" x="896" y="1216" />
+      <frame texture="0" x="960" y="1216" />
+      <frame texture="0" x="1024" y="1216" />
+      <frame texture="0" x="1088" y="1216" />
+      <frame texture="0" x="1152" y="1216" />
+      <frame texture="0" x="1216" y="1216" />
+      <frame texture="0" x="1280" y="1216" />
+    </tile>
+    <tile id="1374" delay="2">
+      <frame texture="0" x="1344" y="1216" />
+      <frame texture="0" x="1408" y="1216" />
+      <frame texture="0" x="1472" y="1216" />
+      <frame texture="0" x="1536" y="1216" />
+      <frame texture="0" x="1600" y="1216" />
+      <frame texture="0" x="1664" y="1216" />
+      <frame texture="0" x="1728" y="1216" />
+      <frame texture="0" x="1792" y="1216" />
+      <frame texture="0" x="1856" y="1216" />
+      <frame texture="0" x="1920" y="1216" />
+      <frame texture="0" x="1984" y="1216" />
+      <frame texture="0" x="0" y="1280" />
+      <frame texture="0" x="64" y="1280" />
+      <frame texture="0" x="128" y="1280" />
+      <frame texture="0" x="192" y="1280" />
+      <frame texture="0" x="256" y="1280" />
+      <frame texture="0" x="320" y="1280" />
+      <frame texture="0" x="384" y="1280" />
+    </tile>
+    <tile id="1384" delay="2">
+      <frame texture="0" x="448" y="1280" />
+      <frame texture="0" x="512" y="1280" />
+      <frame texture="0" x="576" y="1280" />
+      <frame texture="0" x="640" y="1280" />
+      <frame texture="0" x="704" y="1280" />
+      <frame texture="0" x="768" y="1280" />
+      <frame texture="0" x="832" y="1280" />
+      <frame texture="0" x="896" y="1280" />
+      <frame texture="0" x="960" y="1280" />
+      <frame texture="0" x="1024" y="1280" />
+      <frame texture="0" x="1088" y="1280" />
+      <frame texture="0" x="1152" y="1280" />
+      <frame texture="0" x="1216" y="1280" />
+      <frame texture="0" x="1280" y="1280" />
+      <frame texture="0" x="1344" y="1280" />
+      <frame texture="0" x="1408" y="1280" />
+      <frame texture="0" x="1472" y="1280" />
+      <frame texture="0" x="1536" y="1280" />
+    </tile>
+    <tile id="1385" delay="2">
+      <frame texture="0" x="1600" y="1280" />
+      <frame texture="0" x="1664" y="1280" />
+      <frame texture="0" x="1728" y="1280" />
+      <frame texture="0" x="1792" y="1280" />
+      <frame texture="0" x="1856" y="1280" />
+      <frame texture="0" x="1920" y="1280" />
+      <frame texture="0" x="1984" y="1280" />
+      <frame texture="0" x="0" y="1344" />
+      <frame texture="0" x="64" y="1344" />
+      <frame texture="0" x="128" y="1344" />
+      <frame texture="0" x="192" y="1344" />
+      <frame texture="0" x="256" y="1344" />
+      <frame texture="0" x="320" y="1344" />
+      <frame texture="0" x="384" y="1344" />
+      <frame texture="0" x="448" y="1344" />
+      <frame texture="0" x="512" y="1344" />
+      <frame texture="0" x="576" y="1344" />
+      <frame texture="0" x="640" y="1344" />
+    </tile>
+    <tile id="1363" delay="2">
+      <frame texture="0" x="704" y="1344" />
+      <frame texture="0" x="768" y="1344" />
+      <frame texture="0" x="832" y="1344" />
+      <frame texture="0" x="896" y="1344" />
+      <frame texture="0" x="960" y="1344" />
+      <frame texture="0" x="1024" y="1344" />
+      <frame texture="0" x="1088" y="1344" />
+      <frame texture="0" x="1152" y="1344" />
+      <frame texture="0" x="1216" y="1344" />
+      <frame texture="0" x="1280" y="1344" />
+      <frame texture="0" x="1344" y="1344" />
+      <frame texture="0" x="1408" y="1344" />
+      <frame texture="0" x="1472" y="1344" />
+      <frame texture="0" x="1536" y="1344" />
+      <frame texture="0" x="1600" y="1344" />
+      <frame texture="0" x="1664" y="1344" />
+      <frame texture="0" x="1728" y="1344" />
+      <frame texture="0" x="1792" y="1344" />
+    </tile>
+    <tile id="1364" delay="2">
+      <frame texture="0" x="1856" y="1344" delay="600" />
+      <frame texture="0" x="1920" y="1344" />
+      <frame texture="0" x="1984" y="1344" />
+      <frame texture="0" x="0" y="1408" />
+      <frame texture="0" x="64" y="1408" />
+      <frame texture="0" x="128" y="1408" />
+      <frame texture="0" x="1856" y="1344" delay="470" />
+      <frame texture="0" x="1920" y="1344" />
+      <frame texture="0" x="1984" y="1344" />
+      <frame texture="0" x="0" y="1408" />
+      <frame texture="0" x="64" y="1408" />
+      <frame texture="0" x="128" y="1408" />
+      <frame texture="0" x="1856" y="1344" delay="320" />
+      <frame texture="0" x="1920" y="1344" />
+      <frame texture="0" x="1984" y="1344" />
+      <frame texture="0" x="0" y="1408" />
+      <frame texture="0" x="64" y="1408" />
+      <frame texture="0" x="128" y="1408" />
+    </tile>
+    <tile id="1333" delay="2">
+      <frame texture="0" x="192" y="1408" />
+      <frame texture="0" x="256" y="1408" delay="1" />
+      <frame texture="0" x="320" y="1408" />
+      <frame texture="0" x="384" y="1408" delay="3" />
+      <frame texture="0" x="448" y="1408" />
+      <frame texture="0" x="512" y="1408" delay="1" />
+      <frame texture="0" x="192" y="1408" />
+      <frame texture="0" x="256" y="1408" delay="1" />
+      <frame texture="0" x="320" y="1408" />
+      <frame texture="0" x="384" y="1408" delay="3" />
+      <frame texture="0" x="448" y="1408" />
+      <frame texture="0" x="512" y="1408" delay="1" />
+      <frame texture="0" x="192" y="1408" delay="100" />
+    </tile>
+    <tile id="1334" delay="2">
+      <frame texture="0" x="576" y="1408" />
+      <frame texture="0" x="640" y="1408" delay="1" />
+      <frame texture="0" x="704" y="1408" />
+      <frame texture="0" x="768" y="1408" delay="3" />
+      <frame texture="0" x="832" y="1408" />
+      <frame texture="0" x="896" y="1408" delay="1" />
+      <frame texture="0" x="576" y="1408" />
+      <frame texture="0" x="640" y="1408" delay="1" />
+      <frame texture="0" x="704" y="1408" />
+      <frame texture="0" x="768" y="1408" delay="3" />
+      <frame texture="0" x="832" y="1408" />
+      <frame texture="0" x="896" y="1408" delay="1" />
+      <frame texture="0" x="576" y="1408" delay="100" />
+    </tile>
+    <tile id="1335" texture="0" x="960" y="1408" opaque="true" />
+    <tile id="1336" texture="0" x="1024" y="1408" opaque="true" />
+    <tile id="1337" texture="0" x="1088" y="1408" opaque="true" />
+    <tile id="1338" texture="0" x="1152" y="1408" opaque="true" />
+    <tile id="1339" texture="0" x="1216" y="1408" opaque="true" />
+    <tile id="1340" texture="0" x="1280" y="1408" opaque="true" />
+    <tile id="1341" texture="0" x="1344" y="1408" opaque="true" />
+    <tile id="1342" texture="0" x="1408" y="1408" opaque="true" />
+    <tile id="1343" texture="0" x="1472" y="1408" opaque="true" />
+    <tile id="1344" texture="0" x="1536" y="1408" opaque="true" />
+    <tile id="1345" texture="0" x="1600" y="1408" opaque="true" />
+    <tile id="1350" texture="0" x="1664" y="1408" />
+    <tile id="1351" texture="0" x="1728" y="1408" />
+    <tile id="1352" texture="0" x="1792" y="1408" opaque="true" />
+    <tile id="1353" texture="0" x="1856" y="1408" opaque="true" />
+    <tile id="1354" texture="0" x="1920" y="1408" opaque="true" />
+    <tile id="1355" texture="0" x="1984" y="1408" opaque="true" />
+    <tile id="1356" texture="0" x="0" y="1472" opaque="true" />
+    <tile id="1357" texture="0" x="64" y="1472" opaque="true" />
+    <tile id="1358" texture="0" x="128" y="1472" opaque="true" />
+    <tile id="1365" texture="0" x="192" y="1472" />
+    <tile id="1366" texture="0" x="256" y="1472" opaque="true" />
+    <tile id="1367" texture="0" x="320" y="1472" opaque="true" />
+    <tile id="1368" texture="0" x="384" y="1472" opaque="true" />
+    <tile id="1369" texture="0" x="448" y="1472" opaque="true" />
+    <tile id="1370" texture="0" x="512" y="1472" opaque="true" />
+    <tile id="1371" texture="0" x="576" y="1472" opaque="true" />
+    <tile id="1376" texture="0" x="640" y="1472" />
+    <tile id="1377" texture="0" x="704" y="1472" opaque="true" />
+    <tile id="1378" texture="0" x="768" y="1472" opaque="true" />
+    <tile id="1379" texture="0" x="832" y="1472" opaque="true" />
+    <tile id="1380" texture="0" x="896" y="1472" opaque="true" />
+    <tile id="1381" texture="0" x="960" y="1472" opaque="true" />
+    <tile id="1386" texture="0" x="1024" y="1472" opaque="true" />
+    <tile id="1387" texture="0" x="1088" y="1472" opaque="true" />
+    <tile id="1388" texture="0" x="1152" y="1472" opaque="true" />
+    <tile id="1389" texture="0" x="1216" y="1472" opaque="true" />
+    <tile id="1390" texture="0" x="1280" y="1472" opaque="true" />
+    <tile id="1391" texture="0" x="1344" y="1472" opaque="true" />
+    <tile id="1392" texture="0" x="1408" y="1472" opaque="true" />
+    <tile id="1406" delay="3">
+      <frame texture="0" x="1472" y="1472" />
+      <frame texture="0" x="1536" y="1472" />
+      <frame texture="0" x="1600" y="1472" delay="2" />
+      <frame texture="0" x="1664" y="1472" delay="2" />
+      <frame texture="0" x="1728" y="1472" delay="2" />
+      <frame texture="0" x="1792" y="1472" delay="2" />
+      <frame texture="0" x="1856" y="1472" />
+      <frame texture="0" x="1920" y="1472" />
+    </tile>
+    <tile id="1407" delay="3">
+      <frame texture="0" x="1984" y="1472" />
+      <frame texture="0" x="0" y="1536" />
+      <frame texture="0" x="64" y="1536" delay="2" />
+      <frame texture="0" x="128" y="1536" delay="2" />
+      <frame texture="0" x="192" y="1536" delay="2" />
+      <frame texture="0" x="256" y="1536" delay="2" />
+      <frame texture="0" x="320" y="1536" />
+      <frame texture="0" x="384" y="1536" />
+    </tile>
+    <tile id="1393" texture="0" x="448" y="1536" />
+    <tile id="1394" texture="0" x="512" y="1536" />
+    <tile id="1395" texture="0" x="576" y="1536" opaque="true" />
+    <tile id="1396" texture="0" x="640" y="1536" />
+    <tile id="1397" texture="0" x="704" y="1536" opaque="true" />
+    <tile id="1398" texture="0" x="768" y="1536" opaque="true" />
+    <tile id="1399" texture="0" x="832" y="1536" opaque="true" />
+    <tile id="1400" texture="0" x="896" y="1536" />
+    <tile id="1401" texture="0" x="960" y="1536" opaque="true" />
+    <tile id="1402" texture="0" x="1024" y="1536" opaque="true" />
+    <tile id="1403" texture="0" x="1088" y="1536" opaque="true" />
+    <tile id="1404" texture="0" x="1152" y="1536" opaque="true" />
+    <tile id="1405" texture="0" x="1216" y="1536" opaque="true" />
+    <tile id="1408" texture="0" x="1280" y="1536" opaque="true" />
+    <tile id="1409" texture="0" x="1344" y="1536" opaque="true" />
+    <tile id="1410" texture="0" x="1408" y="1536" opaque="true" />
+    <tile id="1411" texture="0" x="1472" y="1536" opaque="true" />
+    <tile id="1412" texture="0" x="1536" y="1536" opaque="true" />
+    <tile id="1413" texture="0" x="1600" y="1536" opaque="true" />
+    <tile id="1414" texture="0" x="1664" y="1536" opaque="true" />
+    <tile id="1415" texture="0" x="1728" y="1536" opaque="true" />
+    <tile id="1416" texture="0" x="1792" y="1536" opaque="true" />
+    <tile id="1417" texture="0" x="1856" y="1536" opaque="true" />
+    <tile id="1418" texture="0" x="1920" y="1536" opaque="true" />
+    <tile id="1419" texture="0" x="1984" y="1536" opaque="true" />
+    <tile id="1420" texture="0" x="0" y="1600" opaque="true" />
+    <tile id="1421" texture="0" x="64" y="1600" opaque="true" />
+    <tile id="1422" texture="0" x="128" y="1600" opaque="true" />
+    <tile id="1423" texture="0" x="192" y="1600" opaque="true" />
+    <tile id="1424" texture="0" x="256" y="1600" opaque="true" />
+    <tile id="1425" texture="0" x="320" y="1600" opaque="true" />
+    <tile id="1426" texture="0" x="384" y="1600" opaque="true" />
+    <tile id="1427" texture="0" x="448" y="1600" opaque="true" />
+    <tile id="1428" texture="0" x="512" y="1600" opaque="true" />
+    <tile id="1429" texture="0" x="576" y="1600" opaque="true" />
+    <tile id="1430" texture="0" x="640" y="1600" opaque="true" />
+    <tile id="1431" texture="0" x="704" y="1600" opaque="true" />
+    <tile id="1432" texture="0" x="768" y="1600" opaque="true" />
+    <tile id="1433" texture="0" x="832" y="1600" opaque="true" />
+    <tile id="1434" texture="0" x="896" y="1600" opaque="true" />
+    <tile id="1435" texture="0" x="960" y="1600" opaque="true" />
+    <tile id="1436" texture="0" x="1024" y="1600" opaque="true" />
+    <tile id="1437" texture="0" x="1088" y="1600" opaque="true" />
+    <tile id="1438" texture="0" x="1152" y="1600" />
+    <tile id="1439" texture="0" x="1216" y="1600" />
+    <tile id="1440" texture="0" x="1280" y="1600" opaque="true" />
+    <tile id="1441" texture="0" x="1344" y="1600" opaque="true" />
+    <tile id="1442" texture="0" x="1408" y="1600" opaque="true" />
+    <tile id="1443" texture="0" x="1472" y="1600" />
+    <tile id="1444" texture="0" x="1536" y="1600" />
+    <tile id="1445" texture="0" x="1600" y="1600" opaque="true" />
+    <tile id="1446" texture="0" x="1664" y="1600" opaque="true" />
+    <tile id="1447" texture="0" x="1728" y="1600" opaque="true" />
+    <tile id="1448" texture="0" x="1792" y="1600" opaque="true" />
+    <tile id="1449" texture="0" x="1856" y="1600" opaque="true" />
+    <tile id="1450" texture="0" x="1920" y="1600" opaque="true" />
+    <tile id="1451" texture="0" x="1984" y="1600" />
+    <tile id="1452" texture="0" x="0" y="1664" opaque="true" />
+    <tile id="1453" texture="0" x="64" y="1664" opaque="true" />
+    <tile id="1454" texture="0" x="128" y="1664" opaque="true" />
+    <tile id="1455" texture="0" x="192" y="1664" opaque="true" />
+    <tile id="1456" texture="0" x="256" y="1664" opaque="true" />
+    <tile id="1457" texture="0" x="320" y="1664" />
+    <tile id="1458" texture="0" x="384" y="1664" opaque="true" />
+    <tile id="1459" texture="0" x="448" y="1664" opaque="true" />
+    <tile id="1460" texture="0" x="512" y="1664" opaque="true" />
+    <tile id="1461" texture="0" x="576" y="1664" opaque="true" />
+    <tile id="1462" texture="0" x="640" y="1664" opaque="true" />
+    <tile id="1463" texture="0" x="704" y="1664" opaque="true" />
+    <tile id="1464" texture="0" x="768" y="1664" opaque="true" />
+    <tile id="1465" texture="0" x="832" y="1664" opaque="true" />
+    <tile id="1466" texture="0" x="896" y="1664" />
+    <tile id="1467" texture="0" x="960" y="1664" />
+    <tile id="1468" texture="0" x="1024" y="1664" />
+    <tile id="1469" texture="0" x="1088" y="1664" opaque="true" />
+    <tile id="1470" texture="0" x="1152" y="1664" />
+    <tile id="1471" texture="0" x="1216" y="1664" opaque="true" />
+    <tile id="1472" texture="0" x="1280" y="1664" opaque="true" />
+    <tile id="1473" texture="0" x="1344" y="1664" opaque="true" />
+    <tile id="1474" texture="0" x="1408" y="1664" />
+    <tile id="1475" texture="0" x="1472" y="1664" />
+    <tile id="1476" texture="0" x="1536" y="1664" opaque="true" />
+    <tile id="1477" texture="0" x="1600" y="1664" opaque="true" />
+    <tile id="1478" texture="0" x="1664" y="1664" />
+    <tile id="1479" texture="0" x="1728" y="1664" />
+    <tile id="1480" texture="0" x="1792" y="1664" opaque="true" />
+    <tile id="1481" texture="0" x="1856" y="1664" opaque="true" />
+    <tile id="1482" texture="0" x="1920" y="1664" />
+    <tile id="1483" texture="0" x="1984" y="1664" />
+    <tile id="1484" texture="0" x="0" y="1728" opaque="true" />
+    <tile id="1485" texture="0" x="64" y="1728" opaque="true" />
+    <tile id="1486" texture="0" x="128" y="1728" />
+    <tile id="1487" texture="0" x="192" y="1728" />
+    <tile id="1488" texture="0" x="256" y="1728" opaque="true" />
+    <tile id="1489" texture="0" x="320" y="1728" opaque="true" />
+    <tile id="1490" texture="0" x="384" y="1728" />
+    <tile id="1491" texture="0" x="448" y="1728" opaque="true" />
+    <tile id="1492" texture="0" x="512" y="1728" opaque="true" />
+    <tile id="1493" texture="0" x="576" y="1728" opaque="true" />
+    <tile id="1494" texture="0" x="640" y="1728" opaque="true" />
+    <tile id="1495" texture="0" x="704" y="1728" />
+    <tile id="1496" texture="0" x="768" y="1728" opaque="true" />
+    <tile id="1497" texture="0" x="832" y="1728" opaque="true" />
+    <tile id="1498" texture="0" x="896" y="1728" />
+    <tile id="1499" texture="0" x="960" y="1728" opaque="true" />
+    <tile id="1500" texture="0" x="1024" y="1728" opaque="true" />
+    <tile id="1515" texture="0" x="1088" y="1728" />
+    <tile id="1516" texture="0" x="1152" y="1728" />
+    <tile id="1517" texture="0" x="1216" y="1728" opaque="true" />
+    <tile id="1518" texture="0" x="1280" y="1728" opaque="true" />
+    <tile id="1519" texture="0" x="1344" y="1728" opaque="true" />
+    <tile id="1520" texture="0" x="1408" y="1728" />
+    <tile id="1521" texture="0" x="1472" y="1728" opaque="true" />
+    <tile id="1522" texture="0" x="1536" y="1728" opaque="true" />
+    <tile id="1523" texture="0" x="1600" y="1728" opaque="true" />
+    <tile id="1524" texture="0" x="1664" y="1728" opaque="true" />
+    <tile id="1525" texture="0" x="1728" y="1728" opaque="true" />
+    <tile id="1526" texture="0" x="1792" y="1728" />
+    <tile id="1527" texture="0" x="1856" y="1728" opaque="true" />
+    <tile id="1528" texture="0" x="1920" y="1728" opaque="true" />
+    <tile id="1529" texture="0" x="1984" y="1728" />
+    <tile id="1530" texture="0" x="0" y="1792" />
+    <tile id="1531" texture="0" x="64" y="1792" opaque="true" />
+    <tile id="1532" texture="0" x="128" y="1792" opaque="true" />
+    <tile id="1533" texture="0" x="192" y="1792" opaque="true" />
+    <tile id="1534" texture="0" x="256" y="1792" opaque="true" />
+    <tile id="1535" texture="0" x="320" y="1792" />
+    <tile id="1536" texture="0" x="384" y="1792" opaque="true" />
+    <tile id="1537" texture="0" x="448" y="1792" opaque="true" />
+    <tile id="1538" texture="0" x="512" y="1792" opaque="true" />
+    <tile id="1539" texture="0" x="576" y="1792" opaque="true" />
+    <tile id="1540" texture="0" x="640" y="1792" opaque="true" />
+    <tile id="1541" texture="0" x="704" y="1792" opaque="true" />
+    <tile id="1542" texture="0" x="768" y="1792" opaque="true" />
+    <tile id="1543" texture="0" x="832" y="1792" opaque="true" />
+    <tile id="1544" texture="0" x="896" y="1792" opaque="true" />
+    <tile id="1545" texture="0" x="960" y="1792" opaque="true" />
+    <tile id="1546" texture="0" x="1024" y="1792" opaque="true" />
+    <tile id="1547" texture="0" x="1088" y="1792" opaque="true" />
+    <tile id="1548" texture="0" x="1152" y="1792" opaque="true" />
+    <tile id="1549" texture="0" x="1216" y="1792" opaque="true" />
+    <tile id="1550" texture="0" x="1280" y="1792" opaque="true" />
+    <tile id="1552" texture="0" x="1344" y="1792" opaque="true" />
+    <tile id="1553" texture="0" x="1408" y="1792" opaque="true" />
+    <tile id="1554" texture="0" x="1472" y="1792" />
+    <tile id="1556" texture="0" x="1536" y="1792" opaque="true" />
+    <tile id="1557" texture="0" x="1600" y="1792" opaque="true" />
+    <tile id="1558" texture="0" x="1664" y="1792" opaque="true" />
+    <tile id="1559" texture="0" x="1728" y="1792" opaque="true" />
+    <tile id="1560" texture="0" x="1792" y="1792" />
+    <tile id="1561" texture="0" x="1856" y="1792" />
+    <tile id="1562" texture="0" x="1920" y="1792" opaque="true" />
+    <tile id="1564" texture="0" x="1984" y="1792" opaque="true" />
+    <tile id="1565" texture="0" x="0" y="1856" />
+    <tile id="1566" texture="0" x="64" y="1856" opaque="true" />
+    <tile id="1567" texture="0" x="128" y="1856" opaque="true" />
+    <tile id="1568" texture="0" x="192" y="1856" opaque="true" />
+    <tile id="1569" texture="0" x="256" y="1856" />
+    <tile id="1570" texture="0" x="320" y="1856" />
+    <tile id="1571" texture="0" x="384" y="1856" />
+    <tile id="1572" texture="0" x="448" y="1856" opaque="true" />
+    <tile id="1573" texture="0" x="512" y="1856" opaque="true" />
+    <tile id="1574" texture="0" x="576" y="1856" />
+    <tile id="1575" texture="0" x="640" y="1856" />
+    <tile id="1576" texture="0" x="704" y="1856" opaque="true" />
+    <tile id="1577" texture="0" x="768" y="1856" opaque="true" />
+    <tile id="1578" texture="0" x="832" y="1856" opaque="true" />
+    <tile id="1579" texture="0" x="896" y="1856" opaque="true" />
+    <tile id="1580" texture="0" x="960" y="1856" opaque="true" />
+    <tile id="1581" texture="0" x="1024" y="1856" opaque="true" />
+    <tile id="1582" texture="0" x="1088" y="1856" opaque="true" />
+    <tile id="1583" texture="0" x="1152" y="1856" opaque="true" />
+    <tile id="1584" texture="0" x="1216" y="1856" opaque="true" />
+    <tile id="1585" texture="0" x="1280" y="1856" opaque="true" />
+    <tile id="1586" texture="0" x="1344" y="1856" opaque="true" />
+    <tile id="1587" texture="0" x="1408" y="1856" opaque="true" />
+    <tile id="1588" texture="0" x="1472" y="1856" opaque="true" />
+    <tile id="1589" texture="0" x="1536" y="1856" opaque="true" />
+    <tile id="1590" texture="0" x="1600" y="1856" opaque="true" />
+    <tile id="1591" texture="0" x="1664" y="1856" opaque="true" />
+    <tile id="1592" texture="0" x="1728" y="1856" opaque="true" />
+    <tile id="1593" texture="0" x="1792" y="1856" opaque="true" />
+    <tile id="1594" texture="0" x="1856" y="1856" opaque="true" />
+    <tile id="1595" texture="0" x="1920" y="1856" opaque="true" />
+    <tile id="1596" texture="0" x="1984" y="1856" opaque="true" />
+    <tile id="1597" texture="0" x="0" y="1920" />
+    <tile id="1598" texture="0" x="64" y="1920" opaque="true" />
+    <tile id="1599" texture="0" x="128" y="1920" opaque="true" />
+    <tile id="1600" texture="0" x="192" y="1920" opaque="true" />
+    <tile id="1601" texture="0" x="256" y="1920" opaque="true" />
+    <tile id="1604" texture="0" x="320" y="1920" />
+    <tile id="1605" texture="0" x="384" y="1920" opaque="true" />
+    <tile id="1606" texture="0" x="448" y="1920" opaque="true" />
+    <tile id="1607" texture="0" x="512" y="1920" opaque="true" />
+    <tile id="1608" texture="0" x="576" y="1920" opaque="true" />
+    <tile id="1609" texture="0" x="640" y="1920" opaque="true" />
+    <tile id="1610" texture="0" x="704" y="1920" opaque="true" />
+    <tile id="1611" texture="0" x="768" y="1920" />
+    <tile id="1612" texture="0" x="832" y="1920" opaque="true" />
+    <tile id="1613" texture="0" x="896" y="1920" opaque="true" />
+    <tile id="1614" texture="0" x="960" y="1920" opaque="true" />
+    <tile id="1615" texture="0" x="1024" y="1920" opaque="true" />
+    <tile id="1616" texture="0" x="1088" y="1920" opaque="true" />
+    <tile id="1617" texture="0" x="1152" y="1920" opaque="true" />
+    <tile id="1618" texture="0" x="1216" y="1920" opaque="true" />
+    <tile id="1619" texture="0" x="1280" y="1920" opaque="true" />
+    <tile id="1620" texture="0" x="1344" y="1920" opaque="true" />
+    <tile id="1621" texture="0" x="1408" y="1920" opaque="true" />
+    <tile id="1622" texture="0" x="1472" y="1920" opaque="true" />
+    <tile id="1623" texture="0" x="1536" y="1920" opaque="true" />
+    <tile id="1624" texture="0" x="1600" y="1920" opaque="true" />
+    <tile id="1625" texture="0" x="1664" y="1920" opaque="true" />
+    <tile id="1626" texture="0" x="1728" y="1920" opaque="true" />
+    <tile id="1627" texture="0" x="1792" y="1920" opaque="true" />
+    <tile id="1628" texture="0" x="1856" y="1920" opaque="true" />
+    <tile id="1629" texture="0" x="1920" y="1920" opaque="true" />
+    <tile id="1630" texture="0" x="1984" y="1920" opaque="true" />
+    <tile id="1631" texture="0" x="0" y="1984" opaque="true" />
+    <tile id="1632" texture="0" x="64" y="1984" opaque="true" />
+    <tile id="1633" texture="0" x="128" y="1984" />
+    <tile id="1634" texture="0" x="192" y="1984" opaque="true" />
+    <tile id="1635" texture="0" x="256" y="1984" opaque="true" />
+    <tile id="1638" texture="0" x="320" y="1984" opaque="true" />
+    <tile id="1639" texture="0" x="384" y="1984" opaque="true" />
+    <tile id="1640" texture="0" x="448" y="1984" opaque="true" />
+    <tile id="1641" texture="0" x="512" y="1984" opaque="true" />
+    <tile id="1642" texture="0" x="576" y="1984" opaque="true" />
+    <tile id="1649" texture="0" x="640" y="1984" opaque="true" />
+    <tile id="1650" texture="0" x="704" y="1984" opaque="true" />
+    <tile id="1651" texture="0" x="768" y="1984" opaque="true" />
+    <tile id="1655" texture="0" x="832" y="1984" opaque="true" />
+    <tile id="1656" texture="0" x="896" y="1984" opaque="true" />
+    <tile id="1660" texture="0" x="960" y="1984" />
+    <tile id="1661" texture="0" x="1024" y="1984" />
+    <tile id="1662" texture="0" x="1088" y="1984" opaque="true" />
+    <tile id="1663" texture="0" x="1152" y="1984" opaque="true" />
+    <tile id="1664" texture="0" x="1216" y="1984" />
+    <tile id="1665" texture="0" x="1280" y="1984" />
+    <tile id="1666" texture="0" x="1344" y="1984" />
+    <tile id="1667" texture="0" x="1408" y="1984" />
+    <tile id="1668" texture="0" x="1472" y="1984" opaque="true" />
+    <tile id="1669" texture="0" x="1536" y="1984" opaque="true" />
+    <tile id="1670" texture="0" x="1600" y="1984" />
+    <tile id="1671" texture="0" x="1664" y="1984" opaque="true" />
+    <tile id="1672" texture="0" x="1728" y="1984" />
+    <tile id="1673" texture="0" x="1792" y="1984" opaque="true" />
+    <tile id="1674" texture="0" x="1856" y="1984" opaque="true" />
+    <tile id="1675" texture="0" x="1920" y="1984" opaque="true" />
+    <tile id="1676" texture="0" x="1984" y="1984" opaque="true" />
+    <tile id="1677" texture="1" x="0" y="0" opaque="true" />
+    <tile id="1678" texture="1" x="64" y="0" opaque="true" />
+    <tile id="1679" texture="1" x="128" y="0" />
+    <tile id="1680" texture="1" x="192" y="0" />
+    <tile id="1681" texture="1" x="256" y="0" />
+    <tile id="1682" texture="1" x="320" y="0" opaque="true" />
+    <tile id="1683" texture="1" x="384" y="0" opaque="true" />
+    <tile id="1684" texture="1" x="448" y="0" opaque="true" />
+    <tile id="1685" texture="1" x="512" y="0" />
+    <tile id="1686" texture="1" x="576" y="0" />
+    <tile id="1687" texture="1" x="640" y="0" opaque="true" />
+    <tile id="1688" texture="1" x="704" y="0" />
+    <tile id="1689" texture="1" x="768" y="0" />
+    <tile id="1690" texture="1" x="832" y="0" opaque="true" />
+    <tile id="1691" texture="1" x="896" y="0" />
+    <tile id="1692" texture="1" x="960" y="0" />
+    <tile id="1693" texture="1" x="1024" y="0" opaque="true" />
+    <tile id="1694" texture="1" x="1088" y="0" opaque="true" />
+    <tile id="1695" texture="1" x="1152" y="0" opaque="true" />
+    <tile id="1696" texture="1" x="1216" y="0" opaque="true" />
+    <tile id="1697" texture="1" x="1280" y="0" opaque="true" />
+    <tile id="1698" texture="1" x="1344" y="0" opaque="true" />
+    <tile id="1699" texture="1" x="1408" y="0" opaque="true" />
+    <tile id="1700" texture="1" x="1472" y="0" />
+    <tile id="1701" texture="1" x="1536" y="0" />
+    <tile id="1702" texture="1" x="1600" y="0" />
+    <tile id="1703" texture="1" x="1664" y="0" />
+    <tile id="1704" texture="1" x="1728" y="0" opaque="true" />
+    <tile id="1705" texture="1" x="1792" y="0" opaque="true" />
+    <tile id="1706" texture="1" x="1856" y="0" opaque="true" />
+    <tile id="1707" texture="1" x="1920" y="0" opaque="true" />
+    <tile id="1708" texture="1" x="1984" y="0" opaque="true" />
+    <tile id="1709" texture="1" x="0" y="64" opaque="true" />
+    <tile id="1710" texture="1" x="64" y="64" opaque="true" />
+    <tile id="1711" texture="1" x="128" y="64" opaque="true" />
+    <tile id="1712" texture="1" x="192" y="64" opaque="true" />
+    <tile id="1713" texture="1" x="256" y="64" opaque="true" />
+    <tile id="1714" texture="1" x="320" y="64" opaque="true" />
+    <tile id="1715" texture="1" x="384" y="64" opaque="true" />
+    <tile id="1716" texture="1" x="448" y="64" opaque="true" />
+    <tile id="1717" texture="1" x="512" y="64" opaque="true" />
+    <tile id="1718" texture="1" x="576" y="64" opaque="true" />
+    <tile id="1719" texture="1" x="640" y="64" />
+    <tile id="1720" texture="1" x="704" y="64" opaque="true" />
+    <tile id="1721" texture="1" x="768" y="64" opaque="true" />
+    <tile id="1722" texture="1" x="832" y="64" />
+    <tile id="1723" texture="1" x="896" y="64" />
+    <tile id="1724" texture="1" x="960" y="64" />
+    <tile id="1725" texture="1" x="1024" y="64" />
+    <tile id="1726" texture="1" x="1088" y="64" />
+    <tile id="1727" texture="1" x="1152" y="64" />
+    <tile id="1728" texture="1" x="1216" y="64" />
+    <tile id="1729" texture="1" x="1280" y="64" />
+    <tile id="1730" texture="1" x="1344" y="64" />
+    <tile id="1731" texture="1" x="1408" y="64" />
+    <tile id="1732" texture="1" x="1472" y="64" />
+    <tile id="1733" texture="1" x="1536" y="64" opaque="true" />
+    <tile id="1734" texture="1" x="1600" y="64" />
+    <tile id="1735" texture="1" x="1664" y="64" />
+    <tile id="1736" texture="1" x="1728" y="64" />
+    <tile id="1737" texture="1" x="1792" y="64" opaque="true" />
+    <tile id="1738" texture="1" x="1856" y="64" />
+    <tile id="1739" texture="1" x="1920" y="64" />
+    <tile id="1740" texture="1" x="1984" y="64" />
+    <tile id="1741" texture="1" x="0" y="128" />
+    <tile id="1742" texture="1" x="64" y="128" opaque="true" />
+    <tile id="1743" texture="1" x="128" y="128" />
+    <tile id="1744" texture="1" x="192" y="128" />
+    <tile id="1745" texture="1" x="256" y="128" />
+    <tile id="1746" texture="1" x="320" y="128" />
+    <tile id="1747" texture="1" x="384" y="128" opaque="true" />
+    <tile id="1748" texture="1" x="448" y="128" />
+    <tile id="1749" texture="1" x="512" y="128" />
+    <tile id="1750" texture="1" x="576" y="128" />
+    <tile id="1751" texture="1" x="640" y="128" opaque="true" />
+    <tile id="1752" texture="1" x="704" y="128" />
+    <tile id="1753" texture="1" x="768" y="128" />
+    <tile id="1754" texture="1" x="832" y="128" />
+    <tile id="1755" texture="1" x="896" y="128" opaque="true" />
+    <tile id="1756" texture="1" x="960" y="128" />
+    <tile id="1757" texture="1" x="1024" y="128" />
+    <tile id="1758" texture="1" x="1088" y="128" />
+    <tile id="1759" texture="1" x="1152" y="128" />
+    <tile id="1760" texture="1" x="1216" y="128" />
+    <tile id="1761" texture="1" x="1280" y="128" />
+    <tile id="1762" texture="1" x="1344" y="128" />
+    <tile id="1763" texture="1" x="1408" y="128" />
+    <tile id="1764" texture="1" x="1472" y="128" />
+    <tile id="1765" texture="1" x="1536" y="128" />
+    <tile id="1766" texture="1" x="1600" y="128" />
+    <tile id="1767" texture="1" x="1664" y="128" />
+    <tile id="1768" texture="1" x="1728" y="128" />
+    <tile id="1769" texture="1" x="1792" y="128" />
+    <tile id="1770" texture="1" x="1856" y="128" />
+    <tile id="1771" texture="1" x="1920" y="128" />
+    <tile id="1772" texture="1" x="1984" y="128" />
+    <tile id="1773" texture="1" x="0" y="192" />
+    <tile id="1774" texture="1" x="64" y="192" />
+    <tile id="1775" texture="1" x="128" y="192" />
+    <tile id="1776" texture="1" x="192" y="192" />
+    <tile id="1777" texture="1" x="256" y="192" opaque="true" />
+    <tile id="1778" texture="1" x="320" y="192" />
+    <tile id="1779" texture="1" x="384" y="192" />
+    <tile id="1780" texture="1" x="448" y="192" />
+    <tile id="1781" texture="1" x="512" y="192" />
+    <tile id="1782" texture="1" x="576" y="192" opaque="true" />
+    <tile id="1783" texture="1" x="640" y="192" />
+    <tile id="1784" texture="1" x="704" y="192" />
+    <tile id="1785" texture="1" x="768" y="192" />
+    <tile id="1786" texture="1" x="832" y="192" />
+    <tile id="1787" texture="1" x="896" y="192" opaque="true" />
+    <tile id="1788" texture="1" x="960" y="192" />
+    <tile id="1789" texture="1" x="1024" y="192" />
+    <tile id="1790" texture="1" x="1088" y="192" />
+    <tile id="1791" texture="1" x="1152" y="192" />
+    <tile id="1792" texture="1" x="1216" y="192" opaque="true" />
+    <tile id="1793" texture="1" x="1280" y="192" />
+    <tile id="1794" texture="1" x="1344" y="192" />
+    <tile id="1795" texture="1" x="1408" y="192" />
+    <tile id="1796" texture="1" x="1472" y="192" />
+    <tile id="1797" texture="1" x="1536" y="192" />
+    <tile id="1798" texture="1" x="1600" y="192" />
+    <tile id="1799" texture="1" x="1664" y="192" />
+    <tile id="1800" texture="1" x="1728" y="192" />
+    <tile id="1801" texture="1" x="1792" y="192" />
+    <tile id="1802" texture="1" x="1856" y="192" />
+    <tile id="1803" texture="1" x="1920" y="192" />
+    <tile id="1804" texture="1" x="1984" y="192" />
+    <tile id="1805" texture="1" x="0" y="256" opaque="true" />
+    <tile id="1806" texture="1" x="64" y="256" />
+    <tile id="1807" texture="1" x="128" y="256" />
+    <tile id="1808" texture="1" x="192" y="256" opaque="true" />
+    <tile id="1809" texture="1" x="256" y="256" opaque="true" />
+    <tile id="1810" texture="1" x="320" y="256" />
+    <tile id="1811" texture="1" x="384" y="256" />
+    <tile id="1812" texture="1" x="448" y="256" opaque="true" />
+    <tile id="1813" texture="1" x="512" y="256" />
+    <tile id="1814" texture="1" x="576" y="256" opaque="true" />
+    <tile id="1815" texture="1" x="640" y="256" opaque="true" />
+    <tile id="1816" texture="1" x="704" y="256" opaque="true" />
+    <tile id="1817" texture="1" x="768" y="256" opaque="true" />
+    <tile id="1818" texture="1" x="832" y="256" opaque="true" />
+    <tile id="1821" texture="1" x="896" y="256" opaque="true" />
+    <tile id="1822" texture="1" x="960" y="256" opaque="true" />
+    <tile id="1823" texture="1" x="1024" y="256" opaque="true" />
+    <tile id="1824" texture="1" x="1088" y="256" opaque="true" />
+    <tile id="1825" texture="1" x="1152" y="256" opaque="true" />
+    <tile id="1826" texture="1" x="1216" y="256" opaque="true" />
+    <tile id="1827" texture="1" x="1280" y="256" opaque="true" />
+    <tile id="1828" texture="1" x="1344" y="256" opaque="true" />
+    <tile id="1829" texture="1" x="1408" y="256" opaque="true" />
+    <tile id="1830" texture="1" x="1472" y="256" opaque="true" />
+    <tile id="1831" texture="1" x="1536" y="256" opaque="true" />
+    <tile id="1832" texture="1" x="1600" y="256" opaque="true" />
+    <tile id="1843" texture="1" x="1664" y="256" opaque="true" />
+    <tile id="1844" texture="1" x="1728" y="256" opaque="true" />
+    <tile id="1850" texture="1" x="1792" y="256" opaque="true" />
+    <tile id="1851" texture="1" x="1856" y="256" />
+    <tile id="1852" texture="1" x="1920" y="256" />
+    <tile id="1853" texture="1" x="1984" y="256" />
+    <tile id="1854" texture="1" x="0" y="320" />
+    <tile id="1855" texture="1" x="64" y="320" />
+    <tile id="1856" texture="1" x="128" y="320" />
+    <tile id="1857" texture="1" x="192" y="320" />
+    <tile id="1858" texture="1" x="256" y="320" />
+    <tile id="1859" texture="1" x="320" y="320" opaque="true" />
+    <tile id="1860" texture="1" x="384" y="320" opaque="true" />
+    <tile id="1861" texture="1" x="448" y="320" opaque="true" />
+    <tile id="1862" texture="1" x="512" y="320" opaque="true" />
+    <tile id="1863" texture="1" x="576" y="320" opaque="true" />
+    <tile id="1864" texture="1" x="640" y="320" opaque="true" />
+    <tile id="1865" texture="1" x="704" y="320" opaque="true" />
+    <tile id="1866" texture="1" x="768" y="320" opaque="true" />
+    <tile id="1867" texture="1" x="832" y="320" opaque="true" />
+    <tile id="1868" texture="1" x="896" y="320" />
+    <tile id="1869" texture="1" x="960" y="320" />
+    <tile id="1870" texture="1" x="1024" y="320" />
+    <tile id="1871" texture="1" x="1088" y="320" />
+    <tile id="1872" texture="1" x="1152" y="320" />
+    <tile id="1873" texture="1" x="1216" y="320" />
+    <tile id="1874" texture="1" x="1280" y="320" opaque="true" />
+    <tile id="1876" texture="1" x="1344" y="320" opaque="true" />
+    <tile id="1877" texture="1" x="1408" y="320" />
+    <tile id="1878" texture="1" x="1472" y="320" />
+    <tile id="1879" texture="1" x="1536" y="320" />
+    <tile id="1880" texture="1" x="1600" y="320" />
+    <tile id="1881" texture="1" x="1664" y="320" />
+    <tile id="1882" texture="1" x="1728" y="320" />
+    <tile id="1883" texture="1" x="1792" y="320" />
+    <tile id="1884" texture="1" x="1856" y="320" />
+    <tile id="1885" texture="1" x="1920" y="320" />
+    <tile id="1886" texture="1" x="1984" y="320" />
+    <tile id="1887" texture="1" x="0" y="384" />
+    <tile id="1888" texture="1" x="64" y="384" />
+    <tile id="1889" texture="1" x="128" y="384" />
+    <tile id="1890" texture="1" x="192" y="384" opaque="true" />
+    <tile id="1891" texture="1" x="256" y="384" opaque="true" />
+    <tile id="1892" texture="1" x="320" y="384" />
+    <tile id="1893" texture="1" x="384" y="384" opaque="true" />
+    <tile id="1894" texture="1" x="448" y="384" opaque="true" />
+    <tile id="1895" texture="1" x="512" y="384" opaque="true" />
+    <tile id="1896" texture="1" x="576" y="384" opaque="true" />
+    <tile id="1897" texture="1" x="640" y="384" opaque="true" />
+    <tile id="1898" texture="1" x="704" y="384" opaque="true" />
+    <tile id="1899" texture="1" x="768" y="384" opaque="true" />
+    <tile id="1900" texture="1" x="832" y="384" opaque="true" />
+    <tile id="1901" texture="1" x="896" y="384" opaque="true" />
+    <tile id="1902" texture="1" x="960" y="384" opaque="true" />
+    <tile id="1903" texture="1" x="1024" y="384" />
+    <tile id="1904" texture="1" x="1088" y="384" />
+    <tile id="1905" texture="1" x="1152" y="384" opaque="true" />
+    <tile id="1906" texture="1" x="1216" y="384" />
+    <tile id="1907" texture="1" x="1280" y="384" />
+    <tile id="1908" texture="1" x="1344" y="384" opaque="true" />
+    <tile id="1909" texture="1" x="1408" y="384" opaque="true" />
+    <tile id="1657">
+      <frame texture="1" x="1472" y="384" delay="1" />
+      <frame texture="1" x="1536" y="384" delay="1" />
+      <frame texture="1" x="1600" y="384" delay="1" />
+      <frame texture="1" x="1664" y="384" delay="1" />
+      <frame texture="1" x="1728" y="384" delay="1" />
+      <frame texture="1" x="1792" y="384" delay="1" />
+    </tile>
+    <tile id="1652" delay="2">
+      <frame texture="1" x="1856" y="384" />
+      <frame texture="1" x="1920" y="384" delay="1" />
+      <frame texture="1" x="1984" y="384" />
+      <frame texture="1" x="0" y="448" delay="3" />
+      <frame texture="1" x="64" y="448" />
+      <frame texture="1" x="128" y="448" delay="1" />
+      <frame texture="1" x="1856" y="384" />
+      <frame texture="1" x="1920" y="384" delay="1" />
+      <frame texture="1" x="1984" y="384" />
+      <frame texture="1" x="0" y="448" delay="3" />
+      <frame texture="1" x="64" y="448" />
+      <frame texture="1" x="128" y="448" delay="1" />
+      <frame texture="1" x="1856" y="384" delay="100" />
+    </tile>
+    <tile id="1653" delay="2">
+      <frame texture="1" x="192" y="448" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" delay="3" />
+      <frame texture="1" x="448" y="448" delay="3" />
+      <frame texture="1" x="512" y="448" delay="3" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" />
+      <frame texture="1" x="448" y="448" />
+      <frame texture="1" x="512" y="448" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" delay="1" />
+      <frame texture="1" x="320" y="448" delay="1" />
+      <frame texture="1" x="384" y="448" delay="1" />
+      <frame texture="1" x="448" y="448" delay="1" />
+      <frame texture="1" x="512" y="448" delay="1" />
+      <frame texture="1" x="192" y="448" delay="100" />
+      <frame texture="1" x="192" y="448" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" delay="3" />
+      <frame texture="1" x="448" y="448" delay="3" />
+      <frame texture="1" x="512" y="448" delay="3" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" />
+      <frame texture="1" x="448" y="448" />
+      <frame texture="1" x="512" y="448" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" delay="1" />
+      <frame texture="1" x="320" y="448" delay="1" />
+      <frame texture="1" x="384" y="448" delay="1" />
+      <frame texture="1" x="448" y="448" delay="1" />
+      <frame texture="1" x="512" y="448" delay="1" />
+      <frame texture="1" x="192" y="448" delay="100" />
+      <frame texture="1" x="192" y="448" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" delay="3" />
+      <frame texture="1" x="448" y="448" delay="3" />
+      <frame texture="1" x="512" y="448" delay="3" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" />
+      <frame texture="1" x="320" y="448" />
+      <frame texture="1" x="384" y="448" />
+      <frame texture="1" x="448" y="448" />
+      <frame texture="1" x="512" y="448" />
+      <frame texture="1" x="192" y="448" delay="1" />
+      <frame texture="1" x="256" y="448" delay="1" />
+      <frame texture="1" x="320" y="448" delay="1" />
+      <frame texture="1" x="384" y="448" delay="1" />
+      <frame texture="1" x="448" y="448" delay="1" />
+      <frame texture="1" x="512" y="448" delay="1" />
+      <frame texture="1" x="192" y="448" delay="100" />
+      <frame texture="1" x="576" y="448" />
+      <frame texture="1" x="640" y="448" />
+      <frame texture="1" x="704" y="448" />
+      <frame texture="1" x="768" y="448" />
+      <frame texture="1" x="832" y="448" />
+      <frame texture="1" x="896" y="448" />
+      <frame texture="1" x="960" y="448" />
+    </tile>
+    <tile id="1654" delay="3">
+      <frame texture="1" x="1024" y="448" />
+      <frame texture="1" x="1088" y="448" />
+      <frame texture="1" x="1152" y="448" delay="2" />
+      <frame texture="1" x="1216" y="448" delay="2" />
+      <frame texture="1" x="1280" y="448" delay="2" />
+      <frame texture="1" x="1344" y="448" delay="2" />
+      <frame texture="1" x="1408" y="448" />
+      <frame texture="1" x="1472" y="448" />
+    </tile>
+    <tile id="1875" delay="2">
+      <frame texture="1" x="1536" y="448" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" delay="3" />
+      <frame texture="1" x="1792" y="448" delay="3" />
+      <frame texture="1" x="1856" y="448" delay="3" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" />
+      <frame texture="1" x="1792" y="448" />
+      <frame texture="1" x="1856" y="448" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" delay="1" />
+      <frame texture="1" x="1664" y="448" delay="1" />
+      <frame texture="1" x="1728" y="448" delay="1" />
+      <frame texture="1" x="1792" y="448" delay="1" />
+      <frame texture="1" x="1856" y="448" delay="1" />
+      <frame texture="1" x="1536" y="448" delay="100" />
+      <frame texture="1" x="1536" y="448" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" delay="3" />
+      <frame texture="1" x="1792" y="448" delay="3" />
+      <frame texture="1" x="1856" y="448" delay="3" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" />
+      <frame texture="1" x="1792" y="448" />
+      <frame texture="1" x="1856" y="448" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" delay="1" />
+      <frame texture="1" x="1664" y="448" delay="1" />
+      <frame texture="1" x="1728" y="448" delay="1" />
+      <frame texture="1" x="1792" y="448" delay="1" />
+      <frame texture="1" x="1856" y="448" delay="1" />
+      <frame texture="1" x="1536" y="448" delay="100" />
+      <frame texture="1" x="1536" y="448" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" delay="3" />
+      <frame texture="1" x="1792" y="448" delay="3" />
+      <frame texture="1" x="1856" y="448" delay="3" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" />
+      <frame texture="1" x="1664" y="448" />
+      <frame texture="1" x="1728" y="448" />
+      <frame texture="1" x="1792" y="448" />
+      <frame texture="1" x="1856" y="448" />
+      <frame texture="1" x="1536" y="448" delay="1" />
+      <frame texture="1" x="1600" y="448" delay="1" />
+      <frame texture="1" x="1664" y="448" delay="1" />
+      <frame texture="1" x="1728" y="448" delay="1" />
+      <frame texture="1" x="1792" y="448" delay="1" />
+      <frame texture="1" x="1856" y="448" delay="1" />
+      <frame texture="1" x="1536" y="448" delay="100" />
+      <frame texture="1" x="1920" y="448" />
+      <frame texture="1" x="1984" y="448" />
+      <frame texture="1" x="0" y="512" />
+      <frame texture="1" x="64" y="512" />
+      <frame texture="1" x="128" y="512" />
+      <frame texture="1" x="192" y="512" />
+      <frame texture="1" x="256" y="512" />
+    </tile>
+    <tile id="1659" delay="2">
+      <frame texture="1" x="320" y="512" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" delay="3" />
+      <frame texture="1" x="576" y="512" delay="3" />
+      <frame texture="1" x="640" y="512" delay="3" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" />
+      <frame texture="1" x="576" y="512" />
+      <frame texture="1" x="640" y="512" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" delay="1" />
+      <frame texture="1" x="448" y="512" delay="1" />
+      <frame texture="1" x="512" y="512" delay="1" />
+      <frame texture="1" x="576" y="512" delay="1" />
+      <frame texture="1" x="640" y="512" delay="1" />
+      <frame texture="1" x="320" y="512" delay="100" />
+      <frame texture="1" x="320" y="512" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" delay="3" />
+      <frame texture="1" x="576" y="512" delay="3" />
+      <frame texture="1" x="640" y="512" delay="3" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" />
+      <frame texture="1" x="576" y="512" />
+      <frame texture="1" x="640" y="512" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" delay="1" />
+      <frame texture="1" x="448" y="512" delay="1" />
+      <frame texture="1" x="512" y="512" delay="1" />
+      <frame texture="1" x="576" y="512" delay="1" />
+      <frame texture="1" x="640" y="512" delay="1" />
+      <frame texture="1" x="320" y="512" delay="100" />
+      <frame texture="1" x="320" y="512" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" delay="3" />
+      <frame texture="1" x="576" y="512" delay="3" />
+      <frame texture="1" x="640" y="512" delay="3" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" />
+      <frame texture="1" x="448" y="512" />
+      <frame texture="1" x="512" y="512" />
+      <frame texture="1" x="576" y="512" />
+      <frame texture="1" x="640" y="512" />
+      <frame texture="1" x="320" y="512" delay="1" />
+      <frame texture="1" x="384" y="512" delay="1" />
+      <frame texture="1" x="448" y="512" delay="1" />
+      <frame texture="1" x="512" y="512" delay="1" />
+      <frame texture="1" x="576" y="512" delay="1" />
+      <frame texture="1" x="640" y="512" delay="1" />
+      <frame texture="1" x="320" y="512" delay="100" />
+      <frame texture="1" x="704" y="512" />
+      <frame texture="1" x="768" y="512" />
+      <frame texture="1" x="832" y="512" />
+      <frame texture="1" x="896" y="512" />
+      <frame texture="1" x="960" y="512" />
+      <frame texture="1" x="1024" y="512" />
+      <frame texture="1" x="1088" y="512" />
+    </tile>
+    <tile id="1637">
+      <frame texture="1" x="1152" y="512" delay="1" />
+      <frame texture="1" x="1216" y="512" delay="1" />
+      <frame texture="1" x="1280" y="512" delay="1" />
+      <frame texture="1" x="1344" y="512" delay="1" />
+      <frame texture="1" x="1408" y="512" delay="1" />
+      <frame texture="1" x="1472" y="512" delay="1" />
+    </tile>
+    <tile id="1563" delay="4" opaque="true">
+      <frame texture="1" x="1536" y="512" delay="24" />
+      <frame texture="1" x="1600" y="512" delay="3" />
+      <frame texture="1" x="1664" y="512" delay="3" />
+      <frame texture="1" x="1728" y="512" />
+      <frame texture="1" x="1792" y="512" />
+      <frame texture="1" x="1856" y="512" />
+      <frame texture="1" x="1920" y="512" delay="5" />
+      <frame texture="1" x="1984" y="512" delay="12" />
+      <frame texture="1" x="1920" y="512" delay="5" />
+      <frame texture="1" x="1856" y="512" />
+      <frame texture="1" x="1792" y="512" />
+      <frame texture="1" x="1728" y="512" />
+      <frame texture="1" x="1664" y="512" delay="3" />
+      <frame texture="1" x="1600" y="512" delay="3" />
+    </tile>
+    <tile id="1551" delay="4" opaque="true">
+      <frame texture="1" x="0" y="576" delay="24" />
+      <frame texture="1" x="64" y="576" delay="3" />
+      <frame texture="1" x="128" y="576" delay="3" />
+      <frame texture="1" x="192" y="576" />
+      <frame texture="1" x="256" y="576" />
+      <frame texture="1" x="320" y="576" />
+      <frame texture="1" x="384" y="576" delay="5" />
+      <frame texture="1" x="448" y="576" delay="12" />
+      <frame texture="1" x="384" y="576" delay="5" />
+      <frame texture="1" x="320" y="576" />
+      <frame texture="1" x="256" y="576" />
+      <frame texture="1" x="192" y="576" />
+      <frame texture="1" x="128" y="576" delay="3" />
+      <frame texture="1" x="64" y="576" delay="3" />
+    </tile>
+    <tile id="1555" delay="4" opaque="true">
+      <frame texture="1" x="512" y="576" delay="24" />
+      <frame texture="1" x="576" y="576" delay="3" />
+      <frame texture="1" x="640" y="576" delay="3" />
+      <frame texture="1" x="704" y="576" />
+      <frame texture="1" x="768" y="576" />
+      <frame texture="1" x="832" y="576" />
+      <frame texture="1" x="896" y="576" delay="5" />
+      <frame texture="1" x="960" y="576" delay="12" />
+      <frame texture="1" x="896" y="576" delay="5" />
+      <frame texture="1" x="832" y="576" />
+      <frame texture="1" x="768" y="576" />
+      <frame texture="1" x="704" y="576" />
+      <frame texture="1" x="640" y="576" delay="3" />
+      <frame texture="1" x="576" y="576" delay="3" />
+    </tile>
+    <tile id="1602" delay="2">
+      <frame texture="1" x="1024" y="576" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" delay="3" />
+      <frame texture="1" x="1280" y="576" delay="3" />
+      <frame texture="1" x="1344" y="576" delay="3" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" />
+      <frame texture="1" x="1280" y="576" />
+      <frame texture="1" x="1344" y="576" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" delay="1" />
+      <frame texture="1" x="1152" y="576" delay="1" />
+      <frame texture="1" x="1216" y="576" delay="1" />
+      <frame texture="1" x="1280" y="576" delay="1" />
+      <frame texture="1" x="1344" y="576" delay="1" />
+      <frame texture="1" x="1024" y="576" delay="100" />
+      <frame texture="1" x="1024" y="576" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" delay="3" />
+      <frame texture="1" x="1280" y="576" delay="3" />
+      <frame texture="1" x="1344" y="576" delay="3" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" />
+      <frame texture="1" x="1280" y="576" />
+      <frame texture="1" x="1344" y="576" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" delay="1" />
+      <frame texture="1" x="1152" y="576" delay="1" />
+      <frame texture="1" x="1216" y="576" delay="1" />
+      <frame texture="1" x="1280" y="576" delay="1" />
+      <frame texture="1" x="1344" y="576" delay="1" />
+      <frame texture="1" x="1024" y="576" delay="100" />
+      <frame texture="1" x="1024" y="576" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" delay="3" />
+      <frame texture="1" x="1280" y="576" delay="3" />
+      <frame texture="1" x="1344" y="576" delay="3" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" />
+      <frame texture="1" x="1152" y="576" />
+      <frame texture="1" x="1216" y="576" />
+      <frame texture="1" x="1280" y="576" />
+      <frame texture="1" x="1344" y="576" />
+      <frame texture="1" x="1024" y="576" delay="1" />
+      <frame texture="1" x="1088" y="576" delay="1" />
+      <frame texture="1" x="1152" y="576" delay="1" />
+      <frame texture="1" x="1216" y="576" delay="1" />
+      <frame texture="1" x="1280" y="576" delay="1" />
+      <frame texture="1" x="1344" y="576" delay="1" />
+      <frame texture="1" x="1024" y="576" delay="121" />
+    </tile>
+    <tile id="1636">
+      <frame texture="1" x="1408" y="576" delay="1" />
+      <frame texture="1" x="1472" y="576" delay="1" />
+      <frame texture="1" x="1536" y="576" delay="1" />
+      <frame texture="1" x="1600" y="576" delay="1" />
+      <frame texture="1" x="1664" y="576" delay="1" />
+      <frame texture="1" x="1728" y="576" delay="1" />
+    </tile>
+    <tile id="1658" delay="3">
+      <frame texture="1" x="1792" y="576" delay="24" />
+      <frame texture="1" x="1856" y="576" />
+      <frame texture="1" x="1920" y="576" />
+      <frame texture="1" x="1984" y="576" delay="4" />
+      <frame texture="1" x="0" y="640" delay="5" />
+      <frame texture="1" x="1984" y="576" delay="4" />
+      <frame texture="1" x="1920" y="576" />
+      <frame texture="1" x="1856" y="576" />
+    </tile>
+    <tile id="1603" delay="2">
+      <frame texture="1" x="64" y="640" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" delay="3" />
+      <frame texture="1" x="320" y="640" delay="3" />
+      <frame texture="1" x="384" y="640" delay="3" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" />
+      <frame texture="1" x="320" y="640" />
+      <frame texture="1" x="384" y="640" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" delay="1" />
+      <frame texture="1" x="192" y="640" delay="1" />
+      <frame texture="1" x="256" y="640" delay="1" />
+      <frame texture="1" x="320" y="640" delay="1" />
+      <frame texture="1" x="384" y="640" delay="1" />
+      <frame texture="1" x="64" y="640" delay="100" />
+      <frame texture="1" x="64" y="640" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" delay="3" />
+      <frame texture="1" x="320" y="640" delay="3" />
+      <frame texture="1" x="384" y="640" delay="3" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" />
+      <frame texture="1" x="320" y="640" />
+      <frame texture="1" x="384" y="640" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" delay="1" />
+      <frame texture="1" x="192" y="640" delay="1" />
+      <frame texture="1" x="256" y="640" delay="1" />
+      <frame texture="1" x="320" y="640" delay="1" />
+      <frame texture="1" x="384" y="640" delay="1" />
+      <frame texture="1" x="64" y="640" delay="100" />
+      <frame texture="1" x="64" y="640" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" delay="3" />
+      <frame texture="1" x="320" y="640" delay="3" />
+      <frame texture="1" x="384" y="640" delay="3" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" />
+      <frame texture="1" x="192" y="640" />
+      <frame texture="1" x="256" y="640" />
+      <frame texture="1" x="320" y="640" />
+      <frame texture="1" x="384" y="640" />
+      <frame texture="1" x="64" y="640" delay="1" />
+      <frame texture="1" x="128" y="640" delay="1" />
+      <frame texture="1" x="192" y="640" delay="1" />
+      <frame texture="1" x="256" y="640" delay="1" />
+      <frame texture="1" x="320" y="640" delay="1" />
+      <frame texture="1" x="384" y="640" delay="1" />
+      <frame texture="1" x="64" y="640" delay="100" />
+      <frame texture="1" x="448" y="640" />
+      <frame texture="1" x="512" y="640" />
+      <frame texture="1" x="576" y="640" />
+      <frame texture="1" x="640" y="640" />
+      <frame texture="1" x="704" y="640" />
+      <frame texture="1" x="768" y="640" />
+      <frame texture="1" x="832" y="640" />
+    </tile>
+    <tile id="1505" delay="2" opaque="true">
+      <frame texture="1" x="896" y="640" />
+      <frame texture="1" x="960" y="640" />
+      <frame texture="1" x="1024" y="640" />
+      <frame texture="1" x="1088" y="640" />
+      <frame texture="1" x="1152" y="640" />
+      <frame texture="1" x="1216" y="640" />
+      <frame texture="1" x="1280" y="640" />
+      <frame texture="1" x="1344" y="640" />
+    </tile>
+    <tile id="1510" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="640" />
+      <frame texture="1" x="1472" y="640" />
+      <frame texture="1" x="1536" y="640" />
+      <frame texture="1" x="1600" y="640" />
+      <frame texture="1" x="1664" y="640" />
+      <frame texture="1" x="1728" y="640" />
+      <frame texture="1" x="1792" y="640" />
+      <frame texture="1" x="1856" y="640" />
+    </tile>
+    <tile id="1502" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="640" />
+      <frame texture="1" x="1984" y="640" />
+      <frame texture="1" x="0" y="704" />
+      <frame texture="1" x="64" y="704" />
+      <frame texture="1" x="128" y="704" />
+      <frame texture="1" x="192" y="704" />
+      <frame texture="1" x="256" y="704" />
+      <frame texture="1" x="320" y="704" />
+    </tile>
+    <tile id="1511" delay="2" opaque="true">
+      <frame texture="1" x="384" y="704" />
+      <frame texture="1" x="448" y="704" />
+      <frame texture="1" x="512" y="704" />
+      <frame texture="1" x="576" y="704" />
+      <frame texture="1" x="640" y="704" />
+      <frame texture="1" x="704" y="704" />
+      <frame texture="1" x="768" y="704" />
+      <frame texture="1" x="832" y="704" />
+    </tile>
+    <tile id="1503" delay="2" opaque="true">
+      <frame texture="1" x="896" y="704" />
+      <frame texture="1" x="960" y="704" />
+      <frame texture="1" x="1024" y="704" />
+      <frame texture="1" x="1088" y="704" />
+      <frame texture="1" x="1152" y="704" />
+      <frame texture="1" x="1216" y="704" />
+      <frame texture="1" x="1280" y="704" />
+      <frame texture="1" x="1344" y="704" />
+    </tile>
+    <tile id="1508" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="704" />
+      <frame texture="1" x="1472" y="704" />
+      <frame texture="1" x="1536" y="704" />
+      <frame texture="1" x="1600" y="704" />
+      <frame texture="1" x="1664" y="704" />
+      <frame texture="1" x="1728" y="704" />
+      <frame texture="1" x="1792" y="704" />
+      <frame texture="1" x="1856" y="704" />
+    </tile>
+    <tile id="1504" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="704" />
+      <frame texture="1" x="1984" y="704" />
+      <frame texture="1" x="0" y="768" />
+      <frame texture="1" x="64" y="768" />
+      <frame texture="1" x="128" y="768" />
+      <frame texture="1" x="192" y="768" />
+      <frame texture="1" x="256" y="768" />
+      <frame texture="1" x="320" y="768" />
+    </tile>
+    <tile id="1509" delay="2" opaque="true">
+      <frame texture="1" x="384" y="768" />
+      <frame texture="1" x="448" y="768" />
+      <frame texture="1" x="512" y="768" />
+      <frame texture="1" x="576" y="768" />
+      <frame texture="1" x="640" y="768" />
+      <frame texture="1" x="704" y="768" />
+      <frame texture="1" x="768" y="768" />
+      <frame texture="1" x="832" y="768" />
+    </tile>
+    <tile id="1501" delay="2" opaque="true">
+      <frame texture="1" x="896" y="768" />
+      <frame texture="1" x="960" y="768" />
+      <frame texture="1" x="1024" y="768" />
+      <frame texture="1" x="1088" y="768" />
+      <frame texture="1" x="1152" y="768" />
+      <frame texture="1" x="1216" y="768" />
+      <frame texture="1" x="1280" y="768" />
+      <frame texture="1" x="1344" y="768" />
+    </tile>
+    <tile id="1512" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="768" />
+      <frame texture="1" x="1472" y="768" />
+      <frame texture="1" x="1536" y="768" />
+      <frame texture="1" x="1600" y="768" />
+      <frame texture="1" x="1664" y="768" />
+      <frame texture="1" x="1728" y="768" />
+      <frame texture="1" x="1792" y="768" />
+      <frame texture="1" x="1856" y="768" />
+    </tile>
+    <tile id="1834" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="768" />
+      <frame texture="1" x="1984" y="768" />
+      <frame texture="1" x="0" y="832" />
+      <frame texture="1" x="64" y="832" />
+      <frame texture="1" x="128" y="832" />
+      <frame texture="1" x="192" y="832" />
+      <frame texture="1" x="256" y="832" />
+      <frame texture="1" x="320" y="832" />
+    </tile>
+    <tile id="1837" delay="2" opaque="true">
+      <frame texture="1" x="384" y="832" />
+      <frame texture="1" x="448" y="832" />
+      <frame texture="1" x="512" y="832" />
+      <frame texture="1" x="576" y="832" />
+      <frame texture="1" x="640" y="832" />
+      <frame texture="1" x="704" y="832" />
+      <frame texture="1" x="768" y="832" />
+      <frame texture="1" x="832" y="832" />
+    </tile>
+    <tile id="1835" delay="2" opaque="true">
+      <frame texture="1" x="896" y="832" />
+      <frame texture="1" x="960" y="832" />
+      <frame texture="1" x="1024" y="832" />
+      <frame texture="1" x="1088" y="832" />
+      <frame texture="1" x="1152" y="832" />
+      <frame texture="1" x="1216" y="832" />
+      <frame texture="1" x="1280" y="832" />
+      <frame texture="1" x="1344" y="832" />
+    </tile>
+    <tile id="1838" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="832" />
+      <frame texture="1" x="1472" y="832" />
+      <frame texture="1" x="1536" y="832" />
+      <frame texture="1" x="1600" y="832" />
+      <frame texture="1" x="1664" y="832" />
+      <frame texture="1" x="1728" y="832" />
+      <frame texture="1" x="1792" y="832" />
+      <frame texture="1" x="1856" y="832" />
+    </tile>
+    <tile id="1839" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="832" />
+      <frame texture="1" x="1984" y="832" />
+      <frame texture="1" x="0" y="896" />
+      <frame texture="1" x="64" y="896" />
+      <frame texture="1" x="128" y="896" />
+      <frame texture="1" x="192" y="896" />
+      <frame texture="1" x="256" y="896" />
+      <frame texture="1" x="320" y="896" />
+    </tile>
+    <tile id="1841" delay="2" opaque="true">
+      <frame texture="1" x="384" y="896" />
+      <frame texture="1" x="448" y="896" />
+      <frame texture="1" x="512" y="896" />
+      <frame texture="1" x="576" y="896" />
+      <frame texture="1" x="640" y="896" />
+      <frame texture="1" x="704" y="896" />
+      <frame texture="1" x="768" y="896" />
+      <frame texture="1" x="832" y="896" />
+    </tile>
+    <tile id="1840" delay="2" opaque="true">
+      <frame texture="1" x="896" y="896" />
+      <frame texture="1" x="960" y="896" />
+      <frame texture="1" x="1024" y="896" />
+      <frame texture="1" x="1088" y="896" />
+      <frame texture="1" x="1152" y="896" />
+      <frame texture="1" x="1216" y="896" />
+      <frame texture="1" x="1280" y="896" />
+      <frame texture="1" x="1344" y="896" />
+    </tile>
+    <tile id="1842" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="896" />
+      <frame texture="1" x="1472" y="896" />
+      <frame texture="1" x="1536" y="896" />
+      <frame texture="1" x="1600" y="896" />
+      <frame texture="1" x="1664" y="896" />
+      <frame texture="1" x="1728" y="896" />
+      <frame texture="1" x="1792" y="896" />
+      <frame texture="1" x="1856" y="896" />
+    </tile>
+    <tile id="1845" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="896" />
+      <frame texture="1" x="1984" y="896" />
+      <frame texture="1" x="0" y="960" />
+      <frame texture="1" x="64" y="960" />
+      <frame texture="1" x="128" y="960" />
+      <frame texture="1" x="192" y="960" />
+      <frame texture="1" x="256" y="960" />
+      <frame texture="1" x="320" y="960" />
+    </tile>
+    <tile id="1847" delay="2" opaque="true">
+      <frame texture="1" x="384" y="960" />
+      <frame texture="1" x="448" y="960" />
+      <frame texture="1" x="512" y="960" />
+      <frame texture="1" x="576" y="960" />
+      <frame texture="1" x="640" y="960" />
+      <frame texture="1" x="704" y="960" />
+      <frame texture="1" x="768" y="960" />
+      <frame texture="1" x="832" y="960" />
+    </tile>
+    <tile id="1846" delay="2" opaque="true">
+      <frame texture="1" x="896" y="960" />
+      <frame texture="1" x="960" y="960" />
+      <frame texture="1" x="1024" y="960" />
+      <frame texture="1" x="1088" y="960" />
+      <frame texture="1" x="1152" y="960" />
+      <frame texture="1" x="1216" y="960" />
+      <frame texture="1" x="1280" y="960" />
+      <frame texture="1" x="1344" y="960" />
+    </tile>
+    <tile id="1848" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="960" />
+      <frame texture="1" x="1472" y="960" />
+      <frame texture="1" x="1536" y="960" />
+      <frame texture="1" x="1600" y="960" />
+      <frame texture="1" x="1664" y="960" />
+      <frame texture="1" x="1728" y="960" />
+      <frame texture="1" x="1792" y="960" />
+      <frame texture="1" x="1856" y="960" />
+    </tile>
+    <tile id="1849" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="960" />
+      <frame texture="1" x="1984" y="960" />
+      <frame texture="1" x="0" y="1024" />
+      <frame texture="1" x="64" y="1024" />
+      <frame texture="1" x="128" y="1024" />
+      <frame texture="1" x="192" y="1024" />
+      <frame texture="1" x="256" y="1024" />
+      <frame texture="1" x="320" y="1024" />
+    </tile>
+    <tile id="1507" delay="2" opaque="true">
+      <frame texture="1" x="384" y="1024" />
+      <frame texture="1" x="448" y="1024" />
+      <frame texture="1" x="512" y="1024" />
+      <frame texture="1" x="576" y="1024" />
+      <frame texture="1" x="640" y="1024" />
+      <frame texture="1" x="704" y="1024" />
+      <frame texture="1" x="768" y="1024" />
+      <frame texture="1" x="832" y="1024" />
+    </tile>
+    <tile id="1514" delay="2" opaque="true">
+      <frame texture="1" x="896" y="1024" />
+      <frame texture="1" x="960" y="1024" />
+      <frame texture="1" x="1024" y="1024" />
+      <frame texture="1" x="1088" y="1024" />
+      <frame texture="1" x="1152" y="1024" />
+      <frame texture="1" x="1216" y="1024" />
+      <frame texture="1" x="1280" y="1024" />
+      <frame texture="1" x="1344" y="1024" />
+    </tile>
+    <tile id="1645" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="1024" />
+      <frame texture="1" x="1472" y="1024" />
+      <frame texture="1" x="1536" y="1024" />
+      <frame texture="1" x="1600" y="1024" />
+      <frame texture="1" x="1664" y="1024" />
+      <frame texture="1" x="1728" y="1024" />
+      <frame texture="1" x="1792" y="1024" />
+      <frame texture="1" x="1856" y="1024" />
+    </tile>
+    <tile id="1648" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="1024" />
+      <frame texture="1" x="1984" y="1024" />
+      <frame texture="1" x="0" y="1088" />
+      <frame texture="1" x="64" y="1088" />
+      <frame texture="1" x="128" y="1088" />
+      <frame texture="1" x="192" y="1088" />
+      <frame texture="1" x="256" y="1088" />
+      <frame texture="1" x="320" y="1088" />
+    </tile>
+    <tile id="1643" delay="2" opaque="true">
+      <frame texture="1" x="384" y="1088" />
+      <frame texture="1" x="448" y="1088" />
+      <frame texture="1" x="512" y="1088" />
+      <frame texture="1" x="576" y="1088" />
+      <frame texture="1" x="640" y="1088" />
+      <frame texture="1" x="704" y="1088" />
+      <frame texture="1" x="768" y="1088" />
+      <frame texture="1" x="832" y="1088" />
+    </tile>
+    <tile id="1646" delay="2" opaque="true">
+      <frame texture="1" x="896" y="1088" />
+      <frame texture="1" x="960" y="1088" />
+      <frame texture="1" x="1024" y="1088" />
+      <frame texture="1" x="1088" y="1088" />
+      <frame texture="1" x="1152" y="1088" />
+      <frame texture="1" x="1216" y="1088" />
+      <frame texture="1" x="1280" y="1088" />
+      <frame texture="1" x="1344" y="1088" />
+    </tile>
+    <tile id="1644" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="1088" />
+      <frame texture="1" x="1472" y="1088" />
+      <frame texture="1" x="1536" y="1088" />
+      <frame texture="1" x="1600" y="1088" />
+      <frame texture="1" x="1664" y="1088" />
+      <frame texture="1" x="1728" y="1088" />
+      <frame texture="1" x="1792" y="1088" />
+      <frame texture="1" x="1856" y="1088" />
+    </tile>
+    <tile id="1647" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="1088" />
+      <frame texture="1" x="1984" y="1088" />
+      <frame texture="1" x="0" y="1152" />
+      <frame texture="1" x="64" y="1152" />
+      <frame texture="1" x="128" y="1152" />
+      <frame texture="1" x="192" y="1152" />
+      <frame texture="1" x="256" y="1152" />
+      <frame texture="1" x="320" y="1152" />
+    </tile>
+    <tile id="1819" delay="2" opaque="true">
+      <frame texture="1" x="384" y="1152" />
+      <frame texture="1" x="448" y="1152" />
+      <frame texture="1" x="512" y="1152" />
+      <frame texture="1" x="576" y="1152" />
+      <frame texture="1" x="640" y="1152" />
+      <frame texture="1" x="704" y="1152" />
+      <frame texture="1" x="768" y="1152" />
+      <frame texture="1" x="832" y="1152" />
+    </tile>
+    <tile id="1820" delay="2" opaque="true">
+      <frame texture="1" x="896" y="1152" />
+      <frame texture="1" x="960" y="1152" />
+      <frame texture="1" x="1024" y="1152" />
+      <frame texture="1" x="1088" y="1152" />
+      <frame texture="1" x="1152" y="1152" />
+      <frame texture="1" x="1216" y="1152" />
+      <frame texture="1" x="1280" y="1152" />
+      <frame texture="1" x="1344" y="1152" />
+    </tile>
+    <tile id="1836" delay="2" opaque="true">
+      <frame texture="1" x="1408" y="1152" />
+      <frame texture="1" x="1472" y="1152" />
+      <frame texture="1" x="1536" y="1152" />
+      <frame texture="1" x="1600" y="1152" />
+      <frame texture="1" x="1664" y="1152" />
+      <frame texture="1" x="1728" y="1152" />
+      <frame texture="1" x="1792" y="1152" />
+      <frame texture="1" x="1856" y="1152" />
+    </tile>
+    <tile id="1833" delay="2" opaque="true">
+      <frame texture="1" x="1920" y="1152" />
+      <frame texture="1" x="1984" y="1152" />
+      <frame texture="1" x="0" y="1216" />
+      <frame texture="1" x="64" y="1216" />
+      <frame texture="1" x="128" y="1216" />
+      <frame texture="1" x="192" y="1216" />
+      <frame texture="1" x="256" y="1216" />
+      <frame texture="1" x="320" y="1216" />
+    </tile>
+    <tile id="1506" delay="2" opaque="true">
+      <frame texture="1" x="384" y="1216" />
+      <frame texture="1" x="448" y="1216" />
+      <frame texture="1" x="512" y="1216" />
+      <frame texture="1" x="576" y="1216" />
+      <frame texture="1" x="640" y="1216" />
+      <frame texture="1" x="704" y="1216" />
+      <frame texture="1" x="768" y="1216" />
+      <frame texture="1" x="832" y="1216" />
+    </tile>
+    <tile id="1513" delay="2" opaque="true">
+      <frame texture="1" x="896" y="1216" />
+      <frame texture="1" x="960" y="1216" />
+      <frame texture="1" x="1024" y="1216" />
+      <frame texture="1" x="1088" y="1216" />
+      <frame texture="1" x="1152" y="1216" />
+      <frame texture="1" x="1216" y="1216" />
+      <frame texture="1" x="1280" y="1216" />
+      <frame texture="1" x="1344" y="1216" />
+    </tile>
+    <tile id="1910" texture="1" x="1408" y="1216" />
+    <tile id="1911" texture="1" x="1472" y="1216" />
+    <tile id="1912" texture="1" x="1536" y="1216" />
+    <tile id="1913" texture="1" x="1600" y="1216" />
+    <tile id="1914" texture="1" x="1664" y="1216" />
+    <tile id="1915" texture="1" x="1728" y="1216" />
+    <tile id="1916" texture="1" x="1792" y="1216" opaque="true" />
+    <tile id="1917" texture="1" x="1856" y="1216" opaque="true" />
+    <tile id="1918" texture="1" x="1920" y="1216" opaque="true" />
+    <tile id="1919" texture="1" x="1984" y="1216" opaque="true" />
+    <tile id="1920" texture="1" x="0" y="1280" opaque="true" />
+    <tile id="1921" texture="1" x="64" y="1280" opaque="true" />
+    <tile id="42" texture="1" x="128" y="1280" />
+    <tile id="42" texture="1" x="192" y="1280" />
+    <tile id="43" texture="1" x="256" y="1280" opaque="true" />
+    <tile id="102" texture="1" x="320" y="1280" opaque="true" />
+    <tile id="150" texture="1" x="384" y="1280" opaque="true" />
+    <tile id="152" texture="1" x="448" y="1280" opaque="true" />
+    <tile id="273" texture="1" x="512" y="1280" opaque="true" />
+    <tile id="298" texture="1" x="576" y="1280" />
+    <tile id="491" texture="1" x="640" y="1280" opaque="true" />
+    <tile id="492" texture="1" x="704" y="1280" />
+    <tile id="493" texture="1" x="768" y="1280" />
+    <tile id="494" texture="1" x="832" y="1280" />
+    <tile id="495" texture="1" x="896" y="1280" opaque="true" />
+    <tile id="592" texture="1" x="960" y="1280" opaque="true" />
+    <tile id="678" texture="1" x="1024" y="1280" opaque="true" />
+    <tile id="681" texture="1" x="1088" y="1280" />
+    <tile id="682" texture="1" x="1152" y="1280" />
+    <tile id="683" texture="1" x="1216" y="1280" />
+    <tile id="731" texture="1" x="1280" y="1280" />
+    <tile id="732" texture="1" x="1344" y="1280" />
+    <tile id="733" texture="1" x="1408" y="1280" />
+    <tile id="734" texture="1" x="1472" y="1280" />
+    <tile id="735" texture="1" x="1536" y="1280" />
+    <tile id="736" texture="1" x="1600" y="1280" />
+    <tile id="737" texture="1" x="1664" y="1280" />
+    <tile id="738" texture="1" x="1728" y="1280" />
+    <tile id="739" texture="1" x="1792" y="1280" />
+    <tile id="740" texture="1" x="1856" y="1280" />
+    <tile id="741" texture="1" x="1920" y="1280" />
+    <tile id="742" texture="1" x="1984" y="1280" />
+    <tile id="743" texture="1" x="0" y="1344" />
+    <tile id="744" texture="1" x="64" y="1344" />
+    <tile id="745" texture="1" x="128" y="1344" />
+    <tile id="746" texture="1" x="192" y="1344" />
+    <tile id="747" texture="1" x="256" y="1344" />
+    <tile id="748" texture="1" x="320" y="1344" />
+    <tile id="749" texture="1" x="384" y="1344" />
+    <tile id="750" texture="1" x="448" y="1344" />
+    <tile id="751" texture="1" x="512" y="1344" />
+    <tile id="752" texture="1" x="576" y="1344" />
+    <tile id="753" texture="1" x="640" y="1344" />
+    <tile id="754" texture="1" x="704" y="1344" />
+    <tile id="755" texture="1" x="768" y="1344" />
+    <tile id="756" texture="1" x="832" y="1344" />
+    <tile id="757" texture="1" x="896" y="1344" />
+    <tile id="758" texture="1" x="960" y="1344" />
+    <tile id="759" texture="1" x="1024" y="1344" />
+    <tile id="760" texture="1" x="1088" y="1344" />
+    <tile id="761" texture="1" x="1152" y="1344" />
+    <tile id="762" texture="1" x="1216" y="1344" />
+    <tile id="763" texture="1" x="1280" y="1344" opaque="true" />
+    <tile id="763" texture="1" x="1344" y="1344" />
+    <tile id="764" texture="1" x="1408" y="1344" />
+    <tile id="765" texture="1" x="1472" y="1344" />
+    <tile id="766" texture="1" x="1536" y="1344" />
+    <tile id="767" texture="1" x="1600" y="1344" />
+    <tile id="768" texture="1" x="1664" y="1344" />
+    <tile id="769" texture="1" x="1728" y="1344" />
+    <tile id="770" texture="1" x="1792" y="1344" />
+    <tile id="771" texture="1" x="1856" y="1344" />
+    <tile id="772" texture="1" x="1920" y="1344" />
+    <tile id="773" texture="1" x="1984" y="1344" />
+    <tile id="774" texture="1" x="0" y="1408" />
+    <tile id="775" texture="1" x="64" y="1408" />
+    <tile id="776" texture="1" x="128" y="1408" opaque="true" />
+    <tile id="777" texture="1" x="192" y="1408" opaque="true" />
+    <tile id="778" texture="1" x="256" y="1408" opaque="true" />
+    <tile id="779" texture="1" x="320" y="1408" opaque="true" />
+    <tile id="780" delay="2">
+      <frame texture="1" x="384" y="1408" />
+      <frame texture="1" x="448" y="1408" />
+      <frame texture="1" x="512" y="1408" />
+      <frame texture="1" x="576" y="1408" />
+      <frame texture="1" x="640" y="1408" />
+      <frame texture="1" x="704" y="1408" />
+      <frame texture="1" x="768" y="1408" />
+      <frame texture="1" x="832" y="1408" />
+    </tile>
+    <tile id="781" delay="2">
+      <frame texture="1" x="896" y="1408" />
+      <frame texture="1" x="960" y="1408" />
+      <frame texture="1" x="1024" y="1408" />
+      <frame texture="1" x="1088" y="1408" />
+      <frame texture="1" x="1152" y="1408" />
+      <frame texture="1" x="1216" y="1408" />
+      <frame texture="1" x="1280" y="1408" />
+      <frame texture="1" x="1344" y="1408" />
+    </tile>
+    <tile id="782" delay="2">
+      <frame texture="1" x="1408" y="1408" />
+      <frame texture="1" x="1472" y="1408" />
+      <frame texture="1" x="1536" y="1408" />
+      <frame texture="1" x="1600" y="1408" />
+      <frame texture="1" x="1664" y="1408" />
+      <frame texture="1" x="1728" y="1408" />
+      <frame texture="1" x="1792" y="1408" />
+      <frame texture="1" x="1856" y="1408" />
+    </tile>
+    <tile id="783" delay="2">
+      <frame texture="1" x="1920" y="1408" />
+      <frame texture="1" x="1984" y="1408" />
+      <frame texture="1" x="0" y="1472" />
+      <frame texture="1" x="64" y="1472" />
+      <frame texture="1" x="128" y="1472" />
+      <frame texture="1" x="192" y="1472" />
+      <frame texture="1" x="256" y="1472" />
+      <frame texture="1" x="320" y="1472" />
+    </tile>
+    <tile id="784" delay="2">
+      <frame texture="1" x="384" y="1472" />
+      <frame texture="1" x="448" y="1472" />
+      <frame texture="1" x="512" y="1472" />
+      <frame texture="1" x="576" y="1472" />
+      <frame texture="1" x="640" y="1472" />
+      <frame texture="1" x="704" y="1472" />
+      <frame texture="1" x="768" y="1472" />
+      <frame texture="1" x="832" y="1472" />
+    </tile>
+    <tile id="785" delay="2">
+      <frame texture="1" x="896" y="1472" />
+      <frame texture="1" x="960" y="1472" />
+      <frame texture="1" x="1024" y="1472" />
+      <frame texture="1" x="1088" y="1472" />
+      <frame texture="1" x="1152" y="1472" />
+      <frame texture="1" x="1216" y="1472" />
+      <frame texture="1" x="1280" y="1472" />
+      <frame texture="1" x="1344" y="1472" />
+    </tile>
+    <tile id="786" delay="2">
+      <frame texture="1" x="1408" y="1472" />
+      <frame texture="1" x="1472" y="1472" />
+      <frame texture="1" x="1536" y="1472" />
+      <frame texture="1" x="1600" y="1472" />
+      <frame texture="1" x="1664" y="1472" />
+      <frame texture="1" x="1728" y="1472" />
+      <frame texture="1" x="1792" y="1472" />
+      <frame texture="1" x="1856" y="1472" />
+    </tile>
+    <tile id="787" delay="2">
+      <frame texture="1" x="1920" y="1472" />
+      <frame texture="1" x="1984" y="1472" />
+      <frame texture="1" x="0" y="1536" />
+      <frame texture="1" x="64" y="1536" />
+      <frame texture="1" x="128" y="1536" />
+      <frame texture="1" x="192" y="1536" />
+      <frame texture="1" x="256" y="1536" />
+      <frame texture="1" x="320" y="1536" />
+    </tile>
+    <tile id="788" delay="2">
+      <frame texture="1" x="384" y="1536" />
+      <frame texture="1" x="448" y="1536" />
+      <frame texture="1" x="512" y="1536" />
+      <frame texture="1" x="576" y="1536" />
+      <frame texture="1" x="640" y="1536" />
+      <frame texture="1" x="704" y="1536" />
+      <frame texture="1" x="768" y="1536" />
+      <frame texture="1" x="832" y="1536" />
+    </tile>
+    <tile id="789" delay="2">
+      <frame texture="1" x="896" y="1536" />
+      <frame texture="1" x="960" y="1536" />
+      <frame texture="1" x="1024" y="1536" />
+      <frame texture="1" x="1088" y="1536" />
+      <frame texture="1" x="1152" y="1536" />
+      <frame texture="1" x="1216" y="1536" />
+      <frame texture="1" x="1280" y="1536" />
+      <frame texture="1" x="1344" y="1536" />
+    </tile>
+    <tile id="790" delay="2">
+      <frame texture="1" x="1408" y="1536" />
+      <frame texture="1" x="1472" y="1536" />
+      <frame texture="1" x="1536" y="1536" />
+      <frame texture="1" x="1600" y="1536" />
+      <frame texture="1" x="1664" y="1536" />
+      <frame texture="1" x="1728" y="1536" />
+      <frame texture="1" x="1792" y="1536" />
+      <frame texture="1" x="1856" y="1536" />
+    </tile>
+    <tile id="791" delay="2">
+      <frame texture="1" x="1920" y="1536" />
+      <frame texture="1" x="1984" y="1536" />
+      <frame texture="1" x="0" y="1600" />
+      <frame texture="1" x="64" y="1600" />
+      <frame texture="1" x="128" y="1600" />
+      <frame texture="1" x="192" y="1600" />
+      <frame texture="1" x="256" y="1600" />
+      <frame texture="1" x="320" y="1600" />
+    </tile>
+    <tile id="792" delay="2">
+      <frame texture="1" x="384" y="1600" />
+      <frame texture="1" x="448" y="1600" />
+      <frame texture="1" x="512" y="1600" />
+      <frame texture="1" x="576" y="1600" />
+      <frame texture="1" x="640" y="1600" />
+      <frame texture="1" x="704" y="1600" />
+      <frame texture="1" x="768" y="1600" />
+      <frame texture="1" x="832" y="1600" />
+    </tile>
+    <tile id="793" delay="2">
+      <frame texture="1" x="896" y="1600" />
+      <frame texture="1" x="960" y="1600" />
+      <frame texture="1" x="1024" y="1600" />
+      <frame texture="1" x="1088" y="1600" />
+      <frame texture="1" x="1152" y="1600" />
+      <frame texture="1" x="1216" y="1600" />
+      <frame texture="1" x="1280" y="1600" />
+      <frame texture="1" x="1344" y="1600" />
+    </tile>
+    <tile id="794" delay="2">
+      <frame texture="1" x="1408" y="1600" />
+      <frame texture="1" x="1472" y="1600" />
+      <frame texture="1" x="1536" y="1600" />
+      <frame texture="1" x="1600" y="1600" />
+      <frame texture="1" x="1664" y="1600" />
+      <frame texture="1" x="1728" y="1600" />
+      <frame texture="1" x="1792" y="1600" />
+      <frame texture="1" x="1856" y="1600" />
+    </tile>
+    <tile id="795" delay="2">
+      <frame texture="1" x="1920" y="1600" />
+      <frame texture="1" x="1984" y="1600" />
+      <frame texture="1" x="0" y="1664" />
+      <frame texture="1" x="64" y="1664" />
+      <frame texture="1" x="128" y="1664" />
+      <frame texture="1" x="192" y="1664" />
+      <frame texture="1" x="256" y="1664" />
+      <frame texture="1" x="320" y="1664" />
+    </tile>
+    <tile id="796" delay="2">
+      <frame texture="1" x="384" y="1664" />
+      <frame texture="1" x="448" y="1664" />
+      <frame texture="1" x="512" y="1664" />
+      <frame texture="1" x="576" y="1664" />
+      <frame texture="1" x="640" y="1664" />
+      <frame texture="1" x="704" y="1664" />
+      <frame texture="1" x="768" y="1664" />
+      <frame texture="1" x="832" y="1664" />
+    </tile>
+    <tile id="797" delay="2">
+      <frame texture="1" x="896" y="1664" />
+      <frame texture="1" x="960" y="1664" />
+      <frame texture="1" x="1024" y="1664" />
+      <frame texture="1" x="1088" y="1664" />
+      <frame texture="1" x="1152" y="1664" />
+      <frame texture="1" x="1216" y="1664" />
+      <frame texture="1" x="1280" y="1664" />
+      <frame texture="1" x="1344" y="1664" />
+    </tile>
+    <tile id="798" delay="2">
+      <frame texture="1" x="1408" y="1664" />
+      <frame texture="1" x="1472" y="1664" />
+      <frame texture="1" x="1536" y="1664" />
+      <frame texture="1" x="1600" y="1664" />
+      <frame texture="1" x="1664" y="1664" />
+      <frame texture="1" x="1728" y="1664" />
+      <frame texture="1" x="1792" y="1664" />
+      <frame texture="1" x="1856" y="1664" />
+    </tile>
+    <tile id="799" delay="2">
+      <frame texture="1" x="1920" y="1664" />
+      <frame texture="1" x="1984" y="1664" />
+      <frame texture="1" x="0" y="1728" />
+      <frame texture="1" x="64" y="1728" />
+      <frame texture="1" x="128" y="1728" />
+      <frame texture="1" x="192" y="1728" />
+      <frame texture="1" x="256" y="1728" />
+      <frame texture="1" x="320" y="1728" />
+    </tile>
+    <tile id="800" delay="2">
+      <frame texture="1" x="384" y="1728" />
+      <frame texture="1" x="448" y="1728" />
+      <frame texture="1" x="512" y="1728" />
+      <frame texture="1" x="576" y="1728" />
+      <frame texture="1" x="640" y="1728" />
+      <frame texture="1" x="704" y="1728" />
+      <frame texture="1" x="768" y="1728" />
+      <frame texture="1" x="832" y="1728" />
+    </tile>
+    <tile id="801" delay="2">
+      <frame texture="1" x="896" y="1728" />
+      <frame texture="1" x="960" y="1728" />
+      <frame texture="1" x="1024" y="1728" />
+      <frame texture="1" x="1088" y="1728" />
+      <frame texture="1" x="1152" y="1728" />
+      <frame texture="1" x="1216" y="1728" />
+      <frame texture="1" x="1280" y="1728" />
+      <frame texture="1" x="1344" y="1728" />
+    </tile>
+    <tile id="802" delay="2">
+      <frame texture="1" x="1408" y="1728" />
+      <frame texture="1" x="1472" y="1728" />
+      <frame texture="1" x="1536" y="1728" />
+      <frame texture="1" x="1600" y="1728" />
+      <frame texture="1" x="1664" y="1728" />
+      <frame texture="1" x="1728" y="1728" />
+      <frame texture="1" x="1792" y="1728" />
+      <frame texture="1" x="1856" y="1728" />
+    </tile>
+    <tile id="803" delay="2">
+      <frame texture="1" x="1920" y="1728" />
+      <frame texture="1" x="1984" y="1728" />
+      <frame texture="1" x="0" y="1792" />
+      <frame texture="1" x="64" y="1792" />
+      <frame texture="1" x="128" y="1792" />
+      <frame texture="1" x="192" y="1792" />
+      <frame texture="1" x="256" y="1792" />
+      <frame texture="1" x="320" y="1792" />
+    </tile>
+	<tile id="804" texture="1" x="576" y="1792" />
+	<tile id="805" texture="1" x="640" y="1792" />
+  </tiles>
+</tileset>

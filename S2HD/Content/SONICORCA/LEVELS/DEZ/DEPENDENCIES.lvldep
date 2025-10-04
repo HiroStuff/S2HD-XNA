@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/RING</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/MONITOR</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/SIGNPOST</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/SPRING</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/STARPOST</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/LAYERSWITCH</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/CAPSULE</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/SPIKES</Key>
+  </Dependency>
+  <Dependency>
+    <Key>SONICORCA/OBJECTS/SPRINGBOARD</Key>
+  </Dependency>
+</Dependencies>

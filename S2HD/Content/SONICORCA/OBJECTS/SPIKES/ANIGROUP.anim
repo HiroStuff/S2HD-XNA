@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation>
+      <frame texture="0" x="0" y="0" w="128" h="128" />
+    </animation>
+  </animations>
+</anigroup>
