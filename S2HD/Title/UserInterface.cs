@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using S2HD.Animation;
 using S2HD.Graphics;
 using S2HD.GameStates;
+using S2HD.Audio;
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -25,6 +26,9 @@ namespace S2HD.Title
         private Texture2D _selectionMarkerTexture;
         private Texture2D _leftArrowTexture;
         private Texture2D _rightArrowTexture;
+        private Texture2D _whiteTexture;
+
+        private AudioManager _audioManager;
 
         private int _ticks;
         private bool _pressStartActive;
@@ -48,8 +52,6 @@ namespace S2HD.Title
         private KeyboardState _previousKeyboardState;
         private GamePadState _previousGamePadState;
         
-        private Texture2D _whiteTexture;
-        
         private EffectEventManager _effectEventManager;
 
         private string[] _menuItems = { "NEW GAME", "OPTIONS", "QUIT" };
@@ -63,10 +65,11 @@ namespace S2HD.Title
         private bool IsSonicActive => _characterSelectionIndex == 0 || _characterSelectionIndex == 1;
         private bool IsTailsActive => _characterSelectionIndex == 0 || _characterSelectionIndex == 2;
 
-        public UserInterface(GraphicsDevice graphicsDevice, ContentManager content, TitleGameState titleGameState)
+        public UserInterface(GraphicsDevice graphicsDevice, ContentManager content, TitleGameState titleGameState, AudioManager audioManager)
         {
             _graphicsDevice = graphicsDevice;
             _content = content;
+            _audioManager = audioManager;
             _effectEventManager = new EffectEventManager();
             LoadContent();
             InitializeLevelSelect();
@@ -258,6 +261,7 @@ namespace S2HD.Title
                     EffectPressStart();
                     _pressStartActive = false;
                     _demoTimeout = null;
+                    _audioManager.PlaySound("NAVIGATE/YES");
                 }
             }
             else if (_characterSelectActive)
@@ -317,17 +321,20 @@ namespace S2HD.Title
                 _characterSelectionIndex = (_characterSelectionIndex - 1 + 3) % 3;
                 _miniSonicAniInstance.Index = 11;
                 _miniTailsAniInstance.Index = 13;
+                _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
             else if (IsKeyJustPressed(keyboardState, Keys.Right) || (gamePadState.DPad.Right == ButtonState.Pressed && _previousGamePadState.DPad.Right != ButtonState.Pressed))
             {
                 _characterSelectionIndex = (_characterSelectionIndex + 1) % 3;
                 _miniSonicAniInstance.Index = 11;
                 _miniTailsAniInstance.Index = 13;
+                _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
 
             if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back))
             {
                 _characterSelectActive = false;
+                _audioManager.PlaySound("NAVIGATE/BACK");
             }
 
             if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
@@ -335,6 +342,7 @@ namespace S2HD.Title
                 _miniSonicAniInstance.Index = IsSonicActive ? 12 : 11;
                 _miniTailsAniInstance.Index = IsTailsActive ? 14 : 13;
                 _characterSelected = true;
+                _audioManager.PlaySound("NAVIGATE/YES");
             }
         }
 
@@ -349,22 +357,26 @@ namespace S2HD.Title
                 _pressStartWhiteAdditive = 0.0;
                 _selectionIndex = 0;
                 InitializeMenuItemWidgets();
+                _audioManager.PlaySound("NAVIGATE/BACK");
             }
 
             if (IsKeyJustPressed(keyboardState, Keys.Left) || IsDPadJustPressed(gamePadState, ButtonState.Pressed))
             {
                 _selectionIndex = (_selectionIndex - 1 + _menuItems.Length) % _menuItems.Length;
                 EffectNavigateMenu(-1);
+                _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
             else if (IsKeyJustPressed(keyboardState, Keys.Right) || (gamePadState.DPad.Right == ButtonState.Pressed && _previousGamePadState.DPad.Right != ButtonState.Pressed))
             {
                 _selectionIndex = (_selectionIndex + 1) % _menuItems.Length;
                 EffectNavigateMenu(1);
+                _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
 
             if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
             {
                 OnSelectMenuItem();
+                _audioManager.PlaySound("NAVIGATE/YES");
             }
         }
 

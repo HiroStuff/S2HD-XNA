@@ -5271,25 +5271,25 @@
 
 #begin SONICORCA/SOUND/BADNIKEXPLOSION.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BADNIKEXPLOSION.ogg;SONICORCA/SOUND/BADNIKEXPLOSION
 
 #begin SONICORCA/SOUND/BARRIER.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BARRIER.ogg;SONICORCA/SOUND/BARRIER
 
 #begin SONICORCA/SOUND/BLOB.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BLOB.ogg;SONICORCA/SOUND/BLOB
 
 #begin SONICORCA/SOUND/BOSSEXPLOSION.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BOSSEXPLOSION.ogg;SONICORCA/SOUND/BOSSEXPLOSION
 
@@ -5298,37 +5298,37 @@
 
 #begin SONICORCA/SOUND/BOSSHELICOPTER/SAMPLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BOSSHELICOPTER/SAMPLE.ogg;SONICORCA/SOUND/BOSSHELICOPTER/SAMPLE
 
 #begin SONICORCA/SOUND/BOSSHIT.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BOSSHIT.ogg;SONICORCA/SOUND/BOSSHIT
 
 #begin SONICORCA/SOUND/BRAKE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BRAKE.ogg;SONICORCA/SOUND/BRAKE
 
 #begin SONICORCA/SOUND/BREAKABLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/BREAKABLE.ogg;SONICORCA/SOUND/BREAKABLE
 
 #begin SONICORCA/SOUND/DROWN.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/DROWN.ogg;SONICORCA/SOUND/DROWN
 
 #begin SONICORCA/SOUND/DROWNWARNING.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/DROWNWARNING.ogg;SONICORCA/SOUND/DROWNWARNING
 
@@ -5337,43 +5337,43 @@
 
 #begin SONICORCA/SOUND/EARTHQUAKE/SAMPLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/EARTHQUAKE/SAMPLE.ogg;SONICORCA/SOUND/EARTHQUAKE/SAMPLE
 
 #begin SONICORCA/SOUND/FIREBALL.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/FIREBALL.ogg;SONICORCA/SOUND/FIREBALL
 
 #begin SONICORCA/SOUND/FIREBURN.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/FIREBURN.ogg;SONICORCA/SOUND/FIREBURN
 
 #begin SONICORCA/SOUND/HURT.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/HURT.ogg;SONICORCA/SOUND/HURT
 
 #begin SONICORCA/SOUND/HURT/SPIKES.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/HURT/SPIKES.ogg;SONICORCA/SOUND/HURT/SPIKES
 
 #begin SONICORCA/SOUND/INHALE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/INHALE.ogg;SONICORCA/SOUND/INHALE
 
 #begin SONICORCA/SOUND/JUMP.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/JUMP.ogg;SONICORCA/SOUND/JUMP
 
@@ -5382,145 +5382,145 @@
 
 #begin SONICORCA/SOUND/LAVAPIT/SAMPLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/LAVAPIT/SAMPLE.ogg;SONICORCA/SOUND/LAVAPIT/SAMPLE
 
 #begin SONICORCA/SOUND/NAVIGATE/BACK.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/NAVIGATE/BACK.ogg;SONICORCA/SOUND/NAVIGATE/BACK
 
 #begin SONICORCA/SOUND/NAVIGATE/CURSOR.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/NAVIGATE/CURSOR.ogg;SONICORCA/SOUND/NAVIGATE/CURSOR
 
 #begin SONICORCA/SOUND/NAVIGATE/NO.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/NAVIGATE/NO.ogg;SONICORCA/SOUND/NAVIGATE/NO
 
 #begin SONICORCA/SOUND/NAVIGATE/YES.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/NAVIGATE/YES.ogg;SONICORCA/SOUND/NAVIGATE/YES
 
 #begin SONICORCA/SOUND/PEELOUT/CHARGE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/PEELOUT/CHARGE.ogg;SONICORCA/SOUND/PEELOUT/CHARGE
 
 #begin SONICORCA/SOUND/PEELOUT/RELEASE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/PEELOUT/RELEASE.ogg;SONICORCA/SOUND/PEELOUT/RELEASE
 
 #begin SONICORCA/SOUND/PERFECT.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/PERFECT.ogg;SONICORCA/SOUND/PERFECT
 
 #begin SONICORCA/SOUND/RING.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/RING.ogg;SONICORCA/SOUND/RING
 
 #begin SONICORCA/SOUND/RINGSCATTER.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/RINGSCATTER.ogg;SONICORCA/SOUND/RINGSCATTER
 
 #begin SONICORCA/SOUND/SHOOTINGSTAR.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SHOOTINGSTAR.ogg;SONICORCA/SOUND/SHOOTINGSTAR
 
 #begin SONICORCA/SOUND/SIGNPOST.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SIGNPOST.ogg;SONICORCA/SOUND/SIGNPOST
 
 #begin SONICORCA/SOUND/SPARKLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPARKLE.ogg;SONICORCA/SOUND/SPARKLE
 
 #begin SONICORCA/SOUND/SPECIALSTAGETRIGGER.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPECIALSTAGETRIGGER.ogg;SONICORCA/SOUND/SPECIALSTAGETRIGGER
 
 #begin SONICORCA/SOUND/SPIKESLASH.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPIKESLASH.ogg;SONICORCA/SOUND/SPIKESLASH
 
 #begin SONICORCA/SOUND/SPINBALL.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPINBALL.ogg;SONICORCA/SOUND/SPINBALL
 
 #begin SONICORCA/SOUND/SPINDASH/CHARGE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPINDASH/CHARGE.ogg;SONICORCA/SOUND/SPINDASH/CHARGE
 
 #begin SONICORCA/SOUND/SPINDASH/RELEASE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPINDASH/RELEASE.ogg;SONICORCA/SOUND/SPINDASH/RELEASE
 
 #begin SONICORCA/SOUND/SPLASH.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPLASH.ogg;SONICORCA/SOUND/SPLASH
 
 #begin SONICORCA/SOUND/SPRING.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/SPRING.ogg;SONICORCA/SOUND/SPRING
 
 #begin SONICORCA/SOUND/STARPOST.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/STARPOST.ogg;SONICORCA/SOUND/STARPOST
 
 #begin SONICORCA/SOUND/TALLY/END.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/TALLY/END.ogg;SONICORCA/SOUND/TALLY/END
 
 #begin SONICORCA/SOUND/TALLY/SWITCH.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/TALLY/SWITCH.ogg;SONICORCA/SOUND/TALLY/SWITCH
 
 #begin SONICORCA/SOUND/VINELIFT.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/VINELIFT.ogg;SONICORCA/SOUND/VINELIFT
 
@@ -5529,7 +5529,7 @@
 
 #begin SONICORCA/SOUND/WATERFALL/SAMPLE.ogg
 /importer:OggImporter
-/processor:SongProcessor
+/processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:SONICORCA/SOUND/WATERFALL/SAMPLE.ogg;SONICORCA/SOUND/WATERFALL/SAMPLE
 

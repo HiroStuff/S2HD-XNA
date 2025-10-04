@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Content;
 using S2HD.Title;
 using S2HD.Graphics;
 using S2HD.Animation;
+using S2HD.Audio;
 using System;
 using System.Collections.Generic;
 
@@ -22,6 +23,7 @@ namespace S2HD.GameStates
         private GraphicsDevice _graphicsDevice;
         private SpriteBatch _spriteBatch;
         private ContentManager _content;
+        private AudioManager _audioManager;
 
         private CustomFont _font;
         private AnimationInstance _sparkleAnimationInstance;
@@ -61,21 +63,21 @@ namespace S2HD.GameStates
 
         public void LoadContent(ContentManager content)
         {
+            _audioManager = new AudioManager(content);
+            _audioManager.LoadContent();
 
             _font = new CustomFont();
             _font.LoadFromXml(content, "Content/SONICORCA/FONTS/HUD_FONT");
 
-
             var sparkleTexture = content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
             _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
-
 
             _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
 
             _loaded = true;
             _background = new Background(_graphicsDevice, content);
             _banner = new Banner(_graphicsDevice, content);
-            _userInterface = new UserInterface(_graphicsDevice, content, this);
+            _userInterface = new UserInterface(_graphicsDevice, content, this, _audioManager);
             RestartEvents();
         }
 
@@ -99,7 +101,7 @@ namespace S2HD.GameStates
 
             if (_ticks == 268)
             {
-
+                _audioManager.PlayMusic("TITLE/MUSIC", false);
             }
 
 
@@ -118,12 +120,17 @@ namespace S2HD.GameStates
 
             if (_ticks >= 662)
             {
-                if (_shootingStarAnimationInstance != null)
+                if (_shootingStarAnimationInstance == null)
                 {
-                    _shootingStarAnimationInstance.Animate();
-                    _shootingStarPosition += new Vector2(-16.0f, 8.0f);
+                    var sparkleTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
+                    _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
+                    _shootingStarPosition = new Vector2(1440.0f, 0.0f);
+                    _audioManager.PlaySound("SHOOTINGSTAR");
                 }
+                _shootingStarAnimationInstance.Animate();
+                _shootingStarPosition += new Vector2(-16.0f, 8.0f);
             }
+
 
             UpdateSparkle();
             _ticks++;
@@ -180,6 +187,7 @@ namespace S2HD.GameStates
             var sparkleTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
             _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
             _sparklePosition = position;
+            _audioManager.PlaySound("SPARKLE");
         }
 
         private void UpdateSparkle()
