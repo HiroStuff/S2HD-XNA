@@ -13,9 +13,31 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Effects/FontOverlayEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/FontOverlayEffect.fx
+
+#begin Effects/FontOverlayEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/FontOverlayEffect.fx
+
+#begin Effects/MaskEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/MaskEffect.fx
+
+#begin Effects/MaskEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/MaskEffect.fx
+
 #begin SONICORCA/CREDITS/SEQUENCE/DUMMY.mp4
-/importer:H264Importer
-/processor:VideoProcessor
 /copy:SONICORCA/CREDITS/SEQUENCE/DUMMY.mp4;SONICORCA/CREDITS/SEQUENCE/DUMMY
 
 #begin SONICORCA/CREDITS/SEQUENCE/GROUP.film

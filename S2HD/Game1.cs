@@ -16,7 +16,7 @@ namespace S2HD
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            
+
             _graphics.PreferredBackBufferWidth = 1920;
             _graphics.PreferredBackBufferHeight = 1080;
             _graphics.IsFullScreen = true;
@@ -30,20 +30,18 @@ namespace S2HD
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _gameStateManager = new GameStateManager(GraphicsDevice, _spriteBatch, Content);            
-            
+            _gameStateManager = new GameStateManager(GraphicsDevice, _spriteBatch, Content);
+
             _gameStateManager.AddState(new DisclaimerGameState(GraphicsDevice, _spriteBatch));
             _gameStateManager.AddState(new LogosGameState(GraphicsDevice, _spriteBatch));
             _gameStateManager.AddState(new TeamLogoGameState(GraphicsDevice, _spriteBatch));
+            _gameStateManager.AddState(new TitleGameState(GraphicsDevice, _spriteBatch, Content));
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
             _gameStateManager.Update(gameTime);
-            
+
             if (!_gameStateManager.HasActiveState)
                 Exit();
 

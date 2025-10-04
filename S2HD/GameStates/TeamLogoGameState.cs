@@ -9,7 +9,7 @@ namespace S2HD.GameStates
     {
         private const int FadeTime = 60;
         private const int ShowTime = 240;
-        
+
         private Texture2D _teamLogoTexture;
         private GraphicsDevice _graphicsDevice;
         private SpriteBatch _spriteBatch;
@@ -17,7 +17,7 @@ namespace S2HD.GameStates
         private float _opacity;
         private int _timer;
         private TeamLogoPhase _currentPhase;
-        
+
         private enum TeamLogoPhase
         {
             Loading,
@@ -52,7 +52,7 @@ namespace S2HD.GameStates
                 case TeamLogoPhase.FadeIn:
                     _opacity += 0.0166666675f;
                     _opacity = Math.Min(_opacity, 1f);
-                    
+
                     if (_opacity >= 1.0f)
                     {
                         _currentPhase = TeamLogoPhase.Showing;
@@ -71,7 +71,7 @@ namespace S2HD.GameStates
                 case TeamLogoPhase.FadeOut:
                     _opacity -= 0.0166666675f;
                     _opacity = Math.Max(_opacity, 0.0f);
-                    
+
                     if (_opacity <= 0.0f)
                     {
                         _currentPhase = TeamLogoPhase.Complete;
@@ -85,19 +85,19 @@ namespace S2HD.GameStates
             if (!_loaded) return;
 
             _spriteBatch.Begin();
-            
+
             Vector2 screenCenter = new Vector2(_graphicsDevice.Viewport.Width / 2, _graphicsDevice.Viewport.Height / 2);
             Vector2 logoSize = new Vector2(_teamLogoTexture.Width, _teamLogoTexture.Height);
             Vector2 logoPosition = screenCenter - logoSize / 2;
-            
+
             _spriteBatch.Draw(_teamLogoTexture, logoPosition, Color.White * _opacity);
-            
+
             if (_opacity < 1.0f)
             {
                 Color fadeColor = new Color(0, 0, 0, 1.0f - _opacity);
                 _spriteBatch.Draw(_teamLogoTexture, new Rectangle(0, 0, _graphicsDevice.Viewport.Width, _graphicsDevice.Viewport.Height), fadeColor);
             }
-            
+
             _spriteBatch.End();
         }
 

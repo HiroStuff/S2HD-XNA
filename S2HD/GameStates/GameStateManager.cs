@@ -10,7 +10,7 @@ namespace S2HD.GameStates
         private readonly GraphicsDevice _graphicsDevice;
         private readonly SpriteBatch _spriteBatch;
         private readonly ContentManager _contentManager;
-        
+
         private IGameState _currentState;
         private readonly Queue<IGameState> _stateQueue;
 
@@ -38,7 +38,7 @@ namespace S2HD.GameStates
             if (_currentState != null)
             {
                 _currentState.Update(gameTime);
-                
+
                 if (_currentState.IsComplete)
                 {
                     _currentState = null;

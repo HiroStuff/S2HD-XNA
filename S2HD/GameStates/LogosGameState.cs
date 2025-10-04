@@ -12,21 +12,21 @@ namespace S2HD.GameStates
         private Texture2D _enginePartialTexture;
         private Texture2D _engineSonicTexture;
         private CustomFont _font;
-        
+
         private GraphicsDevice _graphicsDevice;
         private SpriteBatch _spriteBatch;
         private bool _loaded;
-        
+
         private bool _smallSonic;
         private int _sonicX;
         private int _sonicVX;
         private int _sonicFrame;
         private int _timer;
         private LogosPhase _currentPhase;
-        
+
         private float _fadeOpacity;
         private bool _fadeOut;
-        
+
         private enum LogosPhase
         {
             Loading,
@@ -59,7 +59,7 @@ namespace S2HD.GameStates
             _engineSonicTexture = content.Load<Texture2D>("SONICORCA/ENGINE/SONIC");
             _font = new CustomFont();
             _font.LoadFromXml(content, "Content/SONICORCA/FONTS/HUD_FONT");
-            
+
             _loaded = true;
             _currentPhase = LogosPhase.SmallSonicRun1;
             _timer = 8;
@@ -77,10 +77,10 @@ namespace S2HD.GameStates
                         _timer--;
                         return;
                     }
-                    
+
                     _sonicX += _sonicVX;
                     _sonicFrame = (_sonicFrame + 1) % 8;
-                    
+
                     if (_sonicX >= 2176)
                     {
                         _currentPhase = LogosPhase.SmallSonicRun2;
@@ -97,10 +97,10 @@ namespace S2HD.GameStates
                         _timer--;
                         return;
                     }
-                    
+
                     _sonicX += _sonicVX;
                     _sonicFrame = (_sonicFrame + 1) % 8;
-                    
+
                     if (_sonicX <= -1024)
                     {
                         _currentPhase = LogosPhase.SmallSonicRun3;
@@ -116,10 +116,10 @@ namespace S2HD.GameStates
                         _timer--;
                         return;
                     }
-                    
+
                     _sonicX += _sonicVX;
                     _sonicFrame = (_sonicFrame + 1) % 8;
-                    
+
                     if (_sonicX >= 2944)
                     {
                         _currentPhase = LogosPhase.Wait;
@@ -139,7 +139,7 @@ namespace S2HD.GameStates
                 case LogosPhase.FadeOut:
                     _fadeOpacity -= 0.0166666675f;
                     _fadeOpacity = Math.Max(_fadeOpacity, 0.0f);
-                    
+
                     if (_fadeOpacity <= 0.0f)
                     {
                         _currentPhase = LogosPhase.Complete;
@@ -153,9 +153,9 @@ namespace S2HD.GameStates
             if (!_loaded) return;
 
             _spriteBatch.Begin();
-            
+
             DrawPoweredBy();
-            
+
             if (_smallSonic)
             {
                 DrawSmallSonic();
@@ -165,13 +165,13 @@ namespace S2HD.GameStates
                 DrawEngineLogo();
                 DrawSonic();
             }
-            
+
             if (_fadeOut)
             {
                 Color fadeColor = new Color(0, 0, 0, 1.0f - _fadeOpacity);
                 _spriteBatch.Draw(_engineTexture, new Rectangle(0, 0, _graphicsDevice.Viewport.Width, _graphicsDevice.Viewport.Height), fadeColor);
             }
-            
+
             _spriteBatch.End();
         }
 
@@ -182,12 +182,12 @@ namespace S2HD.GameStates
                 (_graphicsDevice.Viewport.Width - textBounds.Width) / 2,
                 120
             );
-            
+
             if (_smallSonic)
             {
                 Rectangle clipRect = new Rectangle(Math.Max(0, _sonicX), 0, _graphicsDevice.Viewport.Width - Math.Max(0, _sonicX), _graphicsDevice.Viewport.Height);
                 _spriteBatch.Draw(_engineTexture, clipRect, Color.Black);
-            }            
+            }
         }
 
         private void DrawEngineLogo()
@@ -197,16 +197,16 @@ namespace S2HD.GameStates
                 960 - logoSize.X / 2,
                 540 - logoSize.Y / 2
             );
-            
+
             Rectangle destination = new Rectangle(
                 (int)logoPosition.X,
                 (int)logoPosition.Y,
                 (int)logoSize.X,
                 (int)logoSize.Y
             );
-            
+
             int visibleWidth = Math.Max(0, destination.Right - _sonicX);
-            
+
             if (visibleWidth > 0)
             {
                 Rectangle sourceRect = new Rectangle(
@@ -215,21 +215,21 @@ namespace S2HD.GameStates
                     visibleWidth,
                     (int)logoSize.Y
                 );
-                
+
                 Rectangle visibleDest = new Rectangle(
                     destination.Right - visibleWidth,
                     destination.Y,
                     visibleWidth,
                     destination.Height
                 );
-                
+
                 _spriteBatch.Draw(_enginePartialTexture, visibleDest, sourceRect, Color.White);
             }
-            
+
             if (_sonicVX >= 0)
             {
                 int leftVisibleWidth = Math.Max(0, _sonicX - destination.X);
-                
+
                 if (leftVisibleWidth > 0)
                 {
                     Rectangle sourceRect = new Rectangle(
@@ -238,14 +238,14 @@ namespace S2HD.GameStates
                         leftVisibleWidth,
                         (int)logoSize.Y
                     );
-                    
+
                     Rectangle visibleDest = new Rectangle(
                         destination.X,
                         destination.Y,
                         leftVisibleWidth,
                         destination.Height
                     );
-                    
+
                     _spriteBatch.Draw(_engineTexture, visibleDest, sourceRect, Color.White);
                 }
             }
@@ -255,7 +255,7 @@ namespace S2HD.GameStates
         {
             Rectangle sourceRect = new Rectangle(_sonicFrame * 1024, 0, 1024, 1120);
             Rectangle destRect = new Rectangle(_sonicX - 128, 40, 256, 280);
-            
+
             if (destRect.Right > 0 && destRect.Left < _graphicsDevice.Viewport.Width)
             {
                 SpriteEffects effects = _sonicVX >= 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
@@ -267,7 +267,7 @@ namespace S2HD.GameStates
         {
             Rectangle sourceRect = new Rectangle(_sonicFrame * 1024, 0, 1024, 1120);
             Rectangle destRect = new Rectangle(_sonicX - 512, -20, 1024, 1120);
-            
+
             if (destRect.Right > 0 && destRect.Left < _graphicsDevice.Viewport.Width)
             {
                 SpriteEffects effects = _sonicVX >= 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;

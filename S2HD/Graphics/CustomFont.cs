@@ -12,7 +12,7 @@ namespace S2HD.Graphics
         private Dictionary<char, CharacterDefinition> _characterDefinitions;
         private Texture2D _shapeTexture;
         private Texture2D[] _overlayTextures;
-        
+
         public int DefaultWidth { get; private set; }
         public int Height { get; private set; }
         public int Tracking { get; private set; }
@@ -32,10 +32,14 @@ namespace S2HD.Graphics
             if (root == null)
                 throw new XmlException("Missing <font> root node.");
 
+
+            string fontDir = fontPath.Replace("Content/", "").Replace("_FONT", "");
+
             string shapePath = root.SelectSingleNode("shape")?.InnerText;
             if (!string.IsNullOrEmpty(shapePath))
             {
-                _shapeTexture = content.Load<Texture2D>($"SONICORCA/FONTS/HUD{shapePath}");
+                string cleanPath = shapePath.TrimStart('/');
+                _shapeTexture = content.Load<Texture2D>($"{fontDir}/{cleanPath}");
             }
 
             var overlayNodes = root.SelectNodes("overlay");
@@ -45,7 +49,9 @@ namespace S2HD.Graphics
                 for (int i = 0; i < overlayNodes.Count; i++)
                 {
                     string overlayPath = overlayNodes[i].InnerText;
-                    _overlayTextures[i] = content.Load<Texture2D>($"SONICORCA/FONTS/HUD{overlayPath}");
+
+                    string cleanPath = overlayPath.TrimStart('/');
+                    _overlayTextures[i] = content.Load<Texture2D>($"{fontDir}/{cleanPath}");
                 }
             }
 
@@ -107,7 +113,7 @@ namespace S2HD.Graphics
         {
             float width = 0;
             float height = Height;
-            
+
             foreach (char c in text)
             {
                 if (_characterDefinitions.TryGetValue(c, out CharacterDefinition charDef))
@@ -120,7 +126,7 @@ namespace S2HD.Graphics
                 }
                 width += Tracking;
             }
-            
+
             if (text.Length > 0)
                 width -= Tracking;
 
@@ -158,21 +164,40 @@ namespace S2HD.Graphics
 
         public void DrawString(SpriteBatch spriteBatch, string text, Vector2 position, Color color, int overlay = -1)
         {
+            DrawString(spriteBatch, text, position, color, overlay, false);
+        }
+
+        public void DrawString(SpriteBatch spriteBatch, string text, Vector2 position, Color color, int overlay, bool centerAlign)
+        {
             Vector2 currentPosition = position;
-            
+
+            if (centerAlign)
+            {
+                float textWidth = MeasureString(text).Width;
+                currentPosition.X -= textWidth / 2;
+            }
+
             foreach (char c in text)
             {
                 if (_characterDefinitions.TryGetValue(c, out CharacterDefinition charDef))
                 {
                     Vector2 charPosition = currentPosition + charDef.Offset;
-                    
+
+
+                    if (DefaultShadow.HasValue && DefaultShadow.Value != Vector2.Zero)
+                    {
+                        Vector2 shadowPosition = charPosition + DefaultShadow.Value;
+                        Color shadowColor = new Color((byte)0, (byte)0, (byte)0, color.A);
+                        spriteBatch.Draw(_shapeTexture, shadowPosition, charDef.SourceRectangle, shadowColor);
+                    }
+
                     spriteBatch.Draw(_shapeTexture, charPosition, charDef.SourceRectangle, color);
-                    
+
                     if (overlay >= 0 && overlay < _overlayTextures.Length && _overlayTextures[overlay] != null)
                     {
                         spriteBatch.Draw(_overlayTextures[overlay], charPosition, charDef.SourceRectangle, color);
                     }
-                    
+
                     currentPosition.X += charDef.Width + Tracking;
                 }
                 else
