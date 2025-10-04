@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using S2HD.GameStates;
 
 namespace S2HD
 {
@@ -8,26 +9,32 @@ namespace S2HD
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private GameStateManager _gameStateManager;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
+            _graphics.PreferredBackBufferWidth = 1920;
+            _graphics.PreferredBackBufferHeight = 1080;
+            _graphics.IsFullScreen = true;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            _gameStateManager = new GameStateManager(GraphicsDevice, _spriteBatch, Content);            
+            
+            _gameStateManager.AddState(new DisclaimerGameState(GraphicsDevice, _spriteBatch));
+            _gameStateManager.AddState(new LogosGameState(GraphicsDevice, _spriteBatch));
+            _gameStateManager.AddState(new TeamLogoGameState(GraphicsDevice, _spriteBatch));
         }
 
         protected override void Update(GameTime gameTime)
@@ -35,16 +42,19 @@ namespace S2HD
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            _gameStateManager.Update(gameTime);
+            
+            if (!_gameStateManager.HasActiveState)
+                Exit();
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            _gameStateManager.Draw();
 
             base.Draw(gameTime);
         }
