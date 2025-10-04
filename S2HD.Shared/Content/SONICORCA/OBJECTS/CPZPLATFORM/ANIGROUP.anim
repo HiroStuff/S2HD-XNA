@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE1</texture>
+    <texture>//TEXTURE2</texture>
+  </textures>
+  <animations>
+    <!-- Base -->
+    <animation offset_y="-22">
+      <frame texture="0" x="0" y="0" w="260" h="84" />
+    </animation>
+    <!-- Strip glow -->
+    <animation offset_y="-14">
+      <frame texture="0" x="0" y="98" w="260" h="30" />
+    </animation>
+    <!-- Barometer (still) -->
+    <animation>
+      <frame texture="0" x="0" y="162" w="30" h="30" />
+    </animation>
+    <!-- Barometer (twitching) -->
+    <animation delay="2">
+      <frame texture="0" x="270" y="162" w="30" h="30" />
+      <frame texture="0" x="300" y="162" w="30" h="30" />
+      <frame texture="0" x="330" y="162" w="30" h="30" />
+    </animation>
+    <!-- Barometer (still to twitching) -->
+    <animation delay="2" next="3">
+      <frame texture="0" x="0" y="162" w="30" h="30" />
+      <frame texture="0" x="30" y="162" w="30" h="30" />
+      <frame texture="0" x="60" y="162" w="30" h="30" />
+      <frame texture="0" x="90" y="162" w="30" h="30" />
+      <frame texture="0" x="120" y="162" w="30" h="30" />
+      <frame texture="0" x="150" y="162" w="30" h="30" />
+      <frame texture="0" x="180" y="162" w="30" h="30" />
+      <frame texture="0" x="210" y="162" w="30" h="30" />
+      <frame texture="0" x="240" y="162" w="30" h="30" />
+    </animation>
+    <!-- Barometer (twitching to still) -->
+    <animation delay="2" next="2">
+      <frame texture="0" x="240" y="162" w="30" h="30" />
+      <frame texture="0" x="210" y="162" w="30" h="30" />
+      <frame texture="0" x="180" y="162" w="30" h="30" />
+      <frame texture="0" x="150" y="162" w="30" h="30" />
+      <frame texture="0" x="120" y="162" w="30" h="30" />
+      <frame texture="0" x="90" y="162" w="30" h="30" />
+      <frame texture="0" x="60" y="162" w="30" h="30" />
+      <frame texture="0" x="30" y="162" w="30" h="30" />
+    </animation>
+    <!-- Liquid -->
+    <animation delay="2" offset_y="52">
+      <frame texture="0" x="0" y="192" w="162" h="64" />
+      <frame texture="0" x="162" y="192" w="162" h="64" />
+      <frame texture="0" x="324" y="192" w="162" h="64" />
+      <frame texture="0" x="0" y="256" w="162" h="64" />
+      <frame texture="0" x="162" y="256" w="162" h="64" />
+      <frame texture="0" x="324" y="256" w="162" h="64" />
+      <frame texture="0" x="0" y="320" w="162" h="64" />
+      <frame texture="0" x="162" y="320" w="162" h="64" />
+      <frame texture="0" x="324" y="320" w="162" h="64" />
+      <frame texture="0" x="0" y="384" w="162" h="64" />
+      <frame texture="0" x="162" y="384" w="162" h="64" />
+      <frame texture="0" x="324" y="384" w="162" h="64" />
+    </animation>
+
+    <!-- Base (small)  -->
+    <animation offset_y="-22">
+      <frame texture="1" x="2" y="2" w="194" h="84" />
+    </animation>
+    <!-- Strip glow (small) -->
+    <animation offset_y="-16">
+      <frame texture="1" x="2" y="88" w="192" h="32" />
+    </animation>
+    <!-- Strip glow blue (small) -->
+    <animation offset_y="-38">
+      <frame texture="1" x="154" y="219" w="29" h="20" />
+    </animation>
+    <!-- Strip glow green (small) -->
+    <animation offset_y="-38">
+      <frame texture="1" x="185" y="219" w="29" h="20" />
+    </animation>
+    <!-- Liquid (small) -->
+    <animation delay="2" offset_y="28">
+      <frame texture="1" x="2"  y="122" w="86" h="16" />
+      <frame texture="1" x="2"  y="158" w="86" h="16" />
+      <frame texture="1" x="90" y="158" w="86" h="16" />
+      <frame texture="1" x="2"  y="176" w="86" h="16" />
+      <frame texture="1" x="90" y="176" w="86" h="16" />
+      <frame texture="1" x="2"  y="219" w="86" h="16" />
+      <frame texture="1" x="2"  y="194" w="86" h="16" />
+      <frame texture="1" x="2"  y="237" w="86" h="16" />
+      <frame texture="1" x="90" y="194" w="86" h="16" />
+      <frame texture="1" x="90" y="122" w="86" h="16" />
+      <frame texture="1" x="2"  y="140" w="86" h="16" />
+      <frame texture="1" x="90" y="140" w="86" h="16" />
+    </animation>
+  </animations>
+</anigroup>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE0</texture>
+	<texture>//TEXTURE1</texture>
+	<texture>//TEXTURE2</texture>
+	<texture>//TEXTURE3</texture>
+  </textures>
+  <animations>
+    <!-- MAIN -->
+    <animation>
+	  <frame texture="0" x="0" y="0" w="308" h="372" />
+	</animation>
+	<!-- LIGHTS -->
+    <animation delay="4">
+      <frame texture="0" x="308" y="0" w="308" h="372" />
+      <frame texture="0" x="616" y="0" w="308" h="372" />
+      <frame texture="0" x="0" y="372" w="308" h="372" />
+      <frame texture="0" x="308" y="372" w="308" h="372" />
+      <frame texture="0" x="616" y="372" w="308" h="372" />
+	  <frame texture="0" x="308" y="372" w="308" h="372" />
+	  <frame texture="0" x="0" y="372" w="308" h="372" />
+	  <frame texture="0" x="616" y="0" w="308" h="372" />
+	</animation>
+	<!-- DOOR -->
+	<animation>
+      <frame texture="1" x="0" y="0" w="308" h="156" />
+	</animation>
+	<!-- DOOR OPENING -->
+	<animation delay="1">
+      <frame texture="1" x="308" y="0" w="308" h="156" />
+      <frame texture="1" x="616" y="0" w="308" h="156" />
+      <frame texture="1" x="924" y="0" w="308" h="156" />
+      <frame texture="1" x="0" y="156" w="308" h="156" />
+      <frame texture="1" x="308" y="156" w="308" h="156" />
+      <frame texture="1" x="616" y="156" w="308" h="156" />
+      <frame texture="1" x="924" y="156" w="308" h="156" />
+      <frame texture="1" x="0" y="312" w="308" h="156" />
+      <frame texture="1" x="308" y="312" w="308" h="156" />
+      <frame texture="1" x="616" y="312" w="308" h="156" />
+      <frame texture="1" x="924" y="312" w="308" h="156" />
+	</animation>
+	<!-- DOOR LIGHTS -->
+	<animation delay="4">
+      <frame texture="1" x="0" y="468" w="308" h="156" />
+      <frame texture="1" x="308" y="468" w="308" h="156" />
+      <frame texture="1" x="616" y="468" w="308" h="156" />
+      <frame texture="1" x="924" y="468" w="308" h="156" />
+      <frame texture="1" x="0" y="624" w="308" h="156" />  
+	  <frame texture="1" x="924" y="468" w="308" h="156" />
+	  <frame texture="1" x="616" y="468" w="308" h="156" />
+	  <frame texture="1" x="308" y="468" w="308" h="156" />
+	</animation>
+	<!-- MIDDLE -->
+    <animation>
+      <frame texture="1" x="308" y="624" w="308" h="156" />
+	</animation>
+	<!-- MIDDLE OPENING -->
+	<animation delay="1">
+      <frame texture="1" x="616" y="624" w="308" h="156" />
+      <frame texture="1" x="924" y="624" w="308" h="156" />
+      <frame texture="1" x="0" y="780" w="308" h="156" />
+      <frame texture="1" x="308" y="780" w="308" h="156" />
+      <frame texture="1" x="616" y="780" w="308" h="156" />
+      <frame texture="1" x="924" y="780" w="308" h="156" />
+      <frame texture="1" x="0" y="936" w="308" h="156" />
+      <frame texture="1" x="308" y="936" w="308" h="156" />
+      <frame texture="1" x="616" y="936" w="308" h="156" />
+      <frame texture="1" x="924" y="936" w="308" h="156" />
+      <frame texture="1" x="0" y="1092" w="308" h="156" />
+    </animation>
+	<!-- LID -->
+	<animation>
+      <frame texture="2" x="0" y="0" w="140" h="74" />
+	</animation>
+	<!-- LOCK -->
+	<animation>
+	  <frame texture="3" x="0" y="0" w="70" h="70" />
+	</animation>
+	<!-- LOCK LIGHT -->
+	<animation delay="4">
+      <frame texture="3" x="70" y="0" w="70" h="70" />
+      <frame texture="3" x="140" y="0" w="70" h="70" />
+      <frame texture="3" x="0" y="70" w="70" h="70" />
+      <frame texture="3" x="70" y="70" w="70" h="70" />
+      <frame texture="3" x="140" y="70" w="70" h="70" />
+	  <frame texture="3" x="70" y="70" w="70" h="70" />
+	  <frame texture="3" x="0" y="70" w="70" h="70" />
+	  <frame texture="3" x="140" y="0" w="70" h="70" />
+	</animation>
+	<!-- LOCK BROKEN -->
+	<animation>
+      <frame texture="3" x="0" y="140" w="70" h="70" />
+    </animation>
+  </animations>
+</anigroup>

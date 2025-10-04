@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//RINGEFFECT</texture>
+  </textures>
+  <animations>
+    <!-- run -->
+    <animation delay="5" loop="0">
+    	<frame x="0" y="0" w="154" h="154" />
+    	<frame x="154" y="0" w="154" h="154" />
+    	<frame x="308" y="0" w="154" h="154" />
+    </animation>
+  </animations>
+</anigroup>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation delay="1">
+      <frame texture="0" x="0" y="0" w="288" h="288" />
+      <frame texture="0" x="288" y="0" w="288" h="288" />
+      <frame texture="0" x="576" y="0" w="288" h="288" />
+      <frame texture="0" x="864" y="0" w="288" h="288" />
+      <frame texture="0" x="1152" y="0" w="288" h="288" />
+      <frame texture="0" x="0" y="288" w="288" h="288" />
+      <frame texture="0" x="288" y="288" w="288" h="288" />
+      <frame texture="0" x="576" y="288" w="288" h="288" />
+      <frame texture="0" x="864" y="288" w="288" h="288" />
+      <frame texture="0" x="1152" y="288" w="288" h="288" />
+      <frame texture="0" x="0" y="576" w="288" h="288" />
+      <frame texture="0" x="288" y="576" w="288" h="288" />
+      <frame texture="0" x="576" y="576" w="288" h="288" />
+      <frame texture="0" x="864" y="576" w="288" h="288" />
+      <frame texture="0" x="1152" y="576" w="288" h="288" />
+      <frame texture="0" x="0" y="864" w="288" h="288" />
+      <frame texture="0" x="288" y="864" w="288" h="288" />
+      <frame texture="0" x="576" y="864" w="288" h="288" />
+      <frame texture="0" x="864" y="864" w="288" h="288" />
+      <frame texture="0" x="1152" y="864" w="288" h="288" />
+      <frame texture="0" x="0" y="1152" w="288" h="288" />
+      <frame texture="0" x="288" y="1152" w="288" h="288" />
+      <frame texture="0" x="576" y="1152" w="288" h="288" />
+      <frame texture="0" x="864" y="1152" w="288" h="288" />
+    </animation>
+  </animations>
+</anigroup>

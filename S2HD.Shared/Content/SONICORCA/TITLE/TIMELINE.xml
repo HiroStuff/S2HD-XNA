@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <node type="introtext" action="fadein" start="32" duration="32" />
+  <node type="introtext" action="fadeout" start="144" duration="32" />
+  <node type="twinkle" start="204" x="0" y="0" />
+  <node type="twinkle" start="264" x="0" y="0" />
+  <node type="twinkle" start="324" x="0" y="0" />
+  <node type="twinkle" start="384" x="0" y="0" />
+  <node type="banner" action="fadein" start="384" duration="32" />
+</timeline>

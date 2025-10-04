@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TAILS</texture>
+  </textures>
+  <animations>
+    <!-- run -->
+    <animation delay="1" loop="0">
+    	<frame x="0" y="0" w="130" h="227" />
+    	<frame x="130" y="0" w="130" h="227" />
+    	<frame x="260" y="0" w="130" h="227" />
+    	<frame x="390" y="0" w="130" h="227" />
+    	<frame x="520" y="0" w="130" h="227" />
+    	<frame x="650" y="0" w="130" h="227" />
+    	<frame x="780" y="0" w="130" h="227" />
+    	<frame x="910" y="0" w="130" h="227" />
+    </animation>
+    <animation delay="1" loop="0">
+    	<frame x="1040" y="0" w="130" h="227" />
+    	<frame x="1170" y="0" w="130" h="227" />
+    </animation>
+  </animations>
+</anigroup>

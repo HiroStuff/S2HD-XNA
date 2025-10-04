@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation delay="1">
+      <frame texture="0" x="0" y="0" w="145" h="103" />
+      <frame texture="0" x="145" y="0" w="145" h="103" />
+      <frame texture="0" x="0" y="103" w="145" h="103" />
+      <frame texture="0" x="145" y="103" w="145" h="103" />
+      <frame texture="0" x="0" y="206" w="145" h="103" />
+      <frame texture="0" x="145" y="206" w="145" h="103" />
+      <frame texture="0" x="0" y="309" w="145" h="103" />
+      <frame texture="0" x="145" y="309" w="145" h="103" />
+    </animation>
+  </animations>
+</anigroup>

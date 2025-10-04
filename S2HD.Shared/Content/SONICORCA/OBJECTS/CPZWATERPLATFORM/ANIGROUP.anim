@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation offset_y="-18">
+      <frame texture="0" x="0" y="24" w="220" h="42" />
+    </animation>
+    <animation offset_y="-18">
+      <frame texture="0" x="0" y="66" w="220" h="42" />
+    </animation>
+    <animation delay="3" offset_y="10">
+      <frame texture="0" x="0" y="0" w="28" h="24" />
+      <frame texture="0" x="28" y="0" w="28" h="24" />
+      <frame texture="0" x="56" y="0" w="28" h="24" />
+      <frame texture="0" x="84" y="0" w="28" h="24" />
+      <frame texture="0" x="112" y="0" w="28" h="24" />
+      <frame texture="0" x="140" y="0" w="28" h="24" />
+    </animation>
+    <animation delay="3" offset_y="10">
+      <frame texture="0" x="140" y="0" w="28" h="24" />
+      <frame texture="0" x="112" y="0" w="28" h="24" />
+      <frame texture="0" x="84" y="0" w="28" h="24" />
+      <frame texture="0" x="56" y="0" w="28" h="24" />
+      <frame texture="0" x="28" y="0" w="28" h="24" />
+      <frame texture="0" x="0" y="0" w="28" h="24" />
+    </animation>
+  </animations>
+</anigroup>

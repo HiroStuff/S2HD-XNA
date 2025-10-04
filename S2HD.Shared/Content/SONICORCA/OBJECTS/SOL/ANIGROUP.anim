@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+	<texture>//FIREBALL/TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation>
+      <frame texture="0" x="0" y="0" w="80" h="80" />
+    </animation>
+	<animation>
+      <frame texture="0" x="0" y="0" w="80" h="80" />
+      <frame texture="0" x="80" y="0" w="80" h="80" />
+      <frame texture="0" x="160" y="0" w="80" h="80" />
+      <frame texture="0" x="0" y="80" w="80" h="80" />
+      <frame texture="0" x="80" y="80" w="80" h="80" />
+      <frame texture="0" x="160" y="80" w="80" h="80" />
+      <frame texture="0" x="0" y="160" w="80" h="80" />
+      <frame texture="0" x="80" y="160" w="80" h="80" />
+      <frame texture="0" x="160" y="160" w="80" h="80" />
+    </animation>
+	<animation delay="1">
+      <frame texture="1" x="0" y="0" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="97" y="0" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="194" y="0" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="291" y="0" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="0" y="150" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="97" y="150" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="194" y="150" w="97" h="150" offset_y="-30" />
+      <frame texture="1" x="291" y="150" w="97" h="150" offset_y="-30" />
+    </animation>
+	<!-- turn anim -->
+	<animation delay="1">
+      <frame texture="0" x="0" y="240" w="80" h="80" />
+      <frame texture="0" x="80" y="240" w="80" h="80" />
+      <frame texture="0" x="160" y="240" w="80" h="80" />
+    </animation>
+  </animations>
+</anigroup>

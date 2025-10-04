@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "S2HD.Shared", "S2HD.Shared\S2HD.Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2HD.Desktop", "S2HD.Desktop\S2HD.Desktop.csproj", "{ED1B4477-B3F6-4CCA-9FD6-4856AE9B9830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2HD.Android", "S2HD.Android\S2HD.Android.csproj", "{E408EC5E-737D-4A4E-9A78-F6FB99E640D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED1B4477-B3F6-4CCA-9FD6-4856AE9B9830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1B4477-B3F6-4CCA-9FD6-4856AE9B9830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1B4477-B3F6-4CCA-9FD6-4856AE9B9830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1B4477-B3F6-4CCA-9FD6-4856AE9B9830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E408EC5E-737D-4A4E-9A78-F6FB99E640D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E408EC5E-737D-4A4E-9A78-F6FB99E640D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E408EC5E-737D-4A4E-9A78-F6FB99E640D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E408EC5E-737D-4A4E-9A78-F6FB99E640D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C9F8A8A-5064-4EE9-AD7D-AEE49DB0B4D7}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		S2HD.Shared\S2HD.Shared.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
+		S2HD.Shared\S2HD.Shared.projitems*{e408ec5e-737d-4a4e-9a78-f6fb99e640d2}*SharedItemsImports = 5
+		S2HD.Shared\S2HD.Shared.projitems*{ed1b4477-b3f6-4cca-9fd6-4856ae9b9830}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

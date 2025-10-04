@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE</texture>
+  </textures>
+  <animations>
+    <animation delay="5">
+      <frame texture="0" x="101" y="0" w="101" h="151" />
+      <frame texture="0" x="0" y="0" w="101" h="151" />
+      <frame texture="0" x="101" y="0" w="101" h="151" />
+      <frame texture="0" x="202" y="0" w="101" h="151" />
+    </animation>
+    <animation delay="2" next="0">
+      <frame texture="0" x="202" y="0" w="101" h="151" />
+      <frame texture="0" x="303" y="0" w="101" h="151" />
+      <frame texture="0" x="0" y="151" w="101" h="151" />
+      <frame texture="0" x="101" y="151" w="101" h="151" />
+      <frame texture="0" x="202" y="151" w="101" h="151" />
+      <frame texture="0" x="303" y="151" w="101" h="151" />
+      <frame texture="0" x="0" y="302" w="101" h="151" />
+      <frame texture="0" x="101" y="302" w="101" h="151" />
+      <frame texture="0" x="202" y="302" w="101" h="151" />
+      <frame texture="0" x="303" y="302" w="101" h="151" />
+      <frame texture="0" x="0" y="453" w="101" h="151" />
+      <frame texture="0" x="101" y="453" w="101" h="151" />
+      <frame texture="0" x="202" y="453" w="101" h="151" />
+      <frame texture="0" x="303" y="453" w="101" h="151" />
+      <frame texture="0" x="0" y="604" w="101" h="151" />
+      <frame texture="0" x="101" y="604" w="101" h="151" />
+    </animation>
+  </animations>
+</anigroup>

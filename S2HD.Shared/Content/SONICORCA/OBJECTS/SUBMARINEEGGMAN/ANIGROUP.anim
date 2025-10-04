@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+  	<texture>//INSIDE</texture>
+    <texture>//MOBILE</texture>
+	<texture>//LIGHTS</texture>
+	<texture>//FLAMETHROWER</texture>
+	<texture>//FLAMETHROWERSHOT</texture>
+	<texture>//FIREBALL</texture>
+	<texture>//HIGHLIGHTS</texture>
+	<texture>//FLAMETHROWER1</texture>
+	<texture>//PARTS</texture>
+	<texture>//FLAMETRANSITION</texture> 
+	<texture>//FLAME</texture>  
+  </textures>
+  <animations>
+	<!-- mobile, inside -->
+	<animation>
+	  <frame texture="0" x="0" y="0" w="325" h="300" />
+	</animation>
+    <!-- mobile -->
+    <animation delay="1">
+      <frame texture="1" x="0" y="0" w="325" h="300" />
+      <frame texture="1" x="325" y="0" w="325" h="300" />
+	  <frame texture="1" x="0" y="0" w="325" h="300" />
+	  <frame texture="1" x="650" y="0" w="325" h="300" />
+	  <frame texture="1" x="975" y="0" w="325" h="300" />
+    </animation>
+	<!-- mobile, exploding -->
+	<animation>
+	  <frame texture="1" x="1300" y="300" w="325" h="300" />
+	</animation>
+	<!-- mobile, defeated -->
+	<animation delay="1">
+	  <frame texture="1" x="0" y="300" w="325" h="300" />
+	  <frame texture="1" x="325" y="300" w="325" h="300" />
+	  <frame texture="1" x="0" y="300" w="325" h="300" />
+	  <frame texture="1" x="650" y="300" w="325" h="300" />
+	  <frame texture="1" x="975" y="300" w="325" h="300" />
+	</animation>
+	<!-- mobile, lights -->
+	<animation>
+	  <frame texture="2" x="0" y="0" w="325" h="300" />
+	</animation>
+	
+    <!-- flamethrower -->
+    <animation delay="2" >
+      <frame texture="3" x="0" y="0" w="86" h="79" />
+      <frame texture="3" x="86" y="0" w="86" h="79" />
+      <frame texture="3" x="172" y="0" w="86" h="79" />
+      <frame texture="3" x="258" y="0" w="86" h="79" />
+      <frame texture="3" x="344" y="0" w="86" h="79" />
+	  <frame texture="3" x="0" y="79" w="86" h="79" />
+	  <frame texture="3" x="86" y="79" w="86" h="79" />
+	  <frame texture="3" x="172" y="79" w="86" h="79" />
+	  <frame texture="3" x="258" y="79" w="86" h="79" />
+	  <frame texture="3" x="344" y="79" w="86" h="79" />
+	  <frame texture="3" x="0" y="158" w="86" h="79" />
+	  <frame texture="3" x="86" y="158" w="86" h="79" />
+	  <frame texture="3" x="172" y="158" w="86" h="79" />
+	  <frame texture="3" x="258" y="158" w="86" h="79" />
+	  <frame texture="3" x="344" y="158" w="86" h="79" />
+	  <frame texture="3" x="0" y="237" w="86" h="79" />
+	  <frame texture="3" x="86" y="237" w="86" h="79" />
+	  <frame texture="3" x="172" y="237" w="86" h="79" />
+	  <frame texture="3" x="258" y="237" w="86" h="79" />
+	  <frame texture="3" x="344" y="237" w="86" h="79" />
+	  <frame texture="3" x="0" y="316" w="86" h="79" />
+	  <frame texture="3" x="86" y="316" w="86" h="79" />
+	  <frame texture="3" x="172" y="316" w="86" h="79" />
+	  <frame texture="3" x="258" y="316" w="86" h="79" />
+	  <frame texture="3" x="344" y="316" w="86" h="79" />
+	  <frame texture="3" x="0" y="237" w="86" h="79" />
+	  <frame texture="3" x="86" y="237" w="86" h="79" />
+	  <frame texture="3" x="172" y="237" w="86" h="79" />
+	  <frame texture="3" x="258" y="237" w="86" h="79" />
+	  <frame texture="3" x="344" y="237" w="86" h="79" />
+	  <frame texture="3" x="0" y="316" w="86" h="79" />
+	  <frame texture="3" x="86" y="316" w="86" h="79" />
+	  <frame texture="3" x="172" y="316" w="86" h="79" />
+	  <frame texture="3" x="258" y="316" w="86" h="79" />
+	  <frame texture="3" x="344" y="316" w="86" h="79" />
+	  <frame texture="7" x="0" y="0" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="414" y="0" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="828" y="0" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="1242" y="0" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="1656" y="0" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="0" y="173" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="414" y="173" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="828" y="173" w="414" h="173" delay="1" offset_x="-174" />
+	  <frame texture="7" x="1242" y="173" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1656" y="173" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="0" y="346" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="414" y="346" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="828" y="346" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1242" y="346" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1656" y="346" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="0" y="519" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="414" y="519" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="828" y="519" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1242" y="519" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1656" y="519" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="0" y="692" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="414" y="692" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="828" y="692" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1242" y="692" w="414" h="173" offset_x="-174" />
+	  <frame texture="7" x="1656" y="692" w="414" h="173" offset_x="-174" />
+    </animation>
+	
+	<!-- flamethrower shot -->
+	<animation delay="2">
+      <frame texture="4" x="0" y="0" w="85" h="48" />
+	  <frame texture="4" x="85" y="0" w="85" h="48" />
+	  <frame texture="4" x="170" y="0" w="85" h="48" />
+	  <frame texture="4" x="255" y="0" w="85" h="48" />
+	  <frame texture="4" x="340" y="0" w="85" h="48" />
+	  <frame texture="4" x="425" y="0" w="85" h="48" />
+	  <frame texture="4" x="510" y="0" w="85" h="48" />
+	  <frame texture="4" x="595" y="0" w="85" h="48" />
+	  <frame texture="4" x="680" y="0" w="85" h="48" />
+	</animation>
+	
+    <!-- fireball -->
+    <animation delay="2">
+      <frame texture="5" x="0" y="0" w="208" h="150" />
+	  <frame texture="5" x="208" y="0" w="208" h="150" />
+      <frame texture="5" x="416" y="0" w="208" h="150" />
+      <frame texture="5" x="624" y="0" w="208" h="150" />
+      <frame texture="5" x="832" y="0" w="208" h="150" />
+      <frame texture="5" x="1040" y="0" w="208" h="150" />
+      <frame texture="5" x="1248" y="0" w="208" h="150" />
+    </animation>
+	
+	<!-- flamethrower boss highlights (spawn + idle loop) -->
+    <animation delay="5" loop="4">
+      <frame texture="6" x="0" y="0" w="325" h="300" />
+      <frame texture="6" x="325" y="0" w="325" h="300" />
+      <frame texture="6" x="650" y="0" w="325" h="300" />
+      <frame texture="6" x="975" y="0" w="325" h="300" />
+      <frame texture="6" x="1300" y="0" w="325" h="300" />
+      <frame texture="6" x="1625" y="0" w="325" h="300" />
+      <frame texture="6" x="0" y="300" w="325" h="300" />
+      <frame texture="6" x="325" y="300" w="325" h="300" />
+	  <frame texture="6" x="1625" y="0" w="325" h="300" />
+      <frame texture="6" x="650" y="300" w="325" h="300" />
+	</animation>
+	  
+	<!-- flamethrower boss highlights (flamethrower intro + loop) -->  
+	<animation delay="5" loop="2">  
+      <frame texture="6" x="975" y="300" w="325" h="300" />
+      <frame texture="6" x="1300" y="300" w="325" h="300" />
+      <frame texture="6" x="1625" y="300" w="325" h="300" />
+      <frame texture="6" x="0" y="600" w="325" h="300" />
+      <frame texture="6" x="325" y="600" w="325" h="300" />
+      <frame texture="6" x="650" y="600" w="325" h="300" />
+      <frame texture="6" x="0" y="600" w="325" h="300" />
+	  <frame texture="6" x="975" y="600" w="325" h="300" />
+	</animation>  
+	  
+	<!-- flamethrower boss highlights (end) -->  
+	<animation delay="5">
+      <frame texture="6" x="1300" y="600" w="325" h="300" />
+      <frame texture="6" x="1625" y="600" w="325" h="300" />
+    </animation>
+	
+	<!-- lava boss highlights -->
+    <animation delay="5">
+      <frame texture="6" x="0" y="900" w="325" h="300" />
+      <frame texture="6" x="325" y="900" w="325" h="300" />
+	  <frame texture="6" x="650" y="900" w="325" h="300" />
+	  <frame texture="6" x="975" y="900" w="325" h="300" />
+	  <frame texture="6" x="1300" y="900" w="325" h="300" />
+      <frame texture="6" x="1625" y="900" w="325" h="300" delay="11"/>
+	  <frame texture="6" x="1300" y="900" w="325" h="300" />
+	  <frame texture="6" x="975" y="900" w="325" h="300" />
+	  <frame texture="6" x="650" y="900" w="325" h="300" />
+	  <frame texture="6" x="325" y="900" w="325" h="300" />
+    </animation>
+    
+    <!-- the five broken parts -->
+    <animation>
+      <frame texture="8" x="0" y="0" w="103" h="34" />     
+    </animation>
+    
+    <animation>
+      <frame texture="8" x="103" y="0" w="57" h="50" />     
+    </animation>
+    
+    <animation>
+      <frame texture="8" x="0" y="34" w="100" h="82" />     
+    </animation>
+    
+    <animation>
+      <frame texture="8" x="103" y="50" w="95" h="61" />     
+    </animation>
+    
+    <animation>
+      <frame texture="8" x="100" y="111" w="76" h="20" />     
+    </animation>
+    
+    <!-- flame transition --> 
+    <animation delay="1">
+      <frame texture="9" x="0" y="0" w="300" h="300" />
+      <frame texture="9" x="300" y="0" w="300" h="300" />
+      <frame texture="9" x="600" y="0" w="300" h="300" />
+      <frame texture="9" x="900" y="0" w="300" h="300" />
+      <frame texture="9" x="1200" y="0" w="300" h="300" />
+      <frame texture="9" x="1500" y="0" w="300" h="300" />
+      <frame texture="9" x="1800" y="0" w="300" h="300" />
+      <frame texture="9" x="0" y="300" w="300" h="300" />
+      <frame texture="9" x="300" y="300" w="300" h="300" />
+      <frame texture="9" x="600" y="300" w="300" h="300" />
+      <frame texture="9" x="900" y="300" w="300" h="300" />
+      <frame texture="9" x="1200" y="300" w="300" h="300" />
+      <frame texture="9" x="1500" y="300" w="300" h="300" />
+      <frame texture="9" x="1800" y="300" w="300" h="300" />
+      <frame texture="9" x="0" y="600" w="300" h="300" />
+      <frame texture="9" x="300" y="600" w="300" h="300" />
+      <frame texture="9" x="600" y="600" w="300" h="300" />
+      <frame texture="9" x="900" y="600" w="300" h="300" />
+      <frame texture="9" x="1200" y="600" w="300" h="300" />
+      <frame texture="9" x="1500" y="600" w="300" h="300" />
+      <frame texture="9" x="1800" y="600" w="300" h="300" />
+      <frame texture="9" x="0" y="900" w="300" h="300" />
+      <frame texture="9" x="300" y="900" w="300" h="300" />
+      <frame texture="9" x="600" y="900" w="300" h="300" />
+      <frame texture="9" x="900" y="900" w="300" h="300" />
+      <frame texture="9" x="1200" y="900" w="300" h="300" />
+      <frame texture="9" x="1500" y="900" w="300" h="300" />
+      <frame texture="9" x="1800" y="900" w="300" h="300" />
+    </animation> 
+    
+    <!-- flame (intro + loop) --> 
+    <animation delay="2" loop="14">
+      <frame texture="10" x="0" y="0" w="132" h="179" />
+      <frame texture="10" x="132" y="0" w="132" h="179" />
+      <frame texture="10" x="264" y="0" w="132" h="179" offset_x="-5" />
+      <frame texture="10" x="396" y="0" w="132" h="179" offset_x="-3" />
+      <frame texture="10" x="528" y="0" w="132" h="179" />
+      <frame texture="10" x="660" y="0" w="132" h="179" />
+      <frame texture="10" x="792" y="0" w="132" h="179" />
+      <frame texture="10" x="0" y="179" w="132" h="179" />
+      <frame texture="10" x="132" y="179" w="132" h="179" />
+      <frame texture="10" x="264" y="179" w="132" h="179" />
+      <frame texture="10" x="396" y="179" w="132" h="179" /> 
+      <frame texture="10" x="528" y="179" w="132" h="179" />
+      <frame texture="10" x="660" y="179" w="132" h="179" />
+      <frame texture="10" x="792" y="179" w="132" h="179" />
+      <frame texture="10" x="0" y="358" w="132" h="179" />
+      <frame texture="10" x="132" y="358" w="132" h="179" />
+      <frame texture="10" x="264" y="358" w="132" h="179" />
+      <frame texture="10" x="396" y="358" w="132" h="179" />
+      <frame texture="10" x="528" y="358" w="132" h="179" />
+      <frame texture="10" x="660" y="358" w="132" h="179" />
+      <frame texture="10" x="792" y="358" w="132" h="179" />
+      <frame texture="10" x="0" y="537" w="132" h="179" />
+      <frame texture="10" x="132" y="357" w="132" h="179" />
+      <frame texture="10" x="264" y="537" w="132" h="179" />
+      <frame texture="10" x="396" y="537" w="132" h="179" /> 
+    </animation>
+    
+    <!-- flame (end) --> 
+    <animation delay="2">
+      <frame texture="10" x="528" y="537" w="132" h="179" />
+      <frame texture="10" x="660" y="537" w="132" h="179" />
+      <frame texture="10" x="792" y="537" w="132" h="179" />
+      <frame texture="10" x="0" y="716" w="132" h="179" />
+      <frame texture="10" x="132" y="716" w="132" h="179" />
+      <frame texture="10" x="264" y="716" w="132" h="179" />
+      <frame texture="10" x="396" y="716" w="132" h="179" />
+      <frame texture="10" x="528" y="716" w="132" h="179" />
+      <frame texture="10" x="660" y="716" w="132" h="179" />
+      <frame texture="10" x="792" y="716" w="132" h="179" />
+      <frame texture="10" x="895" y="0" w="132" h="179" />
+      <frame texture="10" x="132" y="895" w="132" h="179" />
+      <frame texture="10" x="264" y="895" w="132" h="179" />
+      <frame texture="10" x="396" y="895" w="132" h="179" />
+      <frame texture="10" x="528" y="895" w="132" h="179" />
+      <frame texture="10" x="660" y="895" w="132" h="179" />
+      <frame texture="10" x="792" y="895" w="132" h="179" />
+     </animation>
+    
+    
+    
+    
+  </animations>
+</anigroup>

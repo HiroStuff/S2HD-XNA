@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE0</texture>
+	<texture>//TEXTURE1</texture>
+  </textures>
+  <animations>
+    <!-- red -->
+    <animation>
+	  <frame texture="0" x="0" y="0" w="170" h="168" />
+	</animation>
+    <animation next="0">
+	  <frame texture="0" x="0" y="0" w="170" h="168" />
+      <frame texture="0" x="510" y="0" w="170" h="168" />
+      <frame texture="0" x="0" y="168" w="170" h="168" />
+      <frame texture="0" x="170" y="168" w="170" h="168" />
+      <frame texture="0" x="340" y="168" w="170" h="168" />
+      <frame texture="0" x="510" y="168" w="170" h="168" />
+	  <frame texture="0" x="510" y="0" w="170" h="168" />
+	  <frame delay="1" texture="0" x="170" y="0" w="170" h="168" />
+	  <frame delay="1" texture="0" x="340" y="0" w="170" h="168" />
+	  <frame texture="0" x="170" y="0" w="170" h="168" />
+	</animation>
+	<!-- yellow -->
+    <animation>
+	  <frame texture="0" x="0" y="336" w="170" h="168" />
+	</animation>
+	<animation next="2">
+	  <frame texture="0" x="0" y="336" w="170" h="168" />
+      <frame texture="0" x="510" y="336" w="170" h="168" />
+      <frame texture="0" x="0" y="504" w="170" h="168" />
+      <frame texture="0" x="170" y="504" w="170" h="168" />
+      <frame texture="0" x="340" y="504" w="170" h="168" />
+      <frame texture="0" x="510" y="504" w="170" h="168" />
+	  <frame texture="0" x="0" y="504" w="170" h="168" />
+	  <frame texture="0" x="510" y="336" w="170" h="168" />
+	  <frame delay="1" texture="0" x="170" y="336" w="170" h="168" />
+	  <frame delay="1" texture="0" x="340" y="336" w="170" h="168" />
+	  <frame texture="0" x="510" y="336" w="170" h="168" />
+	</animation>
+	<!-- red diagonal -->
+	<animation>
+	  <frame texture="1" x="0" y="0" w="202" h="207" />
+	</animation>
+	<animation next="4">
+	  <frame texture="1" x="0" y="0" w="202" h="207" />
+      <frame texture="1" x="606" y="0" w="202" h="207" />
+      <frame texture="1" x="0" y="207" w="202" h="207" />
+      <frame texture="1" x="202" y="207" w="202" h="207" />
+      <frame texture="1" x="404" y="207" w="202" h="207" />
+      <frame texture="1" x="606" y="207" w="202" h="207" />
+	  <frame texture="1" x="0" y="207" w="202" h="207" />
+	  <frame texture="1" x="606" y="0" w="202" h="207" />
+	  <frame delay="1" texture="1" x="202" y="0" w="202" h="207" />
+	  <frame delay="1" texture="1" x="404" y="0" w="202" h="207" />
+	  <frame texture="1" x="202" y="0" w="202" h="207" />
+	</animation>
+	<!-- yellow diagonal -->
+    <animation>
+	  <frame texture="1" x="0" y="414" w="202" h="207" />
+	</animation>
+	<animation next="6">
+	  <frame texture="1" x="0" y="414" w="202" h="207" />
+      <frame texture="1" x="606" y="414" w="202" h="207" />
+      <frame texture="1" x="0" y="621" w="202" h="207" />
+      <frame texture="1" x="202" y="621" w="202" h="207" />
+      <frame texture="1" x="404" y="621" w="202" h="207" />
+	  <frame texture="1" x="0" y="621" w="202" h="207" />
+	  <frame texture="1" x="606" y="414" w="202" h="207" />
+	  <frame delay="1" texture="1" x="202" y="414" w="202" h="207" />
+	  <frame delay="1" texture="1" x="404" y="414" w="202" h="207" />
+	  <frame texture="1" x="202" y="414" w="202" h="207" />
+	</animation>
+  </animations>
+</anigroup>

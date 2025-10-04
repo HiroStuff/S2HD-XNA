@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<anigroup>
+  <textures>
+    <texture>//TEXTURE0</texture>
+	<texture>//TEXTURE1</texture>
+  </textures>
+  <animations>
+    <!-- stand -->
+    <animation>
+      <frame texture="0" x="0" y="0" w="431" h="263" />
+	</animation>
+	<!-- platform -->
+    <animation>
+      <frame texture="1" x="0" y="0" w="431" h="263" />
+    </animation>
+  </animations>
+</anigroup>
