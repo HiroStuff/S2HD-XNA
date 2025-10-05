@@ -27,8 +27,10 @@ namespace S2HD.Title
         private Texture2D _leftArrowTexture;
         private Texture2D _rightArrowTexture;
         private Texture2D _whiteTexture;
+        private Texture2D _zigzagTexture;
 
         private AudioManager _audioManager;
+        private TitleGameState _titleGameState;
 
         private int _ticks;
         private bool _pressStartActive;
@@ -70,6 +72,7 @@ namespace S2HD.Title
             _graphicsDevice = graphicsDevice;
             _content = content;
             _audioManager = audioManager;
+            _titleGameState = titleGameState;
             _effectEventManager = new EffectEventManager();
             LoadContent();
             InitializeLevelSelect();
@@ -89,6 +92,7 @@ namespace S2HD.Title
             _selectionMarkerTexture = _content.Load<Texture2D>("SONICORCA/TITLE/SELECTIONMARKER");
             _leftArrowTexture = _content.Load<Texture2D>("SONICORCA/MENU/LEFT");
             _rightArrowTexture = _content.Load<Texture2D>("SONICORCA/MENU/RIGHT");
+            _zigzagTexture = _content.Load<Texture2D>("SONICORCA/TITLE/ZIGZAG");
 
             _whiteTexture = new Texture2D(_graphicsDevice, 1, 1);
             _whiteTexture.SetData(new[] { Color.White });
@@ -140,38 +144,12 @@ namespace S2HD.Title
                     OriginOffset = i,
                     X = 960 + 400 * i,
                     Scale = new Vector2(1.0f),
-                    Opacity = GetMenuItemOpacity(960 + 400 * i)
+                    Opacity = (float)MenuItemOpacityEaseTimeline.GetValueAt((int)(960 + 400 * i))
                 };
             }
             SetSelectionMarkerPositions();
         }
         
-        private float GetMenuItemOpacity(float x)
-        {
-            if (x <= 260) return 0.0f;
-            if (x >= 1660) return 0.0f;
-            
-            if (x <= 560)
-            {
-                float t = (x - 260) / (560 - 260);
-                return Lerp(0.0f, 0.5f, t);
-            }
-            else if (x <= 960)
-            {
-                float t = (x - 560) / (960 - 560);
-                return Lerp(0.5f, 1.0f, t);
-            }
-            else if (x <= 1360)
-            {
-                float t = (x - 960) / (1360 - 960);
-                return Lerp(1.0f, 0.5f, t);
-            }
-            else
-            {
-                float t = (x - 1360) / (1660 - 1360);
-                return Lerp(0.5f, 0.0f, t);
-            }
-        }
         
         private float Lerp(float a, float b, float t)
         {
@@ -422,7 +400,7 @@ namespace S2HD.Title
                 foreach (MenuItemWidget widget in _menuItemWidgets)
                 {
                     widget.X += velocity;
-                    widget.Opacity = GetMenuItemOpacity(widget.X);
+                    widget.Opacity = (float)MenuItemOpacityEaseTimeline.GetValueAt((int)widget.X);
                 }
                 
                 if (t <= 7)
@@ -461,7 +439,7 @@ namespace S2HD.Title
                     widget.MenuItemIndex = NegMod(widget.MenuItemIndex + 1, _menuItems.Length);
                 }
                 widget.X = 960 + 400 * newOriginOffset;
-                widget.Opacity = GetMenuItemOpacity(widget.X);
+                widget.Opacity = (float)MenuItemOpacityEaseTimeline.GetValueAt((int)widget.X);
                 widget.OriginOffset = newOriginOffset;
             }
             
@@ -488,6 +466,9 @@ namespace S2HD.Title
                 case 1: // OPTIONS
                     break;
                 case 2: // QUIT
+                    _busy = true;
+                    _effectEventManager.BeginEvent(EffectFadeOut());
+                    _titleGameState.Result = TitleGameState.ResultType.Quit;
                     break;
             }
         }
@@ -529,6 +510,36 @@ namespace S2HD.Title
                 spriteBatch.End();
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);                
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition, pressStartColor, -1, true);
+
+                if (_pressStartOpacity > 0.0)
+                {
+                    Rectangle textBounds = _fontImpactItalic.MeasureString("PRESS START");
+                    int textWidth = textBounds.Width;
+                    int zigzagWidth = 79;
+                    int spacing = 16;
+                    
+                    int zigzagOffsetX = textWidth / 2 + spacing + zigzagWidth / 2;
+                    int zigzagTextureWidth = _zigzagTexture.Width;
+                    int animationOffset = _ticks / 2;
+                    int wrapOffsetX1 = zigzagTextureWidth - animationOffset % zigzagTextureWidth;
+                    int wrapOffsetX2 = animationOffset % zigzagTextureWidth;
+                    
+                    Rectangle leftZigzagRect = new Rectangle(
+                        (int)(pressStartPosition.X - zigzagOffsetX - zigzagWidth / 2), 
+                        932, 
+                        zigzagWidth, 
+                        0
+                    );
+                    Rectangle rightZigzagRect = new Rectangle(
+                        (int)(pressStartPosition.X + zigzagOffsetX - zigzagWidth / 2), 
+                        932, 
+                        zigzagWidth, 
+                        0
+                    );
+                    
+                    DrawZigZag(spriteBatch, leftZigzagRect, wrapOffsetX1);
+                    DrawZigZag(spriteBatch, rightZigzagRect, wrapOffsetX2);
+                }
             }
 
 
@@ -563,7 +574,16 @@ namespace S2HD.Title
         
         private void DrawMenuItem(SpriteBatch spriteBatch, string text, Vector2 position, float opacity, Vector2 scale, bool selected = false)
         {
+            if (opacity <= 0.0f)
+                return;
+                
             int overlay = -1;
+            
+            if (_textOpacity < 1.0)
+            {
+                opacity *= (float)_textOpacity;
+            }
+            
             Color color = new Color(opacity, 1.0f, 1.0f, 1.0f);
             _fontImpactRegular.DrawString(spriteBatch, text, position, color, overlay, true);
         }
@@ -600,6 +620,86 @@ namespace S2HD.Title
             _miniSonicAniInstance.Draw(spriteBatch, sonicColor, new Vector2(910, 880));
             _miniTailsAniInstance.Draw(spriteBatch, tailsColor, new Vector2(1010, 880));
         }
+
+        private void DrawZigZag(SpriteBatch spriteBatch, Rectangle rect, int wrapOffsetX)
+        {
+            rect.Y -= _zigzagTexture.Height / 2;
+            rect.Height = _zigzagTexture.Height;
+
+            Rectangle sourceRect = new Rectangle(0, 0, _zigzagTexture.Width, _zigzagTexture.Height);
+            Rectangle destRect = rect;
+            destRect.X = rect.X - wrapOffsetX;
+            destRect.Width = _zigzagTexture.Width;
+
+            while (destRect.X < rect.Right)
+            {
+                if (destRect.X < rect.Right && destRect.Right > rect.X)
+                {
+                    Rectangle clippedDest = destRect;
+                    Rectangle clippedSource = sourceRect;
+                    
+                    if (clippedDest.X < rect.X)
+                    {
+                        int clipAmount = rect.X - clippedDest.X;
+                        clippedDest.X = rect.X;
+                        clippedDest.Width -= clipAmount;
+                        clippedSource.X += clipAmount;
+                        clippedSource.Width -= clipAmount;
+                    }
+                    if (clippedDest.Right > rect.Right)
+                    {
+                        int clipAmount = clippedDest.Right - rect.Right;
+                        clippedDest.Width -= clipAmount;
+                        clippedSource.Width -= clipAmount;
+                    }
+                    
+                    if (clippedDest.Width > 0 && clippedSource.Width > 0)
+                    {
+                        spriteBatch.Draw(_zigzagTexture, clippedDest, clippedSource, Color.White);
+                    }
+                }
+                destRect.X += destRect.Width;
+            }
+        }
+
+        private IEnumerable<UpdateResult> EffectFadeOut()
+        {
+            var selectedWidget = _menuItemWidgets.First(w => w.MenuItemIndex == _selectionIndex);
+            _titleGameState.Background.WipeOut();
+            
+            for (int t = 0; t <= 30; t++)
+            {
+                if (t == 15)
+                {
+                    _titleGameState.FadeOut();
+                }
+                selectedWidget.Scale = new Vector2((float)ActivatedTextScaleTimeline.GetValueAt(t));
+                _textOpacity = ActivatedTextOpacityTimeline.GetValueAt(t);
+                yield return UpdateResult.Next;
+            }
+        }
+
+        private static readonly EaseTimeline ActivatedTextScaleTimeline = new EaseTimeline(new EaseTimeline.Entry[]
+        {
+            new EaseTimeline.Entry(0, 1.0),
+            new EaseTimeline.Entry(15, 0.8),
+            new EaseTimeline.Entry(30, 1.4)
+        });
+
+        private static readonly EaseTimeline ActivatedTextOpacityTimeline = new EaseTimeline(new EaseTimeline.Entry[]
+        {
+            new EaseTimeline.Entry(15, 1.0),
+            new EaseTimeline.Entry(30, 0.0)
+        });
+
+        private static readonly EaseTimeline MenuItemOpacityEaseTimeline = new EaseTimeline(new EaseTimeline.Entry[]
+        {
+            new EaseTimeline.Entry(160, 0.0),
+            new EaseTimeline.Entry(560, 0.5),
+            new EaseTimeline.Entry(960, 1.0),
+            new EaseTimeline.Entry(1360, 0.5),
+            new EaseTimeline.Entry(1760, 0.0)
+        });
     }
 
     public class MenuItemWidget

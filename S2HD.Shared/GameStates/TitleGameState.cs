@@ -241,7 +241,7 @@ namespace S2HD.GameStates
             Vector2 versionPosition = new Vector2(8, 1052);            
             _spriteBatch.End();
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(0.5f, 0.5f, 1.0f) * Matrix.CreateTranslation(8, 1052, 0));
-            _font.DrawString(_spriteBatch, _versionText.ToUpper(), Vector2.Zero, colour);
+            _font.DrawString(_spriteBatch, _versionText.ToUpper(), Vector2.Zero, colour, 0);
             _spriteBatch.End();
             _spriteBatch.Begin();
         }
