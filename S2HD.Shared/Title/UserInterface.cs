@@ -50,6 +50,7 @@ namespace S2HD.Title
         private int _characterSelectionIndex;
         private bool _characterSelected;
         private bool _busy;
+        private double _uiFadeOpacity;
         
         private KeyboardState _previousKeyboardState;
         private GamePadState _previousGamePadState;
@@ -126,10 +127,12 @@ namespace S2HD.Title
             _levelSelectSelectionIndex = 0;
             _demoTimeout = 720;
             _characterSelectTimer = 60;
+            _uiFadeOpacity = 1.0;
             InitializeMenuItemWidgets();
             
             _previousKeyboardState = Keyboard.GetState();
             _previousGamePadState = GamePad.GetState(PlayerIndex.One);
+            _effectEventManager.Clear();
         }
 
         private void InitializeMenuItemWidgets()
@@ -176,6 +179,16 @@ namespace S2HD.Title
 
         public void Update()
         {
+            if (Visible && _pressStartActive && _demoTimeout != null)
+            {
+                _demoTimeout--;
+                if (_demoTimeout <= 0)
+                {
+                    _demoTimeout = null;
+                    StartDemo();
+                }
+            }
+
             if (!Visible) return;
 
             if (_characterSelectActive)
@@ -194,16 +207,6 @@ namespace S2HD.Title
             HandleInput();
             _effectEventManager.Update();
             _ticks++;
-
-            if (_demoTimeout != null)
-            {
-                _demoTimeout--;
-                if (_demoTimeout <= 0)
-                {
-                    _demoTimeout = null;
-                    StartDemo();
-                }
-            }
 
             if (_characterSelected)
             {
@@ -234,7 +237,7 @@ namespace S2HD.Title
             }
             else if (_pressStartActive)
             {
-                if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
+                if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start) || IsButtonJustPressed(gamePadState, Buttons.A))
                 {
                     EffectPressStart();
                     _pressStartActive = false;
@@ -265,28 +268,40 @@ namespace S2HD.Title
             return current.IsButtonDown(button) && !_previousGamePadState.IsButtonDown(button);
         }
         
-        private bool IsDPadJustPressed(GamePadState current, ButtonState direction)
+        private bool IsDPadLeftJustPressed(GamePadState current)
         {
             return current.DPad.Left == ButtonState.Pressed && _previousGamePadState.DPad.Left != ButtonState.Pressed;
+        }
+        private bool IsDPadRightJustPressed(GamePadState current)
+        {
+            return current.DPad.Right == ButtonState.Pressed && _previousGamePadState.DPad.Right != ButtonState.Pressed;
+        }
+        private bool IsDPadUpJustPressed(GamePadState current)
+        {
+            return current.DPad.Up == ButtonState.Pressed && _previousGamePadState.DPad.Up != ButtonState.Pressed;
+        }
+        private bool IsDPadDownJustPressed(GamePadState current)
+        {
+            return current.DPad.Down == ButtonState.Pressed && _previousGamePadState.DPad.Down != ButtonState.Pressed;
         }
 
         private void HandleLevelSelectInput(KeyboardState keyboardState, GamePadState gamePadState)
         {
-            if (IsKeyJustPressed(keyboardState, Keys.Up) || (gamePadState.DPad.Up == ButtonState.Pressed && _previousGamePadState.DPad.Up != ButtonState.Pressed))
+            if (IsKeyJustPressed(keyboardState, Keys.Up) || IsDPadUpJustPressed(gamePadState))
             {
                 _levelSelectSelectionIndex = (_levelSelectSelectionIndex - 1 + _levelSelectItems.Length) % _levelSelectItems.Length;
             }
-            else if (IsKeyJustPressed(keyboardState, Keys.Down) || (gamePadState.DPad.Down == ButtonState.Pressed && _previousGamePadState.DPad.Down != ButtonState.Pressed))
+            else if (IsKeyJustPressed(keyboardState, Keys.Down) || IsDPadDownJustPressed(gamePadState))
             {
                 _levelSelectSelectionIndex = (_levelSelectSelectionIndex + 1) % _levelSelectItems.Length;
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
+            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start) || IsButtonJustPressed(gamePadState, Buttons.A))
             {
                 OnLevelSelectStart();
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back))
+            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back) || IsButtonJustPressed(gamePadState, Buttons.B))
             {
                 _levelSelectEnabled = false;
             }
@@ -309,13 +324,13 @@ namespace S2HD.Title
                 _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back))
+            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back) || IsButtonJustPressed(gamePadState, Buttons.B))
             {
                 _characterSelectActive = false;
                 _audioManager.PlaySound("NAVIGATE/BACK");
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
+            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start) || IsButtonJustPressed(gamePadState, Buttons.A))
             {
                 _miniSonicAniInstance.Index = IsSonicActive ? 12 : 11;
                 _miniTailsAniInstance.Index = IsTailsActive ? 14 : 13;
@@ -326,7 +341,7 @@ namespace S2HD.Title
 
         private void HandleMenuInput(KeyboardState keyboardState, GamePadState gamePadState)
         {
-            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back))
+            if (IsKeyJustPressed(keyboardState, Keys.Escape) || IsButtonJustPressed(gamePadState, Buttons.Back) || IsButtonJustPressed(gamePadState, Buttons.B))
             {
                 _demoTimeout = 720;
                 _pressStartActive = true;
@@ -338,20 +353,20 @@ namespace S2HD.Title
                 _audioManager.PlaySound("NAVIGATE/BACK");
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Left) || IsDPadJustPressed(gamePadState, ButtonState.Pressed))
+            if (IsKeyJustPressed(keyboardState, Keys.Left) || IsDPadLeftJustPressed(gamePadState))
             {
                 _selectionIndex = (_selectionIndex - 1 + _menuItems.Length) % _menuItems.Length;
                 EffectNavigateMenu(-1);
                 _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
-            else if (IsKeyJustPressed(keyboardState, Keys.Right) || (gamePadState.DPad.Right == ButtonState.Pressed && _previousGamePadState.DPad.Right != ButtonState.Pressed))
+            else if (IsKeyJustPressed(keyboardState, Keys.Right) || IsDPadRightJustPressed(gamePadState))
             {
                 _selectionIndex = (_selectionIndex + 1) % _menuItems.Length;
                 EffectNavigateMenu(1);
                 _audioManager.PlaySound("NAVIGATE/CURSOR");
             }
 
-            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start))
+            if (IsKeyJustPressed(keyboardState, Keys.Enter) || IsButtonJustPressed(gamePadState, Buttons.Start) || IsButtonJustPressed(gamePadState, Buttons.A))
             {
                 OnSelectMenuItem();
                 _audioManager.PlaySound("NAVIGATE/YES");
@@ -464,6 +479,9 @@ namespace S2HD.Title
                     _characterSelectActive = true;
                     break;
                 case 1: // OPTIONS
+                    _busy = true;
+                    _effectEventManager.BeginEvent(EffectFadeOut());
+                    _titleGameState.Result = TitleGameState.ResultType.ShowOptions;
                     break;
                 case 2: // QUIT
                     _busy = true;
@@ -475,9 +493,9 @@ namespace S2HD.Title
 
         private void OnSelectCharacter()
         {
-
-            _characterSelected = false;
-            _characterSelectActive = false;
+            _busy = true;
+            _effectEventManager.BeginEvent(EffectFadeOut());
+            _titleGameState.Result = TitleGameState.ResultType.NewGame;
         }
 
         private void OnLevelSelectStart()
@@ -487,7 +505,9 @@ namespace S2HD.Title
 
         private void StartDemo()
         {
-
+            _busy = true;
+            _effectEventManager.BeginEvent(EffectFadeOut());
+            _titleGameState.Result = TitleGameState.ResultType.StartDemo;
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -497,15 +517,16 @@ namespace S2HD.Title
 
             if (_pressStartActive)
             {
-                Color pressStartColor = new Color((float)_pressStartOpacity, 1.0f, 1.0f, 1.0f);
+                float fade = (float)_uiFadeOpacity;
+                Color pressStartColor = Color.White * (float)(_pressStartOpacity * fade);
                 Vector2 pressStartPosition = new Vector2(960, 900);
                 
-                Color shadowColor = new Color(0, 0, 0, (float)_pressStartOpacity * 0.5f);
+                Color shadowColor = new Color(0, 0, 0, (float)(_pressStartOpacity * 0.5f * fade));
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition + new Vector2(2, 2), shadowColor, -1, true);
 
                 spriteBatch.End();
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
-                Color glowColor = new Color(1.0f, 1.0f, 1.0f, (float)_pressStartOpacity * 0.3f);
+                Color glowColor = Color.White * (float)(_pressStartOpacity * 0.3f * fade);
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition, glowColor, -1, true);
                 spriteBatch.End();
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);                
@@ -565,7 +586,7 @@ namespace S2HD.Title
                 DrawMenuItem(spriteBatch, text, new Vector2(widget.X, y), widget.Opacity, widget.Scale, selected);
             }
             
-            Color markerColor = new Color((float)_textOpacity, 1.0f, 1.0f, 1.0f);
+            Color markerColor = Color.White * (float)(_textOpacity * _uiFadeOpacity);
             foreach (Vector2 markerPos in _selectedMenuItemMarkerPositions)
             {
                 spriteBatch.Draw(_selectionMarkerTexture, markerPos, markerColor);
@@ -583,26 +604,28 @@ namespace S2HD.Title
             {
                 opacity *= (float)_textOpacity;
             }
+            opacity *= (float)_uiFadeOpacity;
             
-            Color color = new Color(opacity, 1.0f, 1.0f, 1.0f);
+            Color color = Color.White * opacity;
             _fontImpactRegular.DrawString(spriteBatch, text, position, color, overlay, true);
         }
 
         private void DrawCharacterSelect(SpriteBatch spriteBatch)
         {
             double characterSelectOpacity = _characterSelectOpacity;
-            Color inactiveColor = new Color((float)characterSelectOpacity * 0.25f, (float)characterSelectOpacity * 0.25f, (float)characterSelectOpacity * 0.25f, (float)characterSelectOpacity);
-            Color activeColor = new Color((float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity);
+            float fade = (float)_uiFadeOpacity;
+            Color inactiveColor = new Color((float)characterSelectOpacity * 0.25f * fade, (float)characterSelectOpacity * 0.25f * fade, (float)characterSelectOpacity * 0.25f * fade, (float)(characterSelectOpacity * fade));
+            Color activeColor = new Color((float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade));
             
             string[] characterNames = { "SONIC & TAILS", "SONIC", "TAILS" };
             string text = characterNames[_characterSelectionIndex];
             
             Rectangle backgroundRect = new Rectangle(0, 950, 1920, 60);
-            Color backgroundColor = new Color(0.3f * (float)characterSelectOpacity, 0, 0, 0);
+            Color backgroundColor = new Color(0.3f * (float)characterSelectOpacity * fade, 0, 0, 0);
             spriteBatch.Draw(_whiteTexture, backgroundRect, backgroundColor);
             
             Vector2 textPosition = new Vector2(960, 950);
-            Color textColor = new Color((float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity);
+            Color textColor = new Color((float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade), (float)(characterSelectOpacity * fade));
             _fontImpactRegular.DrawString(spriteBatch, text, textPosition, textColor, -1, true);
             
             Rectangle textBounds = _fontImpactRegular.MeasureString(text);
@@ -610,7 +633,7 @@ namespace S2HD.Title
             
             Vector2 leftArrowPos = new Vector2(960 - textHalfWidth - 50, 950);
             Vector2 rightArrowPos = new Vector2(960 + textHalfWidth + -5, 950);
-            Color arrowColor = new Color((float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity, (float)characterSelectOpacity);
+            Color arrowColor = Color.White * (float)(characterSelectOpacity * fade);
             spriteBatch.Draw(_leftArrowTexture, leftArrowPos, arrowColor);
             spriteBatch.Draw(_rightArrowTexture, rightArrowPos, arrowColor);
             
@@ -655,7 +678,7 @@ namespace S2HD.Title
                     
                     if (clippedDest.Width > 0 && clippedSource.Width > 0)
                     {
-                        spriteBatch.Draw(_zigzagTexture, clippedDest, clippedSource, Color.White);
+                        spriteBatch.Draw(_zigzagTexture, clippedDest, clippedSource, Color.White * (float)_uiFadeOpacity);
                     }
                 }
                 destRect.X += destRect.Width;
@@ -675,6 +698,7 @@ namespace S2HD.Title
                 }
                 selectedWidget.Scale = new Vector2((float)ActivatedTextScaleTimeline.GetValueAt(t));
                 _textOpacity = ActivatedTextOpacityTimeline.GetValueAt(t);
+                _uiFadeOpacity = Math.Max(0.0, 1.0 - (t / 30.0));
                 yield return UpdateResult.Next;
             }
         }

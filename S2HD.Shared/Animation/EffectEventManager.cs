@@ -22,6 +22,11 @@ namespace S2HD.Animation
                 }
             }
         }
+
+        public void Clear()
+        {
+            _activeEvents.Clear();
+        }
     }
 
     public class EffectEvent

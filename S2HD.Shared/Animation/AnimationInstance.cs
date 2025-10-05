@@ -28,7 +28,24 @@ namespace S2HD.Animation
         public int Index
         {
             get => _index;
-            set => _index = value;
+            set
+            {
+                if (_index == value)
+                    return;
+                _index = value;
+                if (_animationGroup != null)
+                {
+                    var animationData = _animationGroup.GetAnimation(_index);
+                    if (animationData != null)
+                    {
+                        _animation = animationData.Animation;
+                        _currentFrame = 0;
+                        _currentTime = 0;
+                        _cycles = 0;
+                        _isPlaying = true;
+                    }
+                }
+            }
         }
 
         public AnimationInstance(Texture2D texture, Rectangle[] frames)
