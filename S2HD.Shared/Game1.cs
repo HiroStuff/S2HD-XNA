@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using S2HD.GameStates;
 
-namespace S2HD
+namespace S2HD.Shared
 {
     public class Game1 : Game
     {

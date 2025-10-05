@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "C#: S2HD Debug",
+        "name": "C#: S2HD.Desktop Debug",
         "type": "dotnet",
         "request": "launch",
-        "projectPath": "${workspaceFolder}/S2HD.csproj"
+        "projectPath": "${workspaceFolder}/S2HD.Desktop.csproj"
       }
     ],
   }
