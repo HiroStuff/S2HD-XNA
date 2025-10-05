@@ -63,7 +63,8 @@ namespace S2HD.GameStates
 
         public void LoadContent(ContentManager content)
         {
-            _audioManager = new AudioManager(content);
+            AudioService.Init(content);
+            _audioManager = AudioService.Instance;
             _audioManager.LoadContent();
 
             _font = new CustomFont();

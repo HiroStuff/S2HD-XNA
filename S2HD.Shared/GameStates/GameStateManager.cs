@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using S2HD.Title;
 
 namespace S2HD.GameStates
 {
@@ -41,6 +42,22 @@ namespace S2HD.GameStates
 
                 if (_currentState.IsComplete)
                 {
+                    if (_currentState is TitleGameState title)
+                    {
+                        switch (title.Result)
+                        {
+                            case TitleGameState.ResultType.ShowOptions:
+                                _stateQueue.Enqueue(new OptionsGameState(_graphicsDevice, _spriteBatch));
+                                break;
+                            case TitleGameState.ResultType.Quit:
+                                break;
+                        }
+                    }
+                    else if (_currentState is OptionsGameState)
+                    {
+                        _stateQueue.Enqueue(new TitleGameState(_graphicsDevice, _spriteBatch, _contentManager));
+                    }
+
                     _currentState = null;
                 }
             }

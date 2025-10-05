@@ -10,20 +10,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\ConfigManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Animation\Animation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Animation\AnimationGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Animation\AnimationInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Animation\EffectEventManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Audio\AudioManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Audio\AudioService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\DisclaimerGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\GameStateManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\IGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\LogosGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\OptionsGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\TeamLogoGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\TitleGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\CustomFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\VideoService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\XmlExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Title\Background.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Title\Banner.cs" />
