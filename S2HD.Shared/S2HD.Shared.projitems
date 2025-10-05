@@ -10,6 +10,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animation\Animation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animation\AnimationGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animation\AnimationInstance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animation\EffectEventManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Audio\AudioManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\DisclaimerGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\GameStateManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\IGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\LogosGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\TeamLogoGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameStates\TitleGameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\CustomFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\XmlExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Title\Background.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Title\Banner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Title\TitleResources.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Title\UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
@@ -18,4 +37,4 @@
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
   </ItemGroup>
- </Project>
+</Project>
