@@ -529,11 +529,11 @@ namespace S2HD.Title
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition + new Vector2(2, 2), shadowColor, -1, true);
 
                 spriteBatch.End();
-                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
                 Color glowColor = Color.White * (float)(_pressStartOpacity * 0.3f * fade);
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition, glowColor, -1, true);
                 spriteBatch.End();
-                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);                
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);                
                 _fontImpactItalic.DrawString(spriteBatch, "PRESS START", pressStartPosition, pressStartColor, -1, true);
 
                 if (_pressStartOpacity > 0.0)

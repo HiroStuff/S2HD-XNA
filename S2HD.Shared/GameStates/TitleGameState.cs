@@ -145,7 +145,7 @@ namespace S2HD.GameStates
         {
             if (!_loaded) return;
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
             DrawIntroText();
             _background.Draw(_spriteBatch);
@@ -250,10 +250,10 @@ namespace S2HD.GameStates
             Color colour = new Color(_fadeOutOpacity / 2.0f, 1.0f, 1.0f, 1.0f);
             Vector2 versionPosition = new Vector2(8, 1052);            
             _spriteBatch.End();
-            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(0.5f, 0.5f, 1.0f) * Matrix.CreateTranslation(8, 1052, 0));
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(0.5f, 0.5f, 1.0f) * Matrix.CreateTranslation(8, 1052, 0));
             _font.DrawString(_spriteBatch, _versionText.ToUpper(), Vector2.Zero, colour, 0);
             _spriteBatch.End();
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
         }
 
         public bool IsComplete => _fadingOut && _fadeOutOpacity <= 0.0f;

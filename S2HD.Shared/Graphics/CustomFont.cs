@@ -42,6 +42,7 @@ namespace S2HD.Graphics
                 string full = Path.Combine(fontDir, cleanPath + ".png");
                 using (var s = File.OpenRead(full))
                     _shapeTexture = Texture2D.FromStream(graphicsDevice, s);
+                PremultiplyAlpha(_shapeTexture);
             }
 
             var overlayNodes = root.SelectNodes("overlay");
@@ -56,6 +57,7 @@ namespace S2HD.Graphics
                     string full = Path.Combine(fontDir, cleanPath + ".png");
                     using (var s = File.OpenRead(full))
                         _overlayTextures[i] = Texture2D.FromStream(graphicsDevice, s);
+                    PremultiplyAlpha(_overlayTextures[i]);
                 }
             }
 
@@ -80,6 +82,27 @@ namespace S2HD.Graphics
                     ParseCharacterDefinition(chardefNode);
                 }
             }
+        }
+
+        private static void PremultiplyAlpha(Texture2D texture)
+        {
+            if (texture == null)
+                return;
+            var data = new Color[texture.Width * texture.Height];
+            texture.GetData(data);
+            for (int i = 0; i < data.Length; i++)
+            {
+                byte a = data[i].A;
+                if (a == 255) continue;
+                if (a == 0) { data[i] = new Color(0, 0, 0, 0); continue; }
+                data[i] = new Color(
+                    (byte)(data[i].R * a / 255),
+                    (byte)(data[i].G * a / 255),
+                    (byte)(data[i].B * a / 255),
+                    a
+                );
+            }
+            texture.SetData(data);
         }
 
         private void ParseCharacterDefinition(XmlNode chardefNode)

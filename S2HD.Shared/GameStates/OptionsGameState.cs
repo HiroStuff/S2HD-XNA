@@ -408,7 +408,7 @@ namespace S2HD.GameStates
 			}
 			_spriteBatch.End();
 
-			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
 			if (_audioSubmenuActive)
 			{
@@ -544,19 +544,19 @@ namespace S2HD.GameStates
 		private void DrawScaledString(CustomFont font, string text, Vector2 pos, Color color, float scale)
 		{
 			_spriteBatch.End();
-			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(scale));
+			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(scale));
 			font.DrawString(_spriteBatch, text, pos / scale, color, -1, true);
 			_spriteBatch.End();
-			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 		}
 
 		private void DrawScaledStringLeft(CustomFont font, string text, Vector2 pos, Color color, float scale)
 		{
 			_spriteBatch.End();
-			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(scale));
+			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(scale));
 			font.DrawString(_spriteBatch, text, pos / scale, color, -1);
 			_spriteBatch.End();
-			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend);
+			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 		}
 
 		public bool IsComplete => _complete;
