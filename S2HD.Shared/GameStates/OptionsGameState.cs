@@ -70,21 +70,28 @@ namespace S2HD.GameStates
 			_spriteBatch = spriteBatch;
 		}
 
-		public void LoadContent(ContentManager content)
+		public void LoadContent(string dataRoot)
 		{
 			_fontImpactRegular = new CustomFont();
-			_fontImpactRegular.LoadFromXml(content, "Content/SONICORCA/FONTS/IMPACT/REGULAR_FONT");
+			_fontImpactRegular.LoadFromXml(_graphicsDevice, Path.Combine(dataRoot, "SONICORCA/FONTS/IMPACT/REGULAR.font"));
 
 			_fontImpactItalic = new CustomFont();
-			_fontImpactItalic.LoadFromXml(content, "Content/SONICORCA/FONTS/IMPACT/ITALIC_FONT");
+			_fontImpactItalic.LoadFromXml(_graphicsDevice, Path.Combine(dataRoot, "SONICORCA/FONTS/IMPACT/ITALIC.font"));
 
-			_backgroundTexture = content.Load<Texture2D>("SONICORCA/MENU/OPTIONS/MENU3");
-			_selectionBarTexture = content.Load<Texture2D>("SONICORCA/MENU/OPTIONS/V2/UI/SELECTION/BAR");
-			_buttonATexture = content.Load<Texture2D>("SONICORCA/MENU/GAMEPAD/A");
-			_buttonBTexture = content.Load<Texture2D>("SONICORCA/MENU/GAMEPAD/B");
-			_audioSliderEmptyTexture = content.Load<Texture2D>("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/EMPTY");
-			_audioSliderSilverTexture = content.Load<Texture2D>("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/SILVER");
-			_audioSliderGoldTexture = content.Load<Texture2D>("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/GOLD");
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/MENU3.png")))
+				_backgroundTexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/V2/UI/SELECTION/BAR.png")))
+				_selectionBarTexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/GAMEPAD/A.png")))
+				_buttonATexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/GAMEPAD/B.png")))
+				_buttonBTexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/EMPTY.png")))
+				_audioSliderEmptyTexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/SILVER.png")))
+				_audioSliderSilverTexture = Texture2D.FromStream(_graphicsDevice, s);
+			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/GOLD.png")))
+				_audioSliderGoldTexture = Texture2D.FromStream(_graphicsDevice, s);
 
 			_whiteTexture = new Texture2D(_graphicsDevice, 1, 1);
 			_whiteTexture.SetData(new[] { Color.White });

@@ -1,9 +1,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
 using System.Xml;
+using System.IO;
 
 namespace S2HD.Graphics
 {
@@ -23,7 +23,7 @@ namespace S2HD.Graphics
             _characterDefinitions = new Dictionary<char, CharacterDefinition>();
         }
 
-        public void LoadFromXml(ContentManager content, string fontPath)
+        public void LoadFromXml(GraphicsDevice graphicsDevice, string fontPath)
         {
             var xmlDocument = new XmlDocument();
             xmlDocument.Load(fontPath);
@@ -33,13 +33,15 @@ namespace S2HD.Graphics
                 throw new XmlException("Missing <font> root node.");
 
 
-            string fontDir = fontPath.Replace("Content/", "").Replace("_FONT", "");
+            string fontDir = Path.Combine(Path.GetDirectoryName(fontPath) ?? string.Empty, Path.GetFileNameWithoutExtension(fontPath));
 
             string shapePath = root.SelectSingleNode("shape")?.InnerText;
             if (!string.IsNullOrEmpty(shapePath))
             {
                 string cleanPath = shapePath.TrimStart('/');
-                _shapeTexture = content.Load<Texture2D>($"{fontDir}/{cleanPath}");
+                string full = Path.Combine(fontDir, cleanPath + ".png");
+                using (var s = File.OpenRead(full))
+                    _shapeTexture = Texture2D.FromStream(graphicsDevice, s);
             }
 
             var overlayNodes = root.SelectNodes("overlay");
@@ -51,7 +53,9 @@ namespace S2HD.Graphics
                     string overlayPath = overlayNodes[i].InnerText;
 
                     string cleanPath = overlayPath.TrimStart('/');
-                    _overlayTextures[i] = content.Load<Texture2D>($"{fontDir}/{cleanPath}");
+                    string full = Path.Combine(fontDir, cleanPath + ".png");
+                    using (var s = File.OpenRead(full))
+                        _overlayTextures[i] = Texture2D.FromStream(graphicsDevice, s);
                 }
             }
 

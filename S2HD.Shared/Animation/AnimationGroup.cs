@@ -1,9 +1,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using System.Collections.Generic;
 using System.Xml;
 using System.Linq;
+using System.IO;
 
 namespace S2HD.Animation
 {
@@ -14,7 +14,7 @@ namespace S2HD.Animation
 
         public IReadOnlyList<Texture2D> Textures => _textures;
 
-        public void LoadFromXml(ContentManager content, string xmlPath)
+        public void LoadFromXml(GraphicsDevice graphicsDevice, string xmlPath)
         {
             var xmlDocument = new XmlDocument();
             xmlDocument.Load(xmlPath);
@@ -30,8 +30,9 @@ namespace S2HD.Animation
                 foreach (XmlNode textureNode in textureNodes)
                 {
                     string texturePath = textureNode.InnerText.TrimStart('/');
-                    string fullPath = $"SONICORCA/TITLE/{texturePath}";
-                    _textures.Add(content.Load<Texture2D>(fullPath));
+                    string fullPath = Path.Combine(Path.GetDirectoryName(xmlPath), texturePath + ".png");
+                    using (var s = File.OpenRead(fullPath))
+                        _textures.Add(Texture2D.FromStream(graphicsDevice, s));
                 }
             }
 

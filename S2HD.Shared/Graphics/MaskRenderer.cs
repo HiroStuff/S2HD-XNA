@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using System;
+using System.IO;
 
 namespace S2HD.Graphics
 {
@@ -87,12 +87,13 @@ namespace S2HD.Graphics
             set => _intersectionModelMatrix = value;
         }
 
-        public MaskRenderer(GraphicsDevice graphicsDevice, ContentManager content)
+        public MaskRenderer(GraphicsDevice graphicsDevice, string dataRoot)
         {
             _graphicsDevice = graphicsDevice;
-
-            _maskEffect = new MaskEffect(content.Load<Effect>("Effects/MaskEffect"));
+            var baseEffect = S2HD.Graphics.EffectService.LoadEffect("Effects/MaskEffect");
+            _maskEffect = new MaskEffect(baseEffect);
         }
+
 
         public void Render(SpriteBatch spriteBatch, bool maskColorMultiply = false)
         {

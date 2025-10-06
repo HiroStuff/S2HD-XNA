@@ -1,8 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using S2HD.Graphics;
 using System;
+using System.IO;
 
 namespace S2HD.GameStates
 {
@@ -52,13 +52,16 @@ namespace S2HD.GameStates
             _fadeOut = false;
         }
 
-        public void LoadContent(ContentManager content)
+        public void LoadContent(string dataRoot)
         {
-            _engineTexture = content.Load<Texture2D>("SONICORCA/ENGINE");
-            _enginePartialTexture = content.Load<Texture2D>("SONICORCA/ENGINE/PARTIAL");
-            _engineSonicTexture = content.Load<Texture2D>("SONICORCA/ENGINE/SONIC");
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE.png")))
+                _engineTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE/PARTIAL.png")))
+                _enginePartialTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE/SONIC.png")))
+                _engineSonicTexture = Texture2D.FromStream(_graphicsDevice, s);
             _font = new CustomFont();
-            _font.LoadFromXml(content, "Content/SONICORCA/FONTS/HUD_FONT");
+            _font.LoadFromXml(_graphicsDevice, Path.Combine(dataRoot, "SONICORCA/FONTS/HUD.font"));
 
             _loaded = true;
             _currentPhase = LogosPhase.SmallSonicRun1;

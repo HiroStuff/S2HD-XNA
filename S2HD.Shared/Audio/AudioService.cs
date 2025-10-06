@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework.Content;
+using System;
 
 namespace S2HD.Audio
 {
@@ -7,11 +7,11 @@ namespace S2HD.Audio
 		private static AudioManager _instance;
 		public static AudioManager Instance => _instance;
 
-		public static void Init(ContentManager content)
+		public static void Init(string dataRoot)
 		{
 			if (_instance == null)
 			{
-				_instance = new AudioManager(content);
+				_instance = new AudioManager(dataRoot);
 				_instance.LoadContent();
 			}
 		}

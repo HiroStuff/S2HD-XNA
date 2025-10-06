@@ -1,8 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using S2HD.Animation;
 using System;
+using System.IO;
 
 namespace S2HD.Title
 {
@@ -28,17 +28,21 @@ namespace S2HD.Title
 
         public bool Visible { get; set; }
 
-        public Background(GraphicsDevice graphicsDevice, ContentManager content)
+        public Background(GraphicsDevice graphicsDevice, string dataRoot)
         {
-            LoadContent(content);
+            LoadContent(graphicsDevice, dataRoot);
         }
 
-        private void LoadContent(ContentManager content)
+        private void LoadContent(GraphicsDevice graphicsDevice, string dataRoot)
         {
-            _textureBackgroundSky = content.Load<Texture2D>("SONICORCA/TITLE/BACKGROUND/SKY");
-            _textureBackgroundIsland = content.Load<Texture2D>("SONICORCA/TITLE/BACKGROUND/ISLAND");
-            _textureBackgroundDeathEgg = content.Load<Texture2D>("SONICORCA/TITLE/BACKGROUND/DEATHEGG");
-            _textureWipe = content.Load<Texture2D>("SONICORCA/TITLE/WIPE");
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/SKY.png")))
+                _textureBackgroundSky = Texture2D.FromStream(graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/ISLAND.png")))
+                _textureBackgroundIsland = Texture2D.FromStream(graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/DEATHEGG.png")))
+                _textureBackgroundDeathEgg = Texture2D.FromStream(graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/WIPE.png")))
+                _textureWipe = Texture2D.FromStream(graphicsDevice, s);
         }
 
         public void Reset()

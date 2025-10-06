@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using S2HD.Title;
@@ -10,16 +9,16 @@ namespace S2HD.GameStates
     {
         private readonly GraphicsDevice _graphicsDevice;
         private readonly SpriteBatch _spriteBatch;
-        private readonly ContentManager _contentManager;
+        private readonly string _dataRoot;
 
         private IGameState _currentState;
         private readonly Queue<IGameState> _stateQueue;
 
-        public GameStateManager(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
+        public GameStateManager(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, string dataRoot)
         {
             _graphicsDevice = graphicsDevice;
             _spriteBatch = spriteBatch;
-            _contentManager = contentManager;
+            _dataRoot = dataRoot;
             _stateQueue = new Queue<IGameState>();
         }
 
@@ -33,7 +32,7 @@ namespace S2HD.GameStates
             if (_currentState == null && _stateQueue.Count > 0)
             {
                 _currentState = _stateQueue.Dequeue();
-                _currentState.LoadContent(_contentManager);
+                _currentState.LoadContent(_dataRoot);
             }
 
             if (_currentState != null)
@@ -55,7 +54,7 @@ namespace S2HD.GameStates
                     }
                     else if (_currentState is OptionsGameState)
                     {
-                        _stateQueue.Enqueue(new TitleGameState(_graphicsDevice, _spriteBatch, _contentManager));
+                        _stateQueue.Enqueue(new TitleGameState(_graphicsDevice, _spriteBatch));
                     }
 
                     _currentState = null;

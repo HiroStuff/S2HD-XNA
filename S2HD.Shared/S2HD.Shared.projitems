@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GameStates\TitleGameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\CustomFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\EffectService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskRenderer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\VideoService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\XmlExtensions.cs" />

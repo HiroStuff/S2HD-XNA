@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using System.IO;
 using System;
 
 namespace S2HD.GameStates
@@ -36,9 +37,10 @@ namespace S2HD.GameStates
             _currentPhase = TeamLogoPhase.Loading;
         }
 
-        public void LoadContent(ContentManager content)
+        public void LoadContent(string dataRoot)
         {
-            _teamLogoTexture = content.Load<Texture2D>("SONICORCA/TEAMLOGO");
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TEAMLOGO.png")))
+                _teamLogoTexture = Texture2D.FromStream(_graphicsDevice, s);
             _loaded = true;
             _currentPhase = TeamLogoPhase.FadeIn;
         }

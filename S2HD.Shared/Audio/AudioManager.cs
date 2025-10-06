@@ -1,15 +1,15 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace S2HD.Audio
 {
 	public class AudioManager
 	{
-		private ContentManager _content;
+		private readonly string _dataRoot;
 		private Dictionary<string, SoundEffect> _soundEffects;
 		private Dictionary<string, Song> _songs;
 		private Song _currentSong;
@@ -18,9 +18,9 @@ namespace S2HD.Audio
 		private float _musicVolume = 0.2f;
 		private float _soundVolume = 1.0f;
 
-		public AudioManager(ContentManager content)
+		public AudioManager(string dataRoot)
 		{
-			_content = content;
+			_dataRoot = dataRoot;
 			_soundEffects = new Dictionary<string, SoundEffect>();
 			_songs = new Dictionary<string, Song>();            
 			MediaPlayer.Volume = _masterVolume * _musicVolume;
@@ -49,21 +49,26 @@ namespace S2HD.Audio
 			LoadSong("OPTIONS/MUSIC", "SONICORCA/MUSIC/OPTIONS");
 		}
 
-		private void LoadSoundEffect(string key, string path)
+		private void LoadSoundEffect(string key, string relativePathWithoutExtension)
 		{
 			try
 			{
-				var soundEffect = _content.Load<SoundEffect>(path);
-				_soundEffects[key] = soundEffect;
+				string oggPath = Path.Combine(_dataRoot, relativePathWithoutExtension + ".ogg");
+				using (var stream = File.OpenRead(oggPath))
+				{
+					var soundEffect = SoundEffect.FromStream(stream);
+					_soundEffects[key] = soundEffect;
+				}
 			}
 			catch {}
 		}
 
-		private void LoadSong(string key, string path)
+		private void LoadSong(string key, string relativePathWithoutExtension)
 		{
 			try
 			{
-				var song = _content.Load<Song>(path);
+				string oggPath = Path.Combine(_dataRoot, relativePathWithoutExtension + ".ogg");
+				var song = Song.FromUri(key, new Uri(oggPath));
 				_songs[key] = song;
 			}
 			catch {}

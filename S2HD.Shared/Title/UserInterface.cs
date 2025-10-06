@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
 using S2HD.Animation;
 using S2HD.Graphics;
 using S2HD.GameStates;
 using S2HD.Audio;
 using System;
+using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -15,7 +15,7 @@ namespace S2HD.Title
     internal class UserInterface
     {
         private GraphicsDevice _graphicsDevice;
-        private ContentManager _content;
+        private string _dataRoot;
         private CustomFont _font;
         private CustomFont _fontImpactRegular;
         private CustomFont _fontImpactItalic;
@@ -68,10 +68,10 @@ namespace S2HD.Title
         private bool IsSonicActive => _characterSelectionIndex == 0 || _characterSelectionIndex == 1;
         private bool IsTailsActive => _characterSelectionIndex == 0 || _characterSelectionIndex == 2;
 
-        public UserInterface(GraphicsDevice graphicsDevice, ContentManager content, TitleGameState titleGameState, AudioManager audioManager)
+        public UserInterface(GraphicsDevice graphicsDevice, string dataRoot, TitleGameState titleGameState, AudioManager audioManager)
         {
             _graphicsDevice = graphicsDevice;
-            _content = content;
+            _dataRoot = dataRoot;
             _audioManager = audioManager;
             _titleGameState = titleGameState;
             _effectEventManager = new EffectEventManager();
@@ -82,24 +82,28 @@ namespace S2HD.Title
         private void LoadContent()
         {
             _font = new CustomFont();
-            _font.LoadFromXml(_content, "Content/SONICORCA/FONTS/HUD_FONT");
+            _font.LoadFromXml(_graphicsDevice, Path.Combine(_dataRoot, "SONICORCA/FONTS/HUD.font"));
 
             _fontImpactRegular = new CustomFont();
-            _fontImpactRegular.LoadFromXml(_content, "Content/SONICORCA/FONTS/IMPACT/REGULAR_FONT");
+            _fontImpactRegular.LoadFromXml(_graphicsDevice, Path.Combine(_dataRoot, "SONICORCA/FONTS/IMPACT/REGULAR.font"));
 
             _fontImpactItalic = new CustomFont();
-            _fontImpactItalic.LoadFromXml(_content, "Content/SONICORCA/FONTS/IMPACT/ITALIC_FONT");
+            _fontImpactItalic.LoadFromXml(_graphicsDevice, Path.Combine(_dataRoot, "SONICORCA/FONTS/IMPACT/ITALIC.font"));
 
-            _selectionMarkerTexture = _content.Load<Texture2D>("SONICORCA/TITLE/SELECTIONMARKER");
-            _leftArrowTexture = _content.Load<Texture2D>("SONICORCA/MENU/LEFT");
-            _rightArrowTexture = _content.Load<Texture2D>("SONICORCA/MENU/RIGHT");
-            _zigzagTexture = _content.Load<Texture2D>("SONICORCA/TITLE/ZIGZAG");
+            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/TITLE/SELECTIONMARKER.png")))
+                _selectionMarkerTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/MENU/LEFT.png")))
+                _leftArrowTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/MENU/RIGHT.png")))
+                _rightArrowTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/TITLE/ZIGZAG.png")))
+                _zigzagTexture = Texture2D.FromStream(_graphicsDevice, s);
 
             _whiteTexture = new Texture2D(_graphicsDevice, 1, 1);
             _whiteTexture.SetData(new[] { Color.White });
 
             var titleAniGroup = new AnimationGroup();
-            titleAniGroup.LoadFromXml(_content, "Content/SONICORCA/TITLE/ANIGROUP");
+            titleAniGroup.LoadFromXml(_graphicsDevice, Path.Combine(_dataRoot, "SONICORCA/TITLE/ANIGROUP.anim"));
             
             _miniSonicAniInstance = new AnimationInstance(titleAniGroup, 11);
             _miniTailsAniInstance = new AnimationInstance(titleAniGroup, 13);

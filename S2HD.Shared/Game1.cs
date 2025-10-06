@@ -19,7 +19,6 @@ namespace S2HD.Shared
 		public Game1()
 		{
 			_graphics = new GraphicsDeviceManager(this);
-			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
 
 			_graphics.PreferredBackBufferWidth = 1920;
@@ -52,7 +51,10 @@ namespace S2HD.Shared
 
 		protected override void LoadContent()
 		{
-			AudioService.Init(Content);
+			string dataRoot = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "data");
+			Content.RootDirectory = "data";
+			S2HD.Graphics.EffectService.Init(Content);
+			AudioService.Init(dataRoot);
 			int len = 11;
 			float master = _config.MasterVolume;
 			float music = (float)_config.MusicVolumeIndex / len;
@@ -62,12 +64,12 @@ namespace S2HD.Shared
 			ApplyConfig();
 
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
-			_gameStateManager = new GameStateManager(GraphicsDevice, _spriteBatch, Content);
+			_gameStateManager = new GameStateManager(GraphicsDevice, _spriteBatch, dataRoot);
 
 			_gameStateManager.AddState(new DisclaimerGameState(GraphicsDevice, _spriteBatch));
 			_gameStateManager.AddState(new LogosGameState(GraphicsDevice, _spriteBatch));
 			_gameStateManager.AddState(new TeamLogoGameState(GraphicsDevice, _spriteBatch));
-			_gameStateManager.AddState(new TitleGameState(GraphicsDevice, _spriteBatch, Content));
+			_gameStateManager.AddState(new TitleGameState(GraphicsDevice, _spriteBatch));
 		}
 
 		protected override void Update(GameTime gameTime)

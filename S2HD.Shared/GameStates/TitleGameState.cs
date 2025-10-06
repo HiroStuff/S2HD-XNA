@@ -22,7 +22,7 @@ namespace S2HD.GameStates
 
         private GraphicsDevice _graphicsDevice;
         private SpriteBatch _spriteBatch;
-        private ContentManager _content;
+        private string _dataRoot;
         private AudioManager _audioManager;
 
         private CustomFont _font;
@@ -53,32 +53,33 @@ namespace S2HD.GameStates
         public Background Background => _background;
         public TitleGameState.ResultType Result { get; set; }
 
-        public TitleGameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager content)
+        public TitleGameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
         {
             _graphicsDevice = graphicsDevice;
             _spriteBatch = spriteBatch;
-            _content = content;
             _versionText = "XNA Port 1.0";
         }
 
-        public void LoadContent(ContentManager content)
+        public void LoadContent(string dataRoot)
         {
-            AudioService.Init(content);
+            _dataRoot = dataRoot;
             _audioManager = AudioService.Instance;
             _audioManager.LoadContent();
 
             _font = new CustomFont();
-            _font.LoadFromXml(content, "Content/SONICORCA/FONTS/HUD_FONT");
+            _font.LoadFromXml(_graphicsDevice, System.IO.Path.Combine(_dataRoot, "SONICORCA/FONTS/HUD.font"));
 
-            var sparkleTexture = content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
-            _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
-
-            _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
+            using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+            {
+                var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
+                _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
+                _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
+            }
 
             _loaded = true;
-            _background = new Background(_graphicsDevice, content);
-            _banner = new Banner(_graphicsDevice, content);
-            _userInterface = new UserInterface(_graphicsDevice, content, this, _audioManager);
+            _background = new Background(_graphicsDevice, _dataRoot);
+            _banner = new Banner(_graphicsDevice, _dataRoot);
+            _userInterface = new UserInterface(_graphicsDevice, _dataRoot, this, _audioManager);
             RestartEvents();
         }
 
@@ -123,8 +124,11 @@ namespace S2HD.GameStates
             {
                 if (_shootingStarAnimationInstance == null)
                 {
-                    var sparkleTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
-                    _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
+                    using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+                    {
+                        var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
+                        _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
+                    }
                     _shootingStarPosition = new Vector2(1440.0f, 0.0f);
                     _audioManager.PlaySound("SHOOTINGSTAR");
                 }
@@ -156,9 +160,11 @@ namespace S2HD.GameStates
             if (_fadeOutOpacity != 1.0f)
             {
                 Color fadeColor = new Color(0, 0, 0, 1.0f - _fadeOutOpacity);
-
-                var fadeTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
-                _spriteBatch.Draw(fadeTexture, new Rectangle(0, 0, 1920, 1080), fadeColor);
+                using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+                {
+                    var fadeTexture = Texture2D.FromStream(_graphicsDevice, s);
+                    _spriteBatch.Draw(fadeTexture, new Rectangle(0, 0, 1920, 1080), fadeColor);
+                }
             }
 
             _banner.DrawUnfaded(_spriteBatch);
@@ -185,8 +191,11 @@ namespace S2HD.GameStates
 
         private void CreateSparkle(Vector2 position)
         {
-            var sparkleTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
-            _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
+            using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+            {
+                var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
+                _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
+            }
             _sparklePosition = position;
             _audioManager.PlaySound("SPARKLE");
         }

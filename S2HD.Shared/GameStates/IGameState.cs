@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+using System;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace S2HD.GameStates
 {
     public interface IGameState
     {
-        void LoadContent(ContentManager content);
+        void LoadContent(string dataRoot);
         void Update(GameTime gameTime);
         void Draw();
         bool IsComplete { get; }

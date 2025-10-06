@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using System.IO;
 using System;
 
 namespace S2HD.GameStates
@@ -37,9 +38,10 @@ namespace S2HD.GameStates
             _currentPhase = DisclaimerPhase.Loading;
         }
 
-        public void LoadContent(ContentManager content)
+        public void LoadContent(string dataRoot)
         {
-            _disclaimerTexture = content.Load<Texture2D>("SONICORCA/DISCLAIMER");
+            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/DISCLAIMER.png")))
+                _disclaimerTexture = Texture2D.FromStream(_graphicsDevice, s);
             _loaded = true;
             _currentPhase = DisclaimerPhase.Wait;
             _timer = FadeTime;
