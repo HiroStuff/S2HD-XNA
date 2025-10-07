@@ -40,8 +40,8 @@ namespace S2HD.GameStates
 
         public void LoadContent(string dataRoot)
         {
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/DISCLAIMER.png")))
-                _disclaimerTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/DISCLAIMER.png"))
+                _disclaimerTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
             _loaded = true;
             _currentPhase = DisclaimerPhase.Wait;
             _timer = FadeTime;
@@ -96,7 +96,7 @@ namespace S2HD.GameStates
         {
             if (!_loaded) return;
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
             Vector2 screenCenter = new Vector2(_graphicsDevice.Viewport.Width / 2, _graphicsDevice.Viewport.Height / 2);
             Vector2 disclaimerSize = new Vector2(_disclaimerTexture.Width, _disclaimerTexture.Height);

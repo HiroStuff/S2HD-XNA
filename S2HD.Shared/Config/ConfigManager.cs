@@ -12,6 +12,7 @@ namespace S2HD.Shared.Config
 		public bool WaterEffects { get; private set; } = true;
 		public bool Shadows { get; private set; } = true;
 		public bool HeatEffects { get; private set; } = true;
+		public bool DataFolderMode { get; private set; } = false;
 
 		public static string GetConfigDirectory()
 		{
@@ -27,7 +28,29 @@ namespace S2HD.Shared.Config
 			try
 			{
 				string path = GetConfigPath();
-				if (!File.Exists(path)) return cfg;
+				if (!File.Exists(path))
+				{
+					Directory.CreateDirectory(GetConfigDirectory());
+					using (var sw = new StreamWriter(path, false))
+					{
+						sw.WriteLine("[video]");
+						sw.WriteLine($"fullscreen = {cfg.FullscreenMode}");
+						sw.WriteLine();
+						sw.WriteLine("[audio]");
+						sw.WriteLine($"sound_volume = {cfg.SoundVolumeIndex}");
+						sw.WriteLine($"music_volume = {cfg.MusicVolumeIndex}");
+						sw.WriteLine($"volume = {cfg.MasterVolume.ToString(CultureInfo.InvariantCulture)}");
+						sw.WriteLine();
+						sw.WriteLine("[graphics]");
+						sw.WriteLine($"water_effects = {cfg.WaterEffects.ToString().ToLowerInvariant()}");
+						sw.WriteLine($"shadows = {cfg.Shadows.ToString().ToLowerInvariant()}");
+						sw.WriteLine($"heat_effects = {cfg.HeatEffects.ToString().ToLowerInvariant()}");
+						sw.WriteLine();
+						sw.WriteLine("[dev]");
+						sw.WriteLine($"data_folder_mode = {cfg.DataFolderMode.ToString().ToLowerInvariant()}");
+					}
+					return cfg;
+				}
 				string section = string.Empty;
 				foreach (var rawLine in File.ReadAllLines(path))
 				{
@@ -42,7 +65,7 @@ namespace S2HD.Shared.Config
 					if (eq < 0) continue;
 					string key = line.Substring(0, eq).Trim().ToLowerInvariant();
 					string value = line.Substring(eq + 1).Trim();
-					switch (section)
+						switch (section)
 					{
 						case "video":
 							if (key == "fullscreen") { if (int.TryParse(value, out var v)) cfg.FullscreenMode = v; }
@@ -57,6 +80,9 @@ namespace S2HD.Shared.Config
 							else if (key == "shadows") cfg.Shadows = value.ToLowerInvariant().Contains("true");
 							else if (key == "heat_effects") cfg.HeatEffects = value.ToLowerInvariant().Contains("true");
 							break;
+							case "dev":
+								if (key == "data_folder_mode") cfg.DataFolderMode = value.ToLowerInvariant().Contains("true");
+								break;
 					}
 				}
 			}

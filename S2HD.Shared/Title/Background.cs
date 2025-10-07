@@ -35,14 +35,14 @@ namespace S2HD.Title
 
         private void LoadContent(GraphicsDevice graphicsDevice, string dataRoot)
         {
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/SKY.png")))
-                _textureBackgroundSky = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/ISLAND.png")))
-                _textureBackgroundIsland = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/BACKGROUND/DEATHEGG.png")))
-                _textureBackgroundDeathEgg = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/WIPE.png")))
-                _textureWipe = Texture2D.FromStream(graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/BACKGROUND/SKY.png"))
+                _textureBackgroundSky = S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/BACKGROUND/ISLAND.png"))
+                _textureBackgroundIsland = S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/BACKGROUND/DEATHEGG.png"))
+                _textureBackgroundDeathEgg = S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/WIPE.png"))
+                _textureWipe = S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s);
         }
 
         public void Reset()

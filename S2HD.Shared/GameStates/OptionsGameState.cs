@@ -78,19 +78,19 @@ namespace S2HD.GameStates
 			_fontImpactItalic = new CustomFont();
 			_fontImpactItalic.LoadFromXml(_graphicsDevice, Path.Combine(dataRoot, "SONICORCA/FONTS/IMPACT/ITALIC.font"));
 
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/MENU3.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/OPTIONS/MENU3.png"))
 				_backgroundTexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/V2/UI/SELECTION/BAR.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/OPTIONS/V2/UI/SELECTION/BAR.png"))
 				_selectionBarTexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/GAMEPAD/A.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/GAMEPAD/A.png"))
 				_buttonATexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/GAMEPAD/B.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/GAMEPAD/B.png"))
 				_buttonBTexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/EMPTY.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/EMPTY.png"))
 				_audioSliderEmptyTexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/SILVER.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/SILVER.png"))
 				_audioSliderSilverTexture = Texture2D.FromStream(_graphicsDevice, s);
-			using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/MENU/OPTIONS/AUDIOSLIDER/GOLD.png")))
+			using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/OPTIONS/AUDIOSLIDER/GOLD.png"))
 				_audioSliderGoldTexture = Texture2D.FromStream(_graphicsDevice, s);
 
 			_whiteTexture = new Texture2D(_graphicsDevice, 1, 1);

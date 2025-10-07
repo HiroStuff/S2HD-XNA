@@ -27,9 +27,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\CustomFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\EffectService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\TextureHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\MaskRenderer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\VideoService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\XmlExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Title\Background.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Title\Banner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Title\TitleResources.cs" />

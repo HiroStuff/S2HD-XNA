@@ -90,14 +90,14 @@ namespace S2HD.Title
             _fontImpactItalic = new CustomFont();
             _fontImpactItalic.LoadFromXml(_graphicsDevice, Path.Combine(_dataRoot, "SONICORCA/FONTS/IMPACT/ITALIC.font"));
 
-            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/TITLE/SELECTIONMARKER.png")))
-                _selectionMarkerTexture = Texture2D.FromStream(_graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/MENU/LEFT.png")))
-                _leftArrowTexture = Texture2D.FromStream(_graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/MENU/RIGHT.png")))
-                _rightArrowTexture = Texture2D.FromStream(_graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(_dataRoot, "SONICORCA/TITLE/ZIGZAG.png")))
-                _zigzagTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/SELECTIONMARKER.png"))
+                _selectionMarkerTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/LEFT.png"))
+                _leftArrowTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/MENU/RIGHT.png"))
+                _rightArrowTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/ZIGZAG.png"))
+                _zigzagTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
 
             _whiteTexture = new Texture2D(_graphicsDevice, 1, 1);
             _whiteTexture.SetData(new[] { Color.White });

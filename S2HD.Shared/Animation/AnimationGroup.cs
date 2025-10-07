@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Xml;
 using System.Linq;
+using System;
 using System.IO;
 
 namespace S2HD.Animation
@@ -17,7 +18,20 @@ namespace S2HD.Animation
         public void LoadFromXml(GraphicsDevice graphicsDevice, string xmlPath)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(xmlPath);
+            if (File.Exists(xmlPath))
+            {
+                xmlDocument.Load(xmlPath);
+            }
+            else
+            {
+                string rel = xmlPath.Replace('\\','/');
+                if (rel.StartsWith("data/", StringComparison.OrdinalIgnoreCase))
+                    rel = rel.Substring(5);
+                using (var s = S2HD.Shared.Data.DataService.OpenRead(rel))
+                {
+                    xmlDocument.Load(s);
+                }
+            }
 
             XmlNode root = xmlDocument.SelectSingleNode("anigroup");
             if (root == null)
@@ -31,8 +45,19 @@ namespace S2HD.Animation
                 {
                     string texturePath = textureNode.InnerText.TrimStart('/');
                     string fullPath = Path.Combine(Path.GetDirectoryName(xmlPath), texturePath + ".png");
-                    using (var s = File.OpenRead(fullPath))
-                        _textures.Add(Texture2D.FromStream(graphicsDevice, s));
+                    if (File.Exists(fullPath))
+                    {
+                        using (var s = File.OpenRead(fullPath))
+                            _textures.Add(S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s));
+                    }
+                    else
+                    {
+                        string rel = fullPath.Replace('\\','/');
+                        if (rel.StartsWith("data/", StringComparison.OrdinalIgnoreCase))
+                            rel = rel.Substring(5);
+                        using (var s = S2HD.Shared.Data.DataService.OpenRead(rel))
+                            _textures.Add(S2HD.Graphics.TextureHelper.LoadTextureFromStream(graphicsDevice, s));
+                    }
                 }
             }
 

@@ -51,8 +51,18 @@ namespace S2HD.Shared
 
 		protected override void LoadContent()
 		{
-			string dataRoot = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "data");
+			string baseData = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "data");
+			string dataRoot = baseData;
+			if (_config != null && !_config.DataFolderMode)
+			{
+				string datPath = Path.Combine(baseData, "sonicorca.dat");
+				if (!File.Exists(datPath))
+				{
+					throw new FileNotFoundException("Missing required data archive 'data/sonicorca.dat'.", datPath);
+				}
+			}
 			Content.RootDirectory = "data";
+			S2HD.Shared.Data.DataService.Init(baseData, _config == null || _config.DataFolderMode);
 			S2HD.Graphics.EffectService.Init(Content);
 			AudioService.Init(dataRoot);
 			int len = 11;

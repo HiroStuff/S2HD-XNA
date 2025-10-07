@@ -39,8 +39,8 @@ namespace S2HD.GameStates
 
         public void LoadContent(string dataRoot)
         {
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TEAMLOGO.png")))
-                _teamLogoTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TEAMLOGO.png"))
+                _teamLogoTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
             _loaded = true;
             _currentPhase = TeamLogoPhase.FadeIn;
         }
@@ -86,7 +86,7 @@ namespace S2HD.GameStates
         {
             if (!_loaded) return;
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
             Vector2 screenCenter = new Vector2(_graphicsDevice.Viewport.Width / 2, _graphicsDevice.Viewport.Height / 2);
             Vector2 logoSize = new Vector2(_teamLogoTexture.Width, _teamLogoTexture.Height);

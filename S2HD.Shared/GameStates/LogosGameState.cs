@@ -54,12 +54,12 @@ namespace S2HD.GameStates
 
         public void LoadContent(string dataRoot)
         {
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE.png")))
-                _engineTexture = Texture2D.FromStream(_graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE/PARTIAL.png")))
-                _enginePartialTexture = Texture2D.FromStream(_graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/ENGINE/SONIC.png")))
-                _engineSonicTexture = Texture2D.FromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/ENGINE.png"))
+                _engineTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/ENGINE/PARTIAL.png"))
+                _enginePartialTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/ENGINE/SONIC.png"))
+                _engineSonicTexture = S2HD.Graphics.TextureHelper.LoadTextureFromStream(_graphicsDevice, s);
             _font = new CustomFont();
             _font.LoadFromXml(_graphicsDevice, Path.Combine(dataRoot, "SONICORCA/FONTS/HUD.font"));
 
@@ -155,7 +155,7 @@ namespace S2HD.GameStates
         {
             if (!_loaded) return;
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
             DrawPoweredBy();
 

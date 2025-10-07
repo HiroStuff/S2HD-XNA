@@ -62,15 +62,15 @@ namespace S2HD.Title
             _animationGroup = new AnimationGroup();
             _animationGroup.LoadFromXml(graphicsDevice, Path.Combine(dataRoot, "SONICORCA/TITLE/ANIGROUP.anim"));
 
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/0.png"))
                 _bannerTexture = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/FRAMES/1.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/1.png"))
                 _bannerInsideTexture = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/ADDFRAMES/0.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/ADDFRAMES/0.png"))
                 _titleOutlineTexture = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/ADDFRAMES/1.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/ADDFRAMES/1.png"))
                 _maskTexture = Texture2D.FromStream(graphicsDevice, s);
-            using (var s = File.OpenRead(Path.Combine(dataRoot, "SONICORCA/TITLE/ADDFRAMES/2.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/ADDFRAMES/2.png"))
                 _hdStarTexture = Texture2D.FromStream(graphicsDevice, s);
         }
 

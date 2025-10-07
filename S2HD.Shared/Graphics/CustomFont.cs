@@ -26,22 +26,48 @@ namespace S2HD.Graphics
         public void LoadFromXml(GraphicsDevice graphicsDevice, string fontPath)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(fontPath);
+            if (File.Exists(fontPath))
+            {
+                xmlDocument.Load(fontPath);
+            }
+            else
+            {
+                string rel = fontPath.Replace('\\','/');
+                if (rel.StartsWith("data/", StringComparison.OrdinalIgnoreCase))
+                    rel = rel.Substring(5);
+                using (var s = S2HD.Shared.Data.DataService.OpenRead(rel))
+                {
+                    xmlDocument.Load(s);
+                }
+            }
 
             XmlNode root = xmlDocument.SelectSingleNode("font");
             if (root == null)
                 throw new XmlException("Missing <font> root node.");
 
 
-            string fontDir = Path.Combine(Path.GetDirectoryName(fontPath) ?? string.Empty, Path.GetFileNameWithoutExtension(fontPath));
+            string fontDirFs = Path.Combine(Path.GetDirectoryName(fontPath) ?? string.Empty, Path.GetFileNameWithoutExtension(fontPath));
+            string fontDirKey = (Path.GetDirectoryName(fontPath) ?? string.Empty).Replace('\\','/');
+            if (fontDirKey.StartsWith("data/", StringComparison.OrdinalIgnoreCase))
+                fontDirKey = fontDirKey.Substring(5);
+            fontDirKey += "/" + Path.GetFileNameWithoutExtension(fontPath);
 
             string shapePath = root.SelectSingleNode("shape")?.InnerText;
             if (!string.IsNullOrEmpty(shapePath))
             {
                 string cleanPath = shapePath.TrimStart('/');
-                string full = Path.Combine(fontDir, cleanPath + ".png");
-                using (var s = File.OpenRead(full))
-                    _shapeTexture = Texture2D.FromStream(graphicsDevice, s);
+                string fullFs = Path.Combine(fontDirFs, cleanPath + ".png");
+                if (File.Exists(fullFs))
+                {
+                    using (var s = File.OpenRead(fullFs))
+                        _shapeTexture = Texture2D.FromStream(graphicsDevice, s);
+                }
+                else
+                {
+                    string key = (fontDirKey + "/" + cleanPath + ".png").Replace("\\","/");
+                    using (var s = S2HD.Shared.Data.DataService.OpenRead(key))
+                        _shapeTexture = Texture2D.FromStream(graphicsDevice, s);
+                }
                 PremultiplyAlpha(_shapeTexture);
             }
 
@@ -54,9 +80,18 @@ namespace S2HD.Graphics
                     string overlayPath = overlayNodes[i].InnerText;
 
                     string cleanPath = overlayPath.TrimStart('/');
-                    string full = Path.Combine(fontDir, cleanPath + ".png");
-                    using (var s = File.OpenRead(full))
-                        _overlayTextures[i] = Texture2D.FromStream(graphicsDevice, s);
+                    string fullFs = Path.Combine(fontDirFs, cleanPath + ".png");
+                    if (File.Exists(fullFs))
+                    {
+                        using (var s = File.OpenRead(fullFs))
+                            _overlayTextures[i] = Texture2D.FromStream(graphicsDevice, s);
+                    }
+                    else
+                    {
+                        string key = (fontDirKey + "/" + cleanPath + ".png").Replace("\\","/");
+                        using (var s = S2HD.Shared.Data.DataService.OpenRead(key))
+                            _overlayTextures[i] = Texture2D.FromStream(graphicsDevice, s);
+                    }
                     PremultiplyAlpha(_overlayTextures[i]);
                 }
             }

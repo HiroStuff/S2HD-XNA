@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
 
 namespace S2HD.Audio
 {
@@ -53,11 +54,24 @@ namespace S2HD.Audio
 		{
 			try
 			{
-				string oggPath = Path.Combine(_dataRoot, relativePathWithoutExtension + ".ogg");
-				using (var stream = File.OpenRead(oggPath))
+				string sinfoPath = relativePathWithoutExtension + ".sinfo";
+				if (TryLoadSampleInfo(sinfoPath, out var sampleInfo))
 				{
-					var soundEffect = SoundEffect.FromStream(stream);
-					_soundEffects[key] = soundEffect;
+					string oggPath = sampleInfo.SamplePath;
+					using (var stream = S2HD.Shared.Data.DataService.OpenRead(oggPath))
+					{
+						var soundEffect = SoundEffect.FromStream(stream);
+						_soundEffects[key] = soundEffect;
+					}
+				}
+				else
+				{
+					string oggPath = relativePathWithoutExtension + ".ogg";
+					using (var stream = S2HD.Shared.Data.DataService.OpenRead(oggPath))
+					{
+						var soundEffect = SoundEffect.FromStream(stream);
+						_soundEffects[key] = soundEffect;
+					}
 				}
 			}
 			catch {}
@@ -67,9 +81,35 @@ namespace S2HD.Audio
 		{
 			try
 			{
-				string oggPath = Path.Combine(_dataRoot, relativePathWithoutExtension + ".ogg");
-				var song = Song.FromUri(key, new Uri(oggPath));
-				_songs[key] = song;
+				string sinfoPath = relativePathWithoutExtension + ".sinfo";
+				if (TryLoadSampleInfo(sinfoPath, out var sampleInfo))
+				{
+					string oggPath = sampleInfo.SamplePath;
+					using (var stream = S2HD.Shared.Data.DataService.OpenRead(oggPath))
+					{
+						string tempPath = Path.GetTempFileName() + ".ogg";
+						using (var fileStream = File.Create(tempPath))
+						{
+							stream.CopyTo(fileStream);
+						}
+						var song = Song.FromUri(key, new Uri(tempPath));
+						_songs[key] = song;
+					}
+				}
+				else
+				{
+					string oggPath = relativePathWithoutExtension + ".ogg";
+					using (var stream = S2HD.Shared.Data.DataService.OpenRead(oggPath))
+					{
+						string tempPath = Path.GetTempFileName() + ".ogg";
+						using (var fileStream = File.Create(tempPath))
+						{
+							stream.CopyTo(fileStream);
+						}
+						var song = Song.FromUri(key, new Uri(tempPath));
+						_songs[key] = song;
+					}
+				}
 			}
 			catch {}
 		}
@@ -155,5 +195,48 @@ namespace S2HD.Audio
 		public float GetMasterVolume() => _masterVolume;
 		public float GetMusicVolume() => _musicVolume;
 		public float GetSoundVolume() => _soundVolume;
+
+		private bool TryLoadSampleInfo(string sinfoPath, out SampleInfo sampleInfo)
+		{
+			sampleInfo = null;
+			try
+			{
+				using (var stream = S2HD.Shared.Data.DataService.OpenRead(sinfoPath))
+				{
+					var xmlDocument = new XmlDocument();
+					xmlDocument.Load(stream);
+					
+					var sampleNode = xmlDocument.SelectSingleNode("sampleinfo/sample");
+					if (sampleNode == null) return false;
+					
+					string samplePath = sampleNode.InnerText.TrimStart('/');
+					
+					int? loopSampleIndex = null;
+					var loopNode = xmlDocument.SelectSingleNode("sampleinfo/loop");
+					if (loopNode != null && int.TryParse(loopNode.InnerText, out int loopIndex))
+					{
+						loopSampleIndex = loopIndex;
+					}
+					
+					sampleInfo = new SampleInfo
+					{
+						SamplePath = samplePath,
+						LoopSampleIndex = loopSampleIndex
+					};
+					return true;
+				}
+			}
+			catch
+			{
+				return false;
+			}
+		}
+	}
+
+	public class SampleInfo
+	{
+		public string SamplePath { get; set; }
+		public int? LoopSampleIndex { get; set; }
+		public bool HasLoopPoint => LoopSampleIndex.HasValue;
 	}
 }

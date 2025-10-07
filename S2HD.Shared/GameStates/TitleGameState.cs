@@ -69,7 +69,7 @@ namespace S2HD.GameStates
             _font = new CustomFont();
             _font.LoadFromXml(_graphicsDevice, System.IO.Path.Combine(_dataRoot, "SONICORCA/FONTS/HUD.font"));
 
-            using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/0.png"))
             {
                 var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
                 _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
@@ -124,7 +124,7 @@ namespace S2HD.GameStates
             {
                 if (_shootingStarAnimationInstance == null)
                 {
-                    using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+                    using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/0.png"))
                     {
                         var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
                         _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
@@ -160,7 +160,7 @@ namespace S2HD.GameStates
             if (_fadeOutOpacity != 1.0f)
             {
                 Color fadeColor = new Color(0, 0, 0, 1.0f - _fadeOutOpacity);
-                using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+                using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/0.png"))
                 {
                     var fadeTexture = Texture2D.FromStream(_graphicsDevice, s);
                     _spriteBatch.Draw(fadeTexture, new Rectangle(0, 0, 1920, 1080), fadeColor);
@@ -191,7 +191,7 @@ namespace S2HD.GameStates
 
         private void CreateSparkle(Vector2 position)
         {
-            using (var s = System.IO.File.OpenRead(System.IO.Path.Combine(_dataRoot, "SONICORCA/TITLE/FRAMES/0.png")))
+            using (var s = S2HD.Shared.Data.DataService.OpenRead("SONICORCA/TITLE/FRAMES/0.png"))
             {
                 var sparkleTexture = Texture2D.FromStream(_graphicsDevice, s);
                 _sparkleAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 32, 32) }, 8);
