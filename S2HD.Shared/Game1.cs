@@ -22,12 +22,20 @@ namespace S2HD.Shared
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
 
+#if ANDROID
+			_graphics.IsFullScreen = true;
+			_graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+#else
 			_graphics.PreferredBackBufferWidth = 1920;
 			_graphics.PreferredBackBufferHeight = 1080;
 			_graphics.IsFullScreen = true;
+#endif
 
+			_config = new ConfigManager();
+			
 			try
 			{
+#if !ANDROID
 				string docs = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
 				string dir = Path.Combine(docs, "SonicOrcaXNA");
 				if (!Directory.Exists(dir))
@@ -35,6 +43,7 @@ namespace S2HD.Shared
 					Directory.CreateDirectory(dir);
 				}
 				_config = ConfigManager.Load();
+#endif
 			}
 			catch {}
 		}

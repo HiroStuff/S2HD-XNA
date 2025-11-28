@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Xml;
 
 namespace S2HD.Graphics
@@ -26,12 +27,33 @@ namespace S2HD.Graphics
         public void LoadFromXml(ContentManager content, string fontPath)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(fontPath);
+            
+            Stream stream = null;
+            try
+            {
+                stream = TitleContainer.OpenStream(fontPath);
+            }
+            catch
+            {
+                try
+                {
+                    string altPath = fontPath.Replace("Content/", "");
+                    stream = TitleContainer.OpenStream(altPath);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Failed to load font from '{fontPath}': {ex.Message}", ex);
+                }
+            }
+            
+            using (stream)
+            {
+                xmlDocument.Load(stream);
+            }
 
             XmlNode root = xmlDocument.SelectSingleNode("font");
             if (root == null)
-                throw new XmlException("Missing <font> root node.");
-
+                throw new XmlException($"Missing <font> root node in '{fontPath}'.");
 
             string fontDir = fontPath.Replace("Content/", "").Replace("_FONT", "");
 

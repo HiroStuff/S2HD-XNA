@@ -1,7 +1,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Xml;
 using System.Linq;
 
@@ -17,7 +19,29 @@ namespace S2HD.Animation
         public void LoadFromXml(ContentManager content, string xmlPath)
         {
             var xmlDocument = new XmlDocument();
-            xmlDocument.Load(xmlPath);
+            
+            Stream stream = null;
+            try
+            {
+                stream = TitleContainer.OpenStream(xmlPath);
+            }
+            catch
+            {
+                try
+                {
+                    string altPath = xmlPath.Replace("Content/", "");
+                    stream = TitleContainer.OpenStream(altPath);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Failed to load animation group from '{xmlPath}': {ex.Message}", ex);
+                }
+            }
+            
+            using (stream)
+            {
+                xmlDocument.Load(stream);
+            }
 
             XmlNode root = xmlDocument.SelectSingleNode("anigroup");
             if (root == null)

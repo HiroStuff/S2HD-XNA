@@ -8,13 +8,14 @@ using S2HD.Shared;
 namespace S2HD.Android
 {
     [Activity(
-        Label = "@string/app_name",
+        Label = "S2HD",
         MainLauncher = true,
         Icon = "@drawable/icon",
         AlwaysRetainTaskState = true,
         LaunchMode = LaunchMode.SingleInstance,
-        ScreenOrientation = ScreenOrientation.FullUser,
-        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
+        ScreenOrientation = ScreenOrientation.Landscape,
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize,
+        Theme = "@android:style/Theme.NoTitleBar.Fullscreen"
     )]
     public class Activity1 : AndroidGameActivity
     {

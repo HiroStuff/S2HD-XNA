@@ -61,6 +61,16 @@ namespace S2HD.GameStates
             _versionText = "XNA Port 1.0";
         }
 
+#if ANDROID
+        private float Scale => Math.Min(_graphicsDevice.Viewport.Width / 1920f, _graphicsDevice.Viewport.Height / 1080f);
+        private int ScreenWidth => _graphicsDevice.Viewport.Width;
+        private int ScreenHeight => _graphicsDevice.Viewport.Height;
+#else
+        private float Scale => 1f;
+        private int ScreenWidth => 1920;
+        private int ScreenHeight => 1080;
+#endif
+
         public void LoadContent(ContentManager content)
         {
             AudioService.Init(content);
@@ -125,11 +135,11 @@ namespace S2HD.GameStates
                 {
                     var sparkleTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
                     _shootingStarAnimationInstance = new AnimationInstance(sparkleTexture, new Rectangle[] { new Rectangle(0, 0, 64, 64) }, 9);
-                    _shootingStarPosition = new Vector2(1440.0f, 0.0f);
+                    _shootingStarPosition = new Vector2(1440.0f * Scale, 0.0f);
                     _audioManager.PlaySound("SHOOTINGSTAR");
                 }
                 _shootingStarAnimationInstance.Animate();
-                _shootingStarPosition += new Vector2(-16.0f, 8.0f);
+                _shootingStarPosition += new Vector2(-16.0f * Scale, 8.0f * Scale);
             }
 
 
@@ -158,7 +168,7 @@ namespace S2HD.GameStates
                 Color fadeColor = new Color(0, 0, 0, 1.0f - _fadeOutOpacity);
 
                 var fadeTexture = _content.Load<Texture2D>("SONICORCA/TITLE/FRAMES/0");
-                _spriteBatch.Draw(fadeTexture, new Rectangle(0, 0, 1920, 1080), fadeColor);
+                _spriteBatch.Draw(fadeTexture, new Rectangle(0, 0, ScreenWidth, ScreenHeight), fadeColor);
             }
 
             _banner.DrawUnfaded(_spriteBatch);
@@ -211,14 +221,16 @@ namespace S2HD.GameStates
                 return;
 
             string[] stringList = { "SONIC", "AND", "MILES \"TAILS\" PROWER", "IN" };
-            int y = 540 - stringList.Length * 128 / 2;
+            float scale = Scale;
+            int spacing = (int)(128 * scale);
+            int y = ScreenHeight / 2 - stringList.Length * spacing / 2;
             Color colour = new Color((float)valueAt, 1.0f, 1.0f, 1.0f);
 
             foreach (string text in stringList)
             {
-                Vector2 textPosition = new Vector2(960, y);
+                Vector2 textPosition = new Vector2(ScreenWidth / 2, y);
                 _font.DrawString(_spriteBatch, text, textPosition, colour, 0, true);
-                y += 128;
+                y += spacing;
             }
         }
 
@@ -239,9 +251,12 @@ namespace S2HD.GameStates
         private void DrawVersion()
         {
             Color colour = new Color(_fadeOutOpacity / 2.0f, 1.0f, 1.0f, 1.0f);
-            Vector2 versionPosition = new Vector2(8, 1052);            
+            float scale = Scale;
+            float versionScale = 0.5f * scale;
+            float versionX = 8 * scale;
+            float versionY = ScreenHeight - (28 * scale);
             _spriteBatch.End();
-            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(0.5f, 0.5f, 1.0f) * Matrix.CreateTranslation(8, 1052, 0));
+            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, Matrix.CreateScale(versionScale, versionScale, 1.0f) * Matrix.CreateTranslation(versionX, versionY, 0));
             _font.DrawString(_spriteBatch, _versionText.ToUpper(), Vector2.Zero, colour, 0);
             _spriteBatch.End();
             _spriteBatch.Begin();

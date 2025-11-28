@@ -17,6 +17,12 @@ namespace S2HD.Shared.Graphics
 		public static void Apply(int modeIndex, Point resolution, bool vsync)
 		{
 			if (_gdm == null || _game == null) return;
+			
+#if ANDROID
+			_gdm.IsFullScreen = true;
+			_gdm.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+			_gdm.ApplyChanges();
+#else
 			_gdm.SynchronizeWithVerticalRetrace = vsync;
 			_gdm.PreferredBackBufferWidth = resolution.X;
 			_gdm.PreferredBackBufferHeight = resolution.Y;
@@ -40,6 +46,7 @@ namespace S2HD.Shared.Graphics
 					break;
 			}
 			_gdm.ApplyChanges();
+#endif
 		}
 	}
 }

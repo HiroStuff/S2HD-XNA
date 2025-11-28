@@ -14,6 +14,16 @@ namespace S2HD.GameStates
 	{
 		private readonly GraphicsDevice _graphicsDevice;
 		private readonly SpriteBatch _spriteBatch;
+
+#if ANDROID
+		private float Scale => System.Math.Min(_graphicsDevice.Viewport.Width / 1920f, _graphicsDevice.Viewport.Height / 1080f);
+		private int ScreenWidth => _graphicsDevice.Viewport.Width;
+		private int ScreenHeight => _graphicsDevice.Viewport.Height;
+#else
+		private float Scale => 1f;
+		private int ScreenWidth => 1920;
+		private int ScreenHeight => 1080;
+#endif
 		private CustomFont _fontImpactRegular;
 		private CustomFont _fontImpactItalic;
 		private Texture2D _whiteTexture;
@@ -392,9 +402,9 @@ namespace S2HD.GameStates
 			_spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque);
 			int texW = _backgroundTexture.Width;
 			int texH = _backgroundTexture.Height;
-			for (int y = 0; y < 1080; y += texH)
+			for (int y = 0; y < ScreenHeight; y += texH)
 			{
-				for (int x = 0; x < 1920; x += texW)
+				for (int x = 0; x < ScreenWidth; x += texW)
 				{
 					_spriteBatch.Draw(_backgroundTexture, new Rectangle(x, y, texW, texH), Color.White);
 				}
@@ -421,62 +431,65 @@ namespace S2HD.GameStates
 
 		private void DrawMainMenu()
 		{
-			Vector2 firstPos = new Vector2(960, 360);
-			Vector2 secondPos = new Vector2(960, 480);
+			float scale = Scale;
+			Vector2 firstPos = new Vector2(ScreenWidth / 2, 360 * scale);
+			Vector2 secondPos = new Vector2(ScreenWidth / 2, 480 * scale);
 			Vector2 selectedPos = _selectionIndex == 0 ? firstPos : secondPos;
 
-			int barW = (int)(_selectionBarTexture.Width * BarScaleX);
-			int barH = (int)(_selectionBarTexture.Height * BarScaleY);
-			int barYOffset = 28;
+			int barW = (int)(_selectionBarTexture.Width * BarScaleX * scale);
+			int barH = (int)(_selectionBarTexture.Height * BarScaleY * scale);
+			int barYOffset = (int)(28 * scale);
 			var barDest = new Rectangle((int)(selectedPos.X - barW / 2), (int)(selectedPos.Y - barH / 2 + barYOffset), barW, barH);
 			_spriteBatch.Draw(_selectionBarTexture, barDest, Color.White * _fadeOpacity);
 
 			DrawMenuItemScaled("AUDIO", firstPos, _selectionIndex == 0);
 			DrawMenuItemScaled("VIDEO", secondPos, _selectionIndex == 1);
 
-			var stripRect = new Rectangle(0, 1000, 1920, 80);
+			var stripRect = new Rectangle(0, (int)(1000 * scale), ScreenWidth, (int)(80 * scale));
 			_spriteBatch.Draw(_whiteTexture, stripRect, new Color(0f, 0f, 0f, 0.35f * _fadeOpacity));
-			Vector2 aIconPos = new Vector2(180, 1008);
-			Vector2 bIconPos = new Vector2(1680, 1008);
+			Vector2 aIconPos = new Vector2(180 * scale, 1008 * scale);
+			Vector2 bIconPos = new Vector2(ScreenWidth - 240 * scale, 1008 * scale);
 			_spriteBatch.Draw(_buttonATexture, aIconPos, Color.White * _fadeOpacity);
 			_spriteBatch.Draw(_buttonBTexture, bIconPos, Color.White * _fadeOpacity);
-			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale);
-			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale);
+			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale * scale);
+			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale * scale);
 		}
 
 		private void DrawAudioSubmenu()
 		{
-			Vector2 titlePos = new Vector2(960, 300);
-			DrawScaledString(_fontImpactItalic, "AUDIO", titlePos, Color.White * _fadeOpacity, 0.8f);
+			float scale = Scale;
+			Vector2 titlePos = new Vector2(ScreenWidth / 2, 300 * scale);
+			DrawScaledString(_fontImpactItalic, "AUDIO", titlePos, Color.White * _fadeOpacity, 0.8f * scale);
 
 			var labels = new[] { "MASTER", "MUSIC", "SFX" };
 			float[] values = new[] { _volMaster, _volMusic, _volSound };
-			int startY = 380;
-			int spacing = 120;
+			int startY = (int)(380 * scale);
+			int spacing = (int)(120 * scale);
 			for (int i = 0; i < 3; i++)
 			{
 				int y = startY + i * spacing;
 				bool selected = i == _audioSelectionIndex;
-				DrawScaledString(_fontImpactRegular, labels[i], new Vector2(640, y), selected ? new Color(1.0f * _fadeOpacity, 0.85f * _fadeOpacity, 0.2f * _fadeOpacity, 1f) : Color.White * _fadeOpacity, 0.7f);
-				DrawSlider(new Vector2(1220, y), values[i], selected);
+				DrawScaledString(_fontImpactRegular, labels[i], new Vector2(640 * scale, y), selected ? new Color(1.0f * _fadeOpacity, 0.85f * _fadeOpacity, 0.2f * _fadeOpacity, 1f) : Color.White * _fadeOpacity, 0.7f * scale);
+				DrawSlider(new Vector2(1220 * scale, y), values[i], selected);
 			}
 
-			var stripRect = new Rectangle(0, 1000, 1920, 80);
+			var stripRect = new Rectangle(0, (int)(1000 * scale), ScreenWidth, (int)(80 * scale));
 			_spriteBatch.Draw(_whiteTexture, stripRect, new Color(0f, 0f, 0f, 0.35f * _fadeOpacity));
-			Vector2 aIconPos = new Vector2(180, 1008);
-			Vector2 bIconPos = new Vector2(1680, 1008);
+			Vector2 aIconPos = new Vector2(180 * scale, 1008 * scale);
+			Vector2 bIconPos = new Vector2(ScreenWidth - 240 * scale, 1008 * scale);
 			_spriteBatch.Draw(_buttonATexture, aIconPos, Color.White * _fadeOpacity);
 			_spriteBatch.Draw(_buttonBTexture, bIconPos, Color.White * _fadeOpacity);
-			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale);
-			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale);
+			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale * scale);
+			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale * scale);
 		}
 
 		private void DrawVideoSubmenu()
 		{
-			Vector2 titlePos = new Vector2(960, 300);
-			DrawScaledString(_fontImpactItalic, "VIDEO", titlePos, Color.White * _fadeOpacity, 0.8f);
-			int startY = 380;
-			int spacing = 120;
+			float scale = Scale;
+			Vector2 titlePos = new Vector2(ScreenWidth / 2, 300 * scale);
+			DrawScaledString(_fontImpactItalic, "VIDEO", titlePos, Color.White * _fadeOpacity, 0.8f * scale);
+			int startY = (int)(380 * scale);
+			int spacing = (int)(120 * scale);
 			for (int i = 0; i < 5; i++)
 			{
 				int y = startY + i * spacing;
@@ -486,18 +499,18 @@ namespace S2HD.GameStates
 					: i == 1 ? ($"{_videoResolutionFixed.X}x{_videoResolutionFixed.Y}")
 					: (i == 2 ? (_videoShadows ? "ON" : "OFF") : (i == 3 ? (_videoWaterEffects ? "ON" : "OFF") : (_videoHeatEffects ? "ON" : "OFF")));
 				Color leftColor = selected ? new Color(1.0f * _fadeOpacity, 0.85f * _fadeOpacity, 0.2f * _fadeOpacity, 1f) : Color.White * _fadeOpacity;
-				DrawScaledString(_fontImpactRegular, left, new Vector2(640, y), leftColor, 0.7f);
-				string rightText = selected ? $"◀ {value} ▶" : value;
-				DrawScaledString(_fontImpactRegular, rightText, new Vector2(1280, y), Color.White * _fadeOpacity, 0.7f);
+				DrawScaledString(_fontImpactRegular, left, new Vector2(640 * scale, y), leftColor, 0.7f * scale);
+				string rightText = selected ? $"< {value} >" : value;
+				DrawScaledString(_fontImpactRegular, rightText, new Vector2(1280 * scale, y), Color.White * _fadeOpacity, 0.7f * scale);
 			}
-			var stripRect = new Rectangle(0, 1000, 1920, 80);
+			var stripRect = new Rectangle(0, (int)(1000 * scale), ScreenWidth, (int)(80 * scale));
 			_spriteBatch.Draw(_whiteTexture, stripRect, new Color(0f, 0f, 0f, 0.35f * _fadeOpacity));
-			Vector2 aIconPos = new Vector2(180, 1008);
-			Vector2 bIconPos = new Vector2(1680, 1008);
+			Vector2 aIconPos = new Vector2(180 * scale, 1008 * scale);
+			Vector2 bIconPos = new Vector2(ScreenWidth - 240 * scale, 1008 * scale);
 			_spriteBatch.Draw(_buttonATexture, aIconPos, Color.White * _fadeOpacity);
 			_spriteBatch.Draw(_buttonBTexture, bIconPos, Color.White * _fadeOpacity);
-			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale);
-			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale);
+			AlignButtonLabel("APPLY", aIconPos, _buttonATexture, ButtonLabelScale * scale);
+			AlignButtonLabel("CANCEL", bIconPos, _buttonBTexture, ButtonLabelScale * scale);
 		}
 
 		private void DrawSlider(Vector2 center, float value, bool selected)

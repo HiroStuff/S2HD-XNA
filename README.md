@@ -15,4 +15,5 @@ dotnet build S2HD.Desktop/S2HD.Desktop.csproj
 ```
 dotnet workload install android
 dotnet build S2HD.Android/S2HD.Android.csproj
+cd S2HD.Android; dotnet publish -c Release -f net9.0-android35.0
 ```
